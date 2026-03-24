@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Results — {{ company.name }} | PEMETIQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Manrope', 'sans-serif'] },
+          colors: { primary: '#0D2C4D', teal: '#1A5E63', coral: '#E8643B' }
+        }
+      }
+    }
+  </script>
+  <style>body { font-family: 'Manrope', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+<main class="min-h-screen">
+  <div class="max-w-4xl mx-auto py-12 px-6">
+
+    <!-- Header -->
+    <div class="bg-[#1A5E63] p-10 mb-10 rounded text-white">
+      <span class="text-[#E8643B] font-black tracking-widest text-sm mb-3 block">PEMETIQ</span>
+      <h1 class="text-3xl font-extrabold mb-1">{{ company.name }}</h1>
+      <p class="text-white/70 text-sm">Narrative Stress Test Results</p>
+    </div>
+
+    <!-- Summary metrics -->
+    <div class="grid grid-cols-3 gap-6 mb-10">
+      <div class="bg-white rounded-lg border border-slate-100 p-6 text-center">
+        <div class="text-3xl font-extrabold text-primary">{{ result.analysis.claim_count }}</div>
+        <div class="text-slate-400 text-sm font-semibold mt-1">Claims extracted</div>
+      </div>
+      <div class="bg-white rounded-lg border border-slate-100 p-6 text-center">
+        <div class="text-3xl font-extrabold text-primary">{{ result.analysis.tested_count }}</div>
+        <div class="text-slate-400 text-sm font-semibold mt-1">Claims tested</div>
+      </div>
+      <div class="bg-white rounded-lg border border-slate-100 p-6 text-center">
+        <div class="text-3xl font-extrabold text-primary">{{ "%.0f"|format(result.coverage.get('coverage_pct', 0)) }}%</div>
+        <div class="text-slate-400 text-sm font-semibold mt-1">Signal coverage</div>
+      </div>
+    </div>
+
+    {% if result.errors %}
+    <div class="mb-8 bg-amber-50 border border-amber-200 rounded-lg p-4 text-amber-800 text-sm">
+      <strong class="font-bold">Warnings:</strong>
+      <ul class="mt-1 space-y-1 list-disc list-inside">
+        {% for e in result.errors %}<li>{{ e }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <!-- Claims -->
+    <h2 class="text-xs font-black tracking-widest text-primary uppercase mb-5">Claim-by-claim verdicts</h2>
+
+    <div class="space-y-4">
+    {% for claim in result.claims|sort(attribute='claim_type.value') %}
+      {% set verdict_obj = result.verdicts.get(claim.claim_id) %}
+      {% set verdict_key = verdict_obj.verdict.value if verdict_obj else 'insufficient_evidence' %}
+      {% set verdict_colors = {
+        'supported':             ('bg-emerald-100 text-emerald-800', 'Supported'),
+        'partially_supported':   ('bg-teal-100 text-teal-800',      'Partially Supported'),
+        'contested':             ('bg-orange-100 text-orange-800',   'Contested'),
+        'insufficient_evidence': ('bg-slate-100 text-slate-500',     'Insufficient Evidence'),
+        'not_testable':          ('bg-slate-100 text-slate-400',     'Not Testable'),
+      } %}
+      {% set vc = verdict_colors.get(verdict_key, ('bg-slate-100 text-slate-500', 'Unknown')) %}
+      <div class="bg-white rounded-lg border border-slate-100 p-6">
+        <div class="flex items-start gap-4 mb-3">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold {{ vc[0] }} whitespace-nowrap flex-shrink-0 mt-0.5">
+            {{ vc[1] }}
+          </span>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wide">
+              {{ claim.claim_type.value.replace('_',' ') }}
+            </span>
+            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wide">
+              {{ claim.temporal_framing.value }}
+            </span>
+            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wide">
+              {{ claim.specificity.value }}
+            </span>
+            {% if claim.is_implicit %}
+            <span class="bg-orange-50 text-orange-600 px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wide">
+              implicit
+            </span>
+            {% endif %}
+          </div>
+        </div>
+        <p class="font-bold text-primary mb-2">{{ claim.assertion }}</p>
+        {% if verdict_obj and verdict_obj.reasoning %}
+        <p class="text-slate-500 text-sm leading-relaxed">{{ verdict_obj.reasoning }}</p>
+        {% endif %}
+        {% if verdict_obj %}
+        <div class="mt-2 text-xs text-slate-400 font-semibold">
+          Evidence strength:
+          {% if verdict_obj.evidence_strength.value == 'strong' %}●●●
+          {% elif verdict_obj.evidence_strength.value == 'moderate' %}●●○
+          {% else %}●○○{% endif %}
+        </div>
+        {% endif %}
+      </div>
+    {% else %}
+      <div class="bg-white rounded-lg border border-slate-100 p-8 text-center text-slate-400">
+        No claims were extracted. Try pasting more detailed text.
+      </div>
+    {% endfor %}
+    </div>
+
+    <!-- Back button -->
+    <div class="mt-10">
+      <a href="/"
+        class="inline-flex items-center gap-2 border-2 border-slate-200 rounded-lg px-6 py-3 text-primary font-bold text-sm hover:bg-slate-50 transition-colors">
+        ← Run another test
+      </a>
+    </div>
+
+  </div>
+</main>
+</body>
+</html>

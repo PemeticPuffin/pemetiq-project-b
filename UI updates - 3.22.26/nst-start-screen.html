@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Narrative Stress Test — Start Screen Reference</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #333333;
+      background: #FAFBFC;
+    }
+
+    /* ===================== HERO BANNER ===================== */
+    .nst-hero {
+      background: linear-gradient(135deg, #0E3B54 0%, #1A5C6A 60%, #2A7A8A 100%);
+      padding: 2.5rem 3rem 2.25rem;
+    }
+    .nst-hero-brand {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #E8643B;
+      margin-bottom: 0.75rem;
+    }
+    .nst-hero-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .nst-hero-sub {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.55;
+      max-width: 540px;
+    }
+
+    /* ===================== MAIN CONTAINER ===================== */
+    .nst-main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    /* ===================== FORM ELEMENTS ===================== */
+    .nst-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #0E3B54;
+      margin-bottom: 0.4rem;
+    }
+    .nst-input {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #D0D7DD;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: #333;
+      background: #FFFFFF;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .nst-input:hover { border-color: #A8B8C2; }
+    .nst-input:focus {
+      border-color: #1A5C6A;
+      box-shadow: 0 0 0 2.5px rgba(26, 92, 106, 0.12);
+    }
+    .nst-input::placeholder { color: #B0BAC2; }
+    .nst-helper {
+      font-size: 0.72rem;
+      color: #8A939C;
+      margin-top: 0.3rem;
+      line-height: 1.45;
+    }
+    .nst-field { margin-bottom: 1.1rem; }
+    .nst-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    /* ===================== DIVIDER ===================== */
+    .nst-divider {
+      border: none;
+      border-top: 1px solid #E2E6EA;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    /* ===================== SECTION HEADERS ===================== */
+    .nst-section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #0E3B54;
+      margin-bottom: 0.2rem;
+    }
+    .nst-section-desc {
+      font-size: 0.78rem;
+      color: #6B7580;
+      line-height: 1.5;
+      margin-bottom: 0.7rem;
+    }
+
+    /* ===================== MODE SELECTION CARDS ===================== */
+    .nst-mode-options {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.6rem;
+    }
+    .nst-mode-card {
+      border: 1px solid #D0D7DD;
+      border-radius: 8px;
+      padding: 0.75rem 0.85rem;
+      cursor: pointer;
+      background: #FFFFFF;
+      transition: all 0.15s;
+      position: relative;
+    }
+    .nst-mode-card:hover {
+      border-color: #A8B8C2;
+      background: #F7F8FA;
+    }
+    .nst-mode-card.active {
+      border-color: #0E3B54;
+      border-width: 2px;
+      padding: calc(0.75rem - 1px) calc(0.85rem - 1px);
+    }
+    .nst-mode-card-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #0E3B54;
+      margin-bottom: 0.25rem;
+    }
+    .nst-mode-card-desc {
+      font-size: 0.7rem;
+      color: #7A8690;
+      line-height: 1.4;
+    }
+    .nst-mode-check {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.7rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1.5px solid #D0D7DD;
+      background: #FFFFFF;
+      transition: all 0.15s;
+    }
+    .nst-mode-card.active .nst-mode-check {
+      border-color: #0E3B54;
+      background: #0E3B54;
+    }
+    .nst-mode-card.active .nst-mode-check::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #FFFFFF;
+    }
+
+    /* ===================== PASTE AREAS ===================== */
+    .nst-paste-area {
+      margin-top: 0.75rem;
+      display: none;
+    }
+    .nst-paste-area.visible { display: block; }
+    .nst-textarea {
+      width: 100%;
+      min-height: 90px;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #D0D7DD;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.84rem;
+      color: #333;
+      background: #FFFFFF;
+      outline: none;
+      resize: vertical;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .nst-textarea:hover { border-color: #A8B8C2; }
+    .nst-textarea:focus {
+      border-color: #1A5C6A;
+      box-shadow: 0 0 0 2.5px rgba(26, 92, 106, 0.12);
+    }
+    .nst-textarea::placeholder { color: #B0BAC2; }
+
+    /* ===================== COMPANY TYPE TOGGLE ===================== */
+    .nst-toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .nst-toggle-opt {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #8A939C;
+      cursor: pointer;
+      padding: 0.2rem 0;
+      transition: color 0.15s;
+      border: none;
+      background: none;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .nst-toggle-opt.active { color: #0E3B54; }
+    .nst-toggle-opt:hover:not(.active) { color: #5A6670; }
+    .nst-toggle-switch {
+      width: 36px;
+      height: 20px;
+      border-radius: 10px;
+      background: #0E3B54;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .nst-toggle-knob {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      transition: transform 0.2s;
+    }
+    .nst-toggle-switch.right .nst-toggle-knob {
+      transform: translateX(16px);
+    }
+
+    /* ===================== COMPETITORS ===================== */
+    .nst-comp-wrapper {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+    .nst-btn-auto {
+      background: #FFFFFF;
+      color: #1A5C6A;
+      border: 1px solid #C2CDD3;
+      border-radius: 6px;
+      padding: 0 0.8rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      height: 38px;
+      flex-shrink: 0;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .nst-btn-auto:hover {
+      background: #1A5C6A;
+      color: #FFFFFF;
+      border-color: #1A5C6A;
+    }
+
+    /* ===================== SIGNAL TAGS ===================== */
+    .nst-sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.4rem;
+    }
+    .nst-tag {
+      font-size: 0.66rem;
+      font-weight: 500;
+      color: #4A6A74;
+      background: #EAF0F2;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+    }
+
+    /* ===================== CTA BUTTON ===================== */
+    .nst-btn-run {
+      background: #E8643B;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 6px;
+      padding: 0.6rem 1.6rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      height: 40px;
+      transition: background 0.15s;
+      margin-top: 0.25rem;
+    }
+    .nst-btn-run:hover { background: #D4572F; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="nst-hero">
+    <div class="nst-hero-brand">Pemetiq</div>
+    <div class="nst-hero-title">Narrative Stress Test</div>
+    <div class="nst-hero-sub">Enter a company name — or paste an earnings transcript or investor memo. Every claim gets extracted and tested against public signals.</div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="nst-main">
+
+    <!-- ROW 1: Company name + domain -->
+    <div class="nst-row">
+      <div>
+        <label class="nst-label">Company name</label>
+        <input class="nst-input" type="text" placeholder="e.g. Salesforce, Stripe, Palantir">
+      </div>
+      <div>
+        <label class="nst-label">Company domain</label>
+        <input class="nst-input" type="text" placeholder="e.g. salesforce.com">
+        <div class="nst-helper">Auto-populated. Override if the guess is wrong.</div>
+      </div>
+    </div>
+
+    <hr class="nst-divider">
+
+    <!-- ANALYSIS MODE -->
+    <div class="nst-section-label">Analysis mode</div>
+    <div class="nst-section-desc">Choose what to test. <strong>Company name only</strong> infers claims from public signals. Paste a document to test the specific claims made in it.</div>
+
+    <div class="nst-mode-options" id="modeCards">
+      <div class="nst-mode-card active" data-m="company" onclick="pickMode(this)">
+        <div class="nst-mode-check"></div>
+        <div class="nst-mode-card-title">Company name only</div>
+        <div class="nst-mode-card-desc">Public signals only — no document needed</div>
+      </div>
+      <div class="nst-mode-card" data-m="transcript" onclick="pickMode(this)">
+        <div class="nst-mode-check"></div>
+        <div class="nst-mode-card-title">Earnings transcript</div>
+        <div class="nst-mode-card-desc">Extracts and tests every claim in the call</div>
+      </div>
+      <div class="nst-mode-card" data-m="memo" onclick="pickMode(this)">
+        <div class="nst-mode-check"></div>
+        <div class="nst-mode-card-title">Investor memo</div>
+        <div class="nst-mode-card-desc">Tests a pitch deck, memo, or analyst note</div>
+      </div>
+    </div>
+
+    <div class="nst-paste-area" id="paste-transcript">
+      <textarea class="nst-textarea" placeholder="Paste the full earnings transcript here..."></textarea>
+    </div>
+    <div class="nst-paste-area" id="paste-memo">
+      <textarea class="nst-textarea" placeholder="Paste the investor memo or pitch deck text here..."></textarea>
+    </div>
+
+    <hr class="nst-divider" style="margin-top: 1.5rem;">
+
+    <!-- ROW 2: Company type + Competitors -->
+    <div class="nst-row" style="margin-bottom: 0;">
+      <div>
+        <label class="nst-label">Company type</label>
+        <div class="nst-toggle-row">
+          <button class="nst-toggle-opt active" id="togPublic" onclick="setType('public')">Public</button>
+          <div class="nst-toggle-switch" id="typeSwitch" onclick="toggleType()">
+            <div class="nst-toggle-knob" id="typeKnob"></div>
+          </div>
+          <button class="nst-toggle-opt" id="togPrivate" onclick="setType('private')">Private</button>
+        </div>
+        <div class="nst-helper" style="margin-top: 0.35rem;">
+          <span id="typeHelper">10-K / 10-Q filings pulled from SEC EDGAR automatically.</span>
+        </div>
+      </div>
+      <div>
+        <label class="nst-label">Competitors</label>
+        <div class="nst-comp-wrapper">
+          <input class="nst-input" type="text" placeholder="e.g. HubSpot, ServiceNow" style="flex:1;">
+          <button class="nst-btn-auto">Auto-suggest</button>
+        </div>
+        <div class="nst-helper">Up to 4 for Google Trends comparison. Optional.</div>
+      </div>
+    </div>
+
+    <hr class="nst-divider" style="margin-top: 1.5rem;">
+
+    <!-- SIGNAL SOURCES -->
+    <div style="margin-bottom: 1.5rem;">
+      <div class="nst-section-label">Signal sources</div>
+      <div class="nst-sources">
+        <span class="nst-tag">SEC EDGAR</span>
+        <span class="nst-tag">Google Trends</span>
+        <span class="nst-tag">GitHub</span>
+        <span class="nst-tag">App Store</span>
+        <span class="nst-tag">Job postings</span>
+        <span class="nst-tag">Wayback Machine</span>
+        <span class="nst-tag">GDELT</span>
+        <span class="nst-tag">Wappalyzer</span>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <button class="nst-btn-run">Run stress test</button>
+
+  </div>
+
+  <script>
+    function pickMode(el) {
+      document.querySelectorAll('#modeCards .nst-mode-card').forEach(function(c) { c.classList.remove('active'); });
+      el.classList.add('active');
+      document.getElementById('paste-transcript').classList.remove('visible');
+      document.getElementById('paste-memo').classList.remove('visible');
+      var m = el.getAttribute('data-m');
+      if (m === 'transcript') document.getElementById('paste-transcript').classList.add('visible');
+      if (m === 'memo') document.getElementById('paste-memo').classList.add('visible');
+    }
+
+    var currentType = 'public';
+    function setType(t) {
+      currentType = t;
+      document.getElementById('togPublic').classList.toggle('active', t === 'public');
+      document.getElementById('togPrivate').classList.toggle('active', t === 'private');
+      document.getElementById('typeSwitch').classList.toggle('right', t === 'private');
+      document.getElementById('typeHelper').textContent = t === 'public'
+        ? '10-K / 10-Q filings pulled from SEC EDGAR automatically.'
+        : 'Limited to news, trends, and non-SEC signal sources.';
+    }
+    function toggleType() {
+      setType(currentType === 'public' ? 'private' : 'public');
+    }
+  </script>
+
+</body>
+</html>

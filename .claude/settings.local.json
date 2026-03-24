@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python phase2_validation.py)",
+      "Bash(python phase2_checks.py)",
+      "Bash(ANTHROPIC_API_KEY=test python -c \":*)",
+      "Bash(python smoke_test.py)",
+      "Bash(python -c \":*)",
+      "Bash(python:*)"
+    ]
+  }
+}

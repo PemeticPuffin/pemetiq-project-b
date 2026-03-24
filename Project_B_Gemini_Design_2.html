@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PEMETIQ | NARRATIVE STRESS TEST</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#001f25",
+                        "on-primary-fixed-variant": "#2d486a",
+                        "tertiary-fixed": "#b8ebf7",
+                        "tertiary-fixed-dim": "#9ccfda",
+                        "secondary-fixed-dim": "#ffb4a4",
+                        "on-tertiary-container": "#689aa5",
+                        "on-surface": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "surface-container": "#eceef0",
+                        "primary-fixed-dim": "#adc8f1",
+                        "surface": "#f8f9fb",
+                        "secondary": "#b22200",
+                        "on-tertiary-fixed-variant": "#174d57",
+                        "surface-dim": "#d8dadc",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed": "#d3e3ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#001c39",
+                        "on-secondary-fixed": "#3d0600",
+                        "primary-container": "#0d2c4d",
+                        "outline-variant": "#c4c6cf",
+                        "on-secondary": "#ffffff",
+                        "outline": "#74777f",
+                        "error": "#ba1a1a",
+                        "tertiary": "#001a1f",
+                        "tertiary-container": "#003038",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#8c1800",
+                        "background": "#f8f9fb",
+                        "surface-bright": "#f8f9fb",
+                        "secondary-container": "#d73b19",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffdad3",
+                        "surface-container-high": "#e6e8ea",
+                        "on-primary-container": "#7a94bb",
+                        "primary": "#001731",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#43474e",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "surface-tint": "#456084",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-container": "#fffbff",
+                        "inverse-primary": "#adc8f1"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .active-nav-border {
+            border-right: 4px solid #b22200;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c4c6cf;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-white font-body text-slate-800 antialiased">
+    <!-- TopNavBar -->
+    <!-- SideNavBar -->
+    <!-- Main Content Canvas -->
+    <main class="min-h-screen bg-white">
+        <div class="max-w-5xl mx-auto py-12 px-6">
+            <!-- Header Banner -->
+            <div class="bg-[#1a5e63] p-12 mb-8 rounded-sm text-white">
+                <span class="text-[#ff6b35] font-black tracking-widest text-sm mb-4 block">PEMETIQ</span>
+                <h1 class="text-5xl font-extrabold mb-6">Narrative Stress Test</h1>
+                <p class="text-lg text-white/80 max-w-2xl leading-relaxed font-medium">
+                    Enter a company name — or paste an earnings transcript or investor memo. Every claim gets extracted
+                    and tested against public signals.
+                </p>
+            </div>
+            <!-- Form Section -->
+            <div class="space-y-12">
+                <!-- Row 1: Names -->
+                <div class="grid grid-cols-2 gap-12">
+                    <div class="space-y-3">
+                        <label class="text-lg font-bold text-[#0D2C4D]">Company name</label>
+                        <input
+                            class="w-full border-2 border-slate-200 rounded-lg p-4 focus:border-primary focus:ring-0 text-slate-600"
+                            placeholder="e.g. Salesforce, Stripe, Palantir" type="text" />
+                    </div>
+                    <div class="space-y-3">
+                        <label class="text-lg font-bold text-[#0D2C4D]">Company domain</label>
+                        <input
+                            class="w-full border-2 border-slate-200 rounded-lg p-4 focus:border-primary focus:ring-0 text-slate-600"
+                            placeholder="e.g. salesforce.com" type="text" />
+                        <p class="text-sm text-slate-400">Auto-populated from company name. Override if needed.</p>
+                    </div>
+                </div>
+                <hr class="border-slate-100" />
+                <!-- Row 2: Analysis Mode -->
+                <div class="space-y-6">
+                    <div class="space-y-1">
+                        <h3 class="text-sm font-black tracking-widest text-primary uppercase">ANALYSIS MODE</h3>
+                        <p class="text-slate-500 text-sm">
+                            Choose what to test. <span class="font-bold text-primary">Company name only</span> — public
+                            signals, no document needed. <span class="font-bold text-primary">Earnings transcript</span>
+                            — extracts and tests every claim. <span class="font-bold text-primary">Investor memo</span>
+                            — tests a pitch deck, memo, or analyst note.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-6">
+                        <button
+                            class="border-2 border-primary rounded-lg py-4 text-primary font-bold bg-white flex items-center justify-center px-6 leading-normal">Company
+                            name only</button>
+                        <button
+                            class="border-2 border-slate-200 rounded-lg py-4 text-primary font-bold hover:border-slate-300 transition-colors flex items-center justify-center px-6 leading-normal">Earnings
+                            transcript</button>
+                        <button
+                            class="border-2 border-slate-200 rounded-lg py-4 text-primary font-bold hover:border-slate-300 transition-colors flex items-center justify-center px-6 leading-normal">Investor
+                            memo</button>
+                    </div>
+                </div>
+                <hr class="border-slate-100" />
+                <!-- Row 3: Type and Competitors -->
+                <div class="grid grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <h3 class="text-lg font-bold text-primary">Company type</h3>
+                        <div class="flex items-center gap-12">
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <div class="w-5 h-5 rounded-full border-2 border-primary bg-primary"></div>
+                                <span class="font-bold text-primary">Public</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <div class="w-5 h-5 rounded-full border-2 border-slate-200"></div>
+                                <span class="font-bold text-slate-400 group-hover:text-slate-600">Private</span>
+                            </label>
+                        </div>
+                        <p class="text-sm text-slate-400">10-K / 10-Q filings pulled automatically from SEC EDGAR.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-lg font-bold text-primary">Competitors</h3>
+                        <div class="flex gap-4">
+                            <input
+                                class="flex-grow border-2 border-slate-200 rounded-lg p-4 focus:border-primary focus:ring-0 text-slate-600"
+                                placeholder="e.g. HubSpot, ServiceNow" type="text" />
+                            <button
+                                class="border-2 border-slate-200 rounded-lg px-6 font-bold text-primary text-center hover:bg-slate-50 flex items-center justify-center py-3 leading-normal">Suggest</button>
+                        </div>
+                        <p class="text-sm text-slate-400">Up to 4 for Google Trends comparison. Optional.</p>
+                    </div>
+                </div>
+                <hr class="border-slate-100" />
+                <!-- Row 4: Signal Sources -->
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black tracking-widest text-primary uppercase">SIGNAL SOURCES</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-100 text-slate-600 px-4 py-2 rounded font-bold text-sm">SEC EDGAR</span>
+                        <span class="bg-slate-100 text-slate-600 px-4 py-2 rounded font-bold text-sm">Google
+                            Trends</span>
+                        <span class="bg-slate-100 text-slate-600 px-4 py-2 rounded font-bold text-sm">GitHub</span>
+                        <span class="bg-slate-100 text-slate-600 px-4 py-2 rounded font-bold text-sm">App Store</span>
+                        <span class="bg-slate-100 text-slate-600 px-4 py-2 rounded font-bold text-sm">Job
+                            postings</span>
+                        <span class="bg-slate-100 text-slate-600 px-4 py-2 rounded font-bold text-sm">Wayback
+                            Machine</span>
+                        <span class="bg-slate-100 text-slate-600 px-4 py-2 rounded font-bold text-sm">GDELT</span>
+                        <span class="bg-slate-100 text-slate-600 px-4 py-2 rounded font-bold text-sm">Wappalyzer</span>
+                    </div>
+                    <button
+                        class="w-full border-2 border-slate-200 rounded-lg text-slate-400 font-bold tracking-widest uppercase bg-slate-50 flex items-center justify-center py-4 px-8 leading-normal">
+                        Run stress test
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Contextual FAB (Suppressed as per rules for detailed dashboard, but added ghost structure if needed for future tasks) -->
+</body>
+
+</html>

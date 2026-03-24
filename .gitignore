@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+data/spend_ledger.json
+data/spend_alert_sent.txt
+node_modules/
+venv/
+.venv/
+.DS_Store
