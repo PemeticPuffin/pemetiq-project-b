@@ -252,7 +252,8 @@ class EdgarFetcher(BaseFetcher):
         accessions = filings.get("accessionNumber", [])
 
         # Count 8-Ks in the last 12 months as a proxy for IR activity
-        cutoff = "2025-03-20"
+        from datetime import timedelta
+        cutoff = (date.today() - timedelta(days=365)).isoformat()
         recent_8k = [
             d for f, d in zip(forms, dates)
             if f == "8-K" and d >= cutoff

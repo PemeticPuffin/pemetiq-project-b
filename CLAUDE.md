@@ -22,7 +22,7 @@ Aaron, founder of Pemetiq. 15+ years data science/analytics at director+ level, 
 - Anthropic API (Claude Sonnet for claim extraction + evaluation)
 - Free-tier data APIs (see Data Sources below)
 
-## Current Phase: Phase 3 — Build
+## Current Phase: Phase 3 Complete — Ready for UI Polish + Deployment
 
 ### What's Been Decided (Phases 1 + 2 Complete)
 
@@ -69,14 +69,28 @@ Design Project B's data model to be compatible with Project A (shared entity mod
 | Review sites | G2 / Capterra | Dropped — blocked/requires key | — |
 | Patent filings | USPTO PatentsView | Dropped — 403 blocked; proxy via GitHub | — |
 
-### Phase 3 Build Sequence
-1. Data layer — signal fetchers (one module per source, all return Signal schema objects)
-2. Claim extraction — Claude prompt, structured output, returns Claim schema objects
-3. Evidence mapper — static map: claim type → signal types; fetch and match
-4. Verdict engine — Claude prompt, consumes claim + signals, returns ClaimVerdict
-5. Spend tracker — SpendTracker class + pipeline integration
-6. Streamlit UI — input → loading → claim-by-claim output + sidebar spend meter
-7. GDELT async — background fetch, joins after primary signals complete
+### Phase 3 Build Sequence — ALL COMPLETE ✅
+1. ✅ Data layer — all 8 fetchers built (edgar, adzuna, appstore, gdelt, github, google_trends, wappalyzer, wayback)
+2. ✅ Claim extraction — Claude tool-use call, structured output, 20-claim cap
+3. ✅ Evidence mapper — static ClaimType → SignalType map
+4. ✅ Verdict engine — Claude call per claim, per-signal breakdown + synthesis verdict
+5. ✅ Spend tracker — daily ledger, would_exceed check, status() for UI
+6. ✅ Streamlit UI — full app.py with brand CSS, hero, form, claim-by-claim results
+7. ✅ GDELT async — background thread, joins after primary fetchers
+
+### Test Suite — ALL PASSING ✅
+- 103 unit tests (no API calls): `pytest tests/`
+- 4 live smoke tests (~$0.03/run): `pytest -m smoke -s`
+- Smoke test validated 2026-03-24 against Salesforce (CRM):
+  - 16 claims extracted (9 explicit, 7 implicit)
+  - 68.8% signal coverage
+  - Correctly contested the "20% YoY growth" claim vs EDGAR's 9.6% full-year figure
+
+### Remaining Before Launch
+1. **UI styling pass** — `UI updates - 3.22.26/NST_UI_SPEC.md` defines the target design; `nst-start-screen.html` is the reference. Current app.py CSS needs to be reconciled against it.
+2. **Deployment** — push to private GitHub repo → connect to Streamlit Community Cloud. Secrets go in Streamlit Cloud secrets management (same pattern as Project A).
+3. **server.py** — Flask server is a dead detour. Delete it (confirm with Aaron first). The one unique feature it has — spend alert emails — can be added to the Streamlit sidebar or SpendTracker if needed.
+4. **Project A parity check** — both apps launch simultaneously. Confirm Project A is in equivalent shape before deploying either.
 
 ### Signal Schema (defined in BUILD_LOG)
 6 entities: Company, Signal, Claim, Evidence, ClaimVerdict, Analysis

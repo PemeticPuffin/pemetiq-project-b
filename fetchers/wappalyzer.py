@@ -59,5 +59,5 @@ class WappalyzerFetcher(BaseFetcher):
             if proc.returncode != 0 or not proc.stdout.strip():
                 return None
             return json.loads(proc.stdout)
-        except (subprocess.TimeoutExpired, json.JSONDecodeError, FileNotFoundError):
+        except Exception:
             return None

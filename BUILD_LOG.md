@@ -590,3 +590,49 @@ A tool where a user inputs a public company name or pastes an earnings transcrip
 **Format:** Date + title, phase tag, decision, rationale, alternatives considered. Append-only — never edit old entries.
 
 ---
+
+## 2026-03-24 — Phase 3 Complete: Full Pipeline Built, Tested, and Smoke-Validated
+
+**Phase:** 3 — Build (complete)
+
+### What Was Built
+
+Full pipeline implemented and all components validated end-to-end:
+
+- **8 signal fetchers:** edgar, adzuna, appstore, gdelt, github, google_trends, wappalyzer, wayback — all returning Signal schema objects, all handling errors gracefully
+- **Claim extractor:** Claude tool-use call, structured output mapped to Claim schema, 20-claim cap
+- **Evidence mapper:** Static ClaimType → SignalType map (the non-AI layer of domain judgment)
+- **Verdict engine:** One Claude call per claim, returns ClaimVerdictModel + per-signal Evidence breakdown
+- **Orchestrator:** Full pipeline coordination — GDELT async in background thread, spend check pre-run, spend record post-run
+- **SpendTracker:** Daily JSON ledger, would_exceed check, status() dict for UI
+- **Streamlit UI (app.py):** Full implementation — hero, input form, company type toggle, competitor suggest (Haiku), claim-by-claim verdict cards, signal breakdown expanders, raw signals expander
+- **Test suite:** 103 unit tests (mocked, no API calls) + 4 live smoke tests
+
+### Bugs Fixed
+
+- `fetchers/edgar.py`: Hardcoded `cutoff = "2025-03-20"` in 8-K count logic replaced with dynamic `date.today() - timedelta(days=365)`
+- `fetchers/wappalyzer.py`: Overly narrow `except (subprocess.TimeoutExpired, json.JSONDecodeError, FileNotFoundError)` would crash on unexpected subprocess errors; replaced with `except Exception`
+- `.env`: Duplicate `ANTHROPIC_API_KEY` entries cleaned up (two different keys were present)
+- `ANTHROPIC_MODEL`: `claude-sonnet-4-6-20250514` is not a valid API model ID (404); correct ID is `claude-sonnet-4-6` (undated). Dated format only applies to Haiku.
+
+### Smoke Test Results (2026-03-24, Salesforce / CRM)
+
+- CIK resolved: 0001108524
+- EDGAR signals: 6 (annual_revenue: $41.5B, revenue_growth: 9.58%, gross_margin: 77.68%, operating_income: $8.3B, EPS: $7.80, 8-K count: 14)
+- Google Trends signals: 4
+- Claims extracted: 16 (9 explicit, 7 implicit) — cost $0.033
+- Signal coverage: 68.8% (11 strong, 0 partial, 5 no coverage)
+- Sample verdict: "20% YoY growth" claim → **Contested** — EDGAR shows 9.6% full-year growth, contradicting Q4-specific claim. This is the product working as designed.
+- Total run cost: ~$0.067
+
+### Server Architecture Decision
+
+`server.py` (Flask) is a dead detour created when Streamlit styling proved frustrating. `app.py` (Streamlit) is the deployment target, consistent with Project A. `UI updates - 3.22.26/` contains a UI spec and reference HTML to bring the Streamlit styling in line with Project A's visual language. Flask server to be deleted after Aaron confirms.
+
+### Remaining Before Launch
+1. UI styling pass against `UI updates - 3.22.26/NST_UI_SPEC.md`
+2. GitHub repo creation + Streamlit Community Cloud deployment
+3. Delete `server.py` (pending confirmation)
+4. Project A parity check before simultaneous launch
+
+---
