@@ -71,25 +71,25 @@ header[data-testid="stHeader"], #MainMenu, footer,
 [data-testid="stTextInput"] label,
 [data-testid="stTextArea"]  label,
 [data-testid="stRadio"] > label {
-    font-size: 1rem !important;
-    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
     color: #0E3B54 !important;
 }
 
 /* ── Text inputs ── */
 [data-testid="stTextInput"] input {
-    border: 2px solid #E2E6EA !important;
-    border-radius: 8px !important;
-    padding: 0.75rem 1rem !important;
-    font-size: 0.95rem !important;
+    border: 1px solid #D0D7DD !important;
+    border-radius: 6px !important;
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.88rem !important;
     color: #333 !important;
     background: #fff !important;
-    transition: border-color 0.18s, box-shadow 0.18s !important;
+    transition: border-color 0.2s, box-shadow 0.2s !important;
 }
 [data-testid="stTextInput"] input:hover  { border-color: #A8B8C2 !important; }
 [data-testid="stTextInput"] input:focus  {
     border-color: #1A5C6A !important;
-    box-shadow: none !important;
+    box-shadow: 0 0 0 2.5px rgba(26, 92, 106, 0.12) !important;
 }
 [data-testid="stTextInput"] input::placeholder { color: #B0BAC2 !important; }
 
@@ -227,43 +227,43 @@ header[data-testid="stHeader"], #MainMenu, footer,
 }
 
 /* ── Signal source tags container ── */
-.nst-sources-wrap { margin-top: 0.6rem; line-height: 2.2; }
+.nst-sources-wrap { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.4rem; }
 
 /* ── Custom HTML classes ── */
 .nst-helper {
-    font-size: 0.82rem;
-    color: #94A3B8;
+    font-size: 0.72rem;
+    color: #8A939C;
     line-height: 1.45;
     margin-top: 0.35rem;
 }
 .nst-section-label {
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.15em;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #0E3B54;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
 }
 .nst-section-desc {
-    font-size: 0.88rem;
-    color: #64748B;
-    line-height: 1.55;
-    margin-bottom: 0.15rem;
+    font-size: 0.78rem;
+    color: #6B7580;
+    line-height: 1.5;
+    margin-bottom: 0.7rem;
 }
 .nst-divider {
     border: none;
-    border-top: 1px solid #F1F5F9;
-    margin: 0.25rem 0 0.25rem;
+    border-top: 1px solid #E2E6EA;
+    margin: 0.5rem 0 1.5rem;
 }
 .nst-source-tag {
     display: inline-block;
-    background: #F1F5F9;
-    color: #475569;
-    padding: 0.3rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    margin: 0.2rem 0.2rem 0.2rem 0;
+    background: #EAF0F2;
+    color: #4A6A74;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.66rem;
+    font-weight: 500;
+    margin: 0.1rem 0.15rem 0.1rem 0;
 }
 
 /* ── Results ── */
@@ -369,9 +369,8 @@ def render_input_form():
     st.markdown("""
     <div class="nst-section-label">Analysis mode</div>
     <div class="nst-section-desc">
-        <strong style="color:#0E3B54">Company name only</strong> — public signals, no document needed.&nbsp;
-        <strong style="color:#0E3B54">Earnings transcript</strong> — extracts and tests every claim.&nbsp;
-        <strong style="color:#0E3B54">Investor memo</strong> — tests a pitch deck, memo, or analyst note.
+        Choose what to test. <strong>Company name only</strong> infers claims from public signals.
+        Paste a document to test the specific claims made in it.
     </div>
     """, unsafe_allow_html=True)
 
