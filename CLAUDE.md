@@ -1,4 +1,4 @@
-# Pemetiq Project B — Narrative Stress Test
+# Pemetiq Project B — Manseil
 
 ## What This Is
 A tool where a user inputs a company (public or private) or pastes a pitch deck / investor memo / earnings transcript. The tool pulls public signals and systematically tests narrative claims against observable evidence. Output is claim-by-claim: "The company says X. The evidence says Y. Confidence: Z."
@@ -12,7 +12,7 @@ A tool where a user inputs a company (public or private) or pastes a pitch deck 
 Aaron, founder of Pemetiq. 15+ years data science/analytics at director+ level, Gartner vendor intelligence background, domains: asset mgmt, finserv, retail, SaaS. Python/R/SQL native. Directs Claude Code as engineering tool rather than coding manually.
 
 ## Brand
-- Colors: Navy #0E3B54, Teal #1A5C6A, Coral #C9523B
+- Colors: Navy #001731 (Atlantic Navy Blue), Teal #1A5C6A, Coral #E8643B (accent), Run/Alert #b22200 (Coral Jasper)
 - Typeface: DM Sans
 - Mascot: Geometric puffin (navy body, coral beak)
 

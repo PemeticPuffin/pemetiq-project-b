@@ -18,6 +18,7 @@ import asyncio
 import concurrent.futures
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
+from typing import Callable
 
 from fetchers.edgar import fetch_recent_filing_text
 from fetchers.adzuna import AdzunaFetcher
@@ -63,6 +64,7 @@ def run_analysis(
     input_type: InputType,
     competitors: list[str] | None = None,
     spend_tracker: SpendTracker | None = None,
+    progress_callback: Callable[[str, float], None] | None = None,
 ) -> AnalysisResult:
     """
     Run the full narrative stress test pipeline.
@@ -79,6 +81,10 @@ def run_analysis(
     """
     tracker = spend_tracker or SpendTracker()
     errors: list[str] = []
+
+    def _progress(label: str, pct: float) -> None:
+        if progress_callback:
+            progress_callback(label, pct)
 
     # ------------------------------------------------------------------
     # 1. Pre-run spend check (rough estimate: $0.10 per analysis)
@@ -102,6 +108,7 @@ def run_analysis(
     # ------------------------------------------------------------------
     # 2a. Fire GDELT in background thread (14s+ latency — don't block)
     # ------------------------------------------------------------------
+    _progress("Gathering signals from 8 sources…", 0.05)
     gdelt_future: concurrent.futures.Future = concurrent.futures.ThreadPoolExecutor(
         max_workers=1
     ).submit(_run_gdelt_sync, company)
@@ -122,6 +129,7 @@ def run_analysis(
         except Exception as e:
             errors.append(f"{type(fetcher).__name__}: {e}")
 
+    _progress("Waiting for news signals (GDELT)…", 0.35)
     # ------------------------------------------------------------------
     # 2c. Join GDELT (wait up to 35s)
     # ------------------------------------------------------------------
@@ -131,10 +139,11 @@ def run_analysis(
     except (concurrent.futures.TimeoutError, Exception) as e:
         errors.append(f"GdeltFetcher: {e}")
 
+    _progress("Extracting claims from filing…", 0.50)
     # ------------------------------------------------------------------
     # 3. Claim extraction
     # ------------------------------------------------------------------
-    # If no text was pasted, auto-fetch the most recent 8-K from EDGAR.
+    # If no text was pasted, auto-fetch the most recent 10-Q/10-K from EDGAR.
     # This makes "company name only" mode actually useful — it stress-tests
     # the company's most recent earnings filing automatically.
     auto_fetched_source = None
@@ -142,20 +151,31 @@ def run_analysis(
     if not input_text and company.cik:
         result_filing = fetch_recent_filing_text(company.cik)
         if result_filing:
-            input_text, auto_fetched_source, auto_fetched_form = result_filing
-            errors.append(f"Auto-fetched {auto_fetched_form}: {auto_fetched_source}")
+            input_text, auto_fetched_source, auto_fetched_form, auto_fetched_date = result_filing
+            date_label = f" (filed {auto_fetched_date})" if auto_fetched_date else ""
+            errors.append(f"Auto-fetched {auto_fetched_form}{date_label}: {auto_fetched_source}")
 
-    text_for_extraction = input_text or f"{company.name} is a company."
-    try:
-        claims, extraction_cost = extract_claims(
-            text=text_for_extraction,
-            analysis_id=analysis.analysis_id,
-            entity_id=company.entity_id,
-            company_name=company.name,
+    # Private company with no pasted text — no source document to extract from.
+    # Skip extraction rather than feeding a placeholder string to Claude.
+    if not input_text:
+        errors.append(
+            "NO_SOURCE_TEXT: Company name only mode auto-fetches SEC filings, "
+            "which are only available for public companies. "
+            "Paste an earnings transcript, investor memo, or press release to "
+            "extract and stress-test claims for this company."
         )
-    except Exception as e:
-        errors.append(f"ClaimExtractor: {e}")
         claims, extraction_cost = [], 0.0
+    else:
+        try:
+            claims, extraction_cost = extract_claims(
+                text=input_text,
+                analysis_id=analysis.analysis_id,
+                entity_id=company.entity_id,
+                company_name=company.name,
+            )
+        except Exception as e:
+            errors.append(f"ClaimExtractor: {e}")
+            claims, extraction_cost = [], 0.0
 
     total_cost = extraction_cost
 
@@ -165,25 +185,38 @@ def run_analysis(
     evidence_map = map_evidence(claims, signals)
     coverage = coverage_summary(evidence_map)
 
+    _progress("Evaluating claim verdicts…", 0.70)
     # ------------------------------------------------------------------
-    # 5. Verdict engine — one call per claim
+    # 5. Verdict engine — one Claude call per claim, run in parallel
     # ------------------------------------------------------------------
     verdicts: dict[str, ClaimVerdictModel] = {}
     evidences: dict[str, list[Evidence]] = {}
     verdict_cost = 0.0
 
-    for claim in claims:
+    def _evaluate_one(claim: Claim):
         matched_signals = evidence_map.get(claim.claim_id, [])
-        try:
-            verdict, claim_evidences, cost = evaluate_claim(claim, matched_signals)
-            verdicts[claim.claim_id] = verdict
-            evidences[claim.claim_id] = claim_evidences
-            verdict_cost += cost
-        except Exception as e:
-            errors.append(f"VerdictEngine[{claim.claim_id[:8]}]: {e}")
+        return claim.claim_id, evaluate_claim(claim, matched_signals)
+
+    completed = 0
+    total_claims = len(claims)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+        futures = {pool.submit(_evaluate_one, claim): claim for claim in claims}
+        for future in concurrent.futures.as_completed(futures):
+            completed += 1
+            pct = 0.70 + 0.25 * (completed / total_claims) if total_claims else 0.95
+            _progress(f"Evaluating claim verdicts… ({completed}/{total_claims})", pct)
+            try:
+                claim_id, (verdict, claim_evidences, cost) = future.result()
+                verdicts[claim_id] = verdict
+                evidences[claim_id] = claim_evidences
+                verdict_cost += cost
+            except Exception as e:
+                claim = futures[future]
+                errors.append(f"VerdictEngine[{claim.claim_id[:8]}]: {e}")
 
     total_cost += verdict_cost
 
+    _progress("Finalizing results…", 0.95)
     # ------------------------------------------------------------------
     # 6. Finalise Analysis record
     # ------------------------------------------------------------------

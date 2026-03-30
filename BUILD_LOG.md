@@ -636,3 +636,11 @@ Full pipeline implemented and all components validated end-to-end:
 4. Project A parity check before simultaneous launch
 
 ---
+
+## 2026-03-29 — Product Naming: Manseil
+
+**Phase:** Branding
+**Decision:** Project B is now branded "Manseil" (subtitle: "Narrative stress test"). Named after Mansell Peak, Mount Desert Island — subtle letter swap (ll → il), same pronunciation. Part of the Pemetiq mountain-naming convention alongside Cadillaq (Project A).
+**Rationale:** Mountain pet names give tools a memorable, brand-able identity. Descriptive names become subtitles. Users say "run it through Manseil" rather than "use the Narrative Stress Test tool."
+
+---

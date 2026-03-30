@@ -74,8 +74,23 @@ class AppStoreFetcher(BaseFetcher):
         if not isinstance(data, dict):
             return []
         results = data.get("results", [])
-        # Filter to apps that have ratings and match company name reasonably
+        # Meaningful tokens from the company name (skip short words like "the", "of")
+        tokens = [w.lower() for w in company_name.split() if len(w) > 2]
         return [
             r for r in results
-            if r.get("averageUserRating") and r.get("userRatingCount", 0) > 100
+            if r.get("averageUserRating")
+            and r.get("userRatingCount", 0) > 100
+            and self._is_relevant(r, tokens)
         ]
+
+    @staticmethod
+    def _is_relevant(app: dict, tokens: list[str]) -> bool:
+        """Return True if the app plausibly belongs to the queried company."""
+        if not tokens:
+            return True
+        haystack = " ".join([
+            app.get("trackName", ""),
+            app.get("artistName", ""),
+            app.get("bundleId", ""),
+        ]).lower()
+        return any(token in haystack for token in tokens)

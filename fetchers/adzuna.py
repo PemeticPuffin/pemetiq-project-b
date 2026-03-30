@@ -42,7 +42,7 @@ class AdzunaFetcher(BaseFetcher):
             return []
 
         try:
-            results = self._search_jobs(company.name)
+            total_count, results = self._search_jobs(company.name)
         except Exception:
             return []
 
@@ -51,24 +51,24 @@ class AdzunaFetcher(BaseFetcher):
 
         signals: list[Signal] = []
 
-        # Total hiring volume
+        # Total hiring volume — use API's reported total, not len(results)
         signals.append(Signal(
             entity_id=company.entity_id,
             signal_type=SignalType.hiring_volume,
             signal_name="open_jobs_count",
-            value=len(results),
+            value=total_count,
             unit="count",
             period_end=date.today(),
             source=DataSource.adzuna,
             source_url=f"https://www.adzuna.com/search?q={company.name.replace(' ', '+')}",
             reliability_tier=2,
-            raw={"query": company.name, "result_count": len(results)},
+            raw={"query": company.name, "total_count": total_count, "sample_size": len(results)},
         ))
 
-        # Hiring mix
+        # Hiring mix — run across the full paginated sample for reliable percentages
         titles = [r.get("title", "") for r in results]
         ai_ml = sum(1 for t in titles if _AI_ML_KEYWORDS.search(t))
-        eng = sum(1 for t in titles if _ENGINEERING_KEYWORDS.search(t))
+        eng   = sum(1 for t in titles if _ENGINEERING_KEYWORDS.search(t))
         sales = sum(1 for t in titles if _SALES_KEYWORDS.search(t))
         total = len(titles)
 
@@ -77,13 +77,13 @@ class AdzunaFetcher(BaseFetcher):
             signal_type=SignalType.hiring_mix,
             signal_name="hiring_mix_breakdown",
             value={
-                "ai_ml_pct": round(ai_ml / total * 100, 1) if total else 0,
-                "engineering_pct": round(eng / total * 100, 1) if total else 0,
-                "sales_pct": round(sales / total * 100, 1) if total else 0,
-                "ai_ml_count": ai_ml,
+                "ai_ml_pct":        round(ai_ml / total * 100, 1) if total else 0,
+                "engineering_pct":  round(eng   / total * 100, 1) if total else 0,
+                "sales_pct":        round(sales  / total * 100, 1) if total else 0,
+                "ai_ml_count":      ai_ml,
                 "engineering_count": eng,
-                "sales_count": sales,
-                "total": total,
+                "sales_count":      sales,
+                "sample_size":      total,
             },
             unit="pct_breakdown",
             period_end=date.today(),
@@ -94,15 +94,35 @@ class AdzunaFetcher(BaseFetcher):
 
         return signals
 
-    def _search_jobs(self, company_name: str) -> list[dict]:
-        params = {
+    def _search_jobs(self, company_name: str) -> tuple[int, list[dict]]:
+        """
+        Fetch up to 3 pages of results (150 jobs) for a reliable hiring mix sample.
+        Returns (total_count_from_api, sampled_results).
+        total_count is the API's reported total — accurate regardless of pagination.
+        """
+        base_params = {
             "app_id": settings.ADZUNA_APP_ID,
             "app_key": settings.ADZUNA_APP_KEY,
             "results_per_page": 50,
             "what_or": company_name,
             "content-type": "application/json",
         }
-        data = self.get_json(f"{_BASE}/search/1", params=params, timeout=15)
-        if not isinstance(data, dict):
-            return []
-        return data.get("results", [])
+
+        all_results: list[dict] = []
+        total_count = 0
+
+        for page in range(1, 4):  # pages 1, 2, 3
+            data = self.get_json(f"{_BASE}/search/{page}", params=base_params, timeout=15)
+            if not isinstance(data, dict):
+                break
+            if page == 1:
+                total_count = data.get("count", 0)
+            page_results = data.get("results", [])
+            if not page_results:
+                break
+            all_results.extend(page_results)
+            # No point fetching more pages than exist
+            if len(all_results) >= total_count:
+                break
+
+        return total_count, all_results

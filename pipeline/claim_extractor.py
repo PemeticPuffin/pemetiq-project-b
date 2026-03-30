@@ -26,6 +26,45 @@ _PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "claim_extraction.txt"
 _INPUT_COST_PER_M = 3.00
 _OUTPUT_COST_PER_M = 15.00
 
+def _is_testable_claim(claim: Claim) -> bool:
+    """
+    Return False for claims that will produce no analytical value for the audience.
+
+    Kept:
+    - All implicit claims (26-pattern flags are analytically valuable even if not directly testable)
+    - All forward-looking claims (analysts want to know what management said they'd do)
+    - All quantitative and comparative explicit claims
+    - Qualitative claims with at least partial testability
+
+    Dropped:
+    - Explicit, non-forward, testability=no claims → always produce "Not Testable" verdict,
+      waste a Claude call, and dilute results for the analyst audience
+    - Unit economics past quantitative → EDGAR annual signals can't verify sub-period figures
+    """
+    # Always keep implicit claims — they are analytical red flags, not direct assertions
+    if claim.is_implicit:
+        return True
+
+    # Always keep forward guidance — analysts specifically want to track what was promised
+    if claim.temporal_framing == TemporalFraming.forward:
+        return True
+
+    # Drop explicit claims that are explicitly not testable from public signals
+    # These produce "Not Testable" verdicts with no signal evidence — no value to the audience
+    if claim.testability == Testability.no:
+        return False
+
+    # Unit economics past quantitative → sub-period figures EDGAR annual data cannot verify
+    if (
+        claim.claim_type == ClaimType.unit_economics
+        and claim.temporal_framing == TemporalFraming.past
+        and claim.specificity == Specificity.quantitative
+    ):
+        return False
+
+    return True
+
+
 _EXTRACT_TOOL = {
     "name": "extract_claims",
     "description": "Extract all narrative claims from the provided text, including implicit claims.",
@@ -105,7 +144,7 @@ def extract_claims(
 
     response = client.messages.create(
         model=settings.ANTHROPIC_MODEL,
-        max_tokens=8192,
+        max_tokens=16384,
         system=system_prompt,
         tools=[_EXTRACT_TOOL],
         tool_choice={"type": "tool", "name": "extract_claims"},
@@ -159,7 +198,8 @@ def _parse_response(
                     is_implicit=rc.get("is_implicit", False),
                     implicit_pattern_id=rc.get("implicit_pattern_id"),
                 )
-                claims.append(claim)
+                if _is_testable_claim(claim):
+                    claims.append(claim)
             except (KeyError, ValueError):
                 # Skip malformed entries — don't crash the pipeline
                 continue

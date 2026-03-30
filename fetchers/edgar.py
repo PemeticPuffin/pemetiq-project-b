@@ -275,13 +275,14 @@ class EdgarFetcher(BaseFetcher):
         )]
 
 
-def fetch_recent_filing_text(cik: str, max_chars: int = 8_000) -> tuple[str, str, str] | None:
+def fetch_recent_filing_text(cik: str, max_chars: int = 20_000) -> tuple[str, str, str, str] | None:
     """
-    Fetch narrative text from the most recent substantive SEC filing.
+    Fetch narrative MD&A text from the most recent 10-Q or 10-K.
 
-    Priority: 10-Q (MD&A rich) → 10-K → earnings 8-K (Item 2.02 only).
-    Returns (text, source_url, form_type) or None if unavailable.
-    Strips HTML; truncates to max_chars to control token cost.
+    Only returns 10-Q or 10-K — never falls back to 8-K, which is too short
+    and too inconsistent to be a reliable source for claim extraction.
+    Returns (text, source_url, form_type, filing_date) or None if unavailable.
+    Strips HTML; extracts MD&A section; truncates to max_chars.
     """
     import html as _html
     import re as _re
@@ -301,42 +302,23 @@ def fetch_recent_filing_text(cik: str, max_chars: int = 8_000) -> tuple[str, str
         return None
 
     filings = subs.get("filings", {}).get("recent", {})
-    forms = filings.get("form", [])
-    accessions = filings.get("accessionNumber", [])
-    descriptions = filings.get("primaryDocDescription", [""] * len(forms))
+    forms        = filings.get("form", [])
+    accessions   = filings.get("accessionNumber", [])
     primary_docs = filings.get("primaryDocument", [""] * len(forms))
+    filing_dates = filings.get("filingDate", [""] * len(forms))
 
-    # 2. Find best filing in priority order
-    candidates = list(zip(forms, accessions, descriptions, primary_docs))
+    # 2. Find the most recent 10-Q or 10-K — no 8-K fallback.
+    # 8-K filings are too short and inconsistent for claim extraction.
+    candidates = list(zip(forms, accessions, primary_docs, filing_dates))
 
-    def find_form(target: str):
-        for form, acc, desc, primary in candidates:
-            if form == target:
-                return acc, primary
-        return None, None
-
-    def find_earnings_8k():
-        """8-K with Item 2.02 (Results of Operations) — earnings releases only."""
-        for form, acc, desc, primary in candidates:
-            if form == "8-K" and "2.02" in desc:
-                return acc, primary
-        # Fallback: any 8-K with an EX-99.1 (common for earnings)
-        for form, acc, desc, primary in candidates:
-            if form == "8-K":
-                return acc, primary
-        return None, None
-
-    accession, primary_doc, form_type = None, None, None
+    accession, primary_doc, form_type, filing_date = None, None, None, ""
     for target in ["10-Q", "10-K"]:
-        acc, primary = find_form(target)
-        if acc:
-            accession, primary_doc, form_type = acc, primary, target
+        for form, acc, primary, fdate in candidates:
+            if form == target:
+                accession, primary_doc, form_type, filing_date = acc, primary, target, fdate
+                break
+        if accession:
             break
-
-    if not accession:
-        acc, primary = find_earnings_8k()
-        if acc:
-            accession, primary_doc, form_type = acc, primary, "8-K"
 
     if not accession:
         return None
@@ -376,11 +358,12 @@ def fetch_recent_filing_text(cik: str, max_chars: int = 8_000) -> tuple[str, str
         if len(text) > max_chars:
             text = text[:max_chars] + "…"
 
-    if not text or len(text) < 200:
+    # Require at least 1,000 chars — anything less isn't a usable MD&A section
+    if not text or len(text) < 1_000:
         return None
 
     source_url = f"{base_url}/{accession}-index.html"
-    return text, source_url, form_type
+    return text, source_url, form_type, filing_date
 
 
 def _extract_mda_section(text: str, max_chars: int) -> str:
