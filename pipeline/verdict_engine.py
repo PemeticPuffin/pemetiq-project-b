@@ -182,6 +182,11 @@ def _parse_response(
             continue
 
         inp = block.input
+        if isinstance(inp, str):
+            try:
+                inp = json.loads(inp)
+            except (json.JSONDecodeError, TypeError):
+                continue
         try:
             verdict_model = ClaimVerdictModel(
                 claim_id=claim.claim_id,
@@ -200,6 +205,11 @@ def _parse_response(
 
         evidences: list[Evidence] = []
         for sa in inp.get("signal_assessments", []):
+            if isinstance(sa, str):
+                try:
+                    sa = json.loads(sa)
+                except (json.JSONDecodeError, TypeError):
+                    continue
             sig_id = sa.get("signal_id", "")
             if sig_id not in signal_index:
                 continue
