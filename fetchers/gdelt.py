@@ -42,7 +42,7 @@ async def fetch_gdelt(company: Company) -> list[Signal]:
 
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(_BASE, params=params, timeout=aiohttp.ClientTimeout(total=30)) as resp:
+            async with session.get(_BASE, params=params, timeout=aiohttp.ClientTimeout(total=20)) as resp:
                 if resp.status != 200:
                     return []
                 data = await resp.json(content_type=None)

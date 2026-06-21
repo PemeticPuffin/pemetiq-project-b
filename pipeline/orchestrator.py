@@ -46,6 +46,14 @@ _SYNC_FETCHERS = [
     WappalyzerFetcher(),
 ]
 
+# Overall wall-clock bound on the signal-gathering phase. Fetchers run
+# concurrently, so this caps the phase at the slowest fetcher we're willing to
+# wait for — and protects against ones with no internal timeout (pytrends) or a
+# long one. Anything not done by the deadline is dropped; partial signals are
+# fine and the UI discloses which sources returned data. Sized to roughly match
+# the parallel claim-extraction track so neither dominates the critical path.
+_SIGNAL_PHASE_DEADLINE = 25
+
 
 @dataclass
 class AnalysisResult:
@@ -139,14 +147,30 @@ def run_analysis(
             return [], [f"{type(fetcher).__name__}: {e}"]
 
     signals: list[Signal] = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=len(_SYNC_FETCHERS)) as pool:
-        for fetched, errs in pool.map(_run_fetcher, _SYNC_FETCHERS):
+    fetcher_pool = concurrent.futures.ThreadPoolExecutor(max_workers=len(_SYNC_FETCHERS))
+    future_to_name = {
+        fetcher_pool.submit(_run_fetcher, f): type(f).__name__ for f in _SYNC_FETCHERS
+    }
+    try:
+        for future in concurrent.futures.as_completed(
+            future_to_name, timeout=_SIGNAL_PHASE_DEADLINE
+        ):
+            fetched, errs = future.result()
             signals.extend(fetched)
             errors.extend(errs)
+    except concurrent.futures.TimeoutError:
+        for future, name in future_to_name.items():
+            if not future.done():
+                errors.append(
+                    f"{name}: dropped — exceeded {_SIGNAL_PHASE_DEADLINE}s signal deadline"
+                )
+    finally:
+        fetcher_pool.shutdown(wait=False)
 
-    # 2c. Join GDELT (wait up to 35s).
+    # 2c. Join GDELT. Its own 20s aiohttp timeout guarantees the thread
+    # completes; this bounds the join itself against the same phase deadline.
     try:
-        gdelt_signals = gdelt_future.result(timeout=35)
+        gdelt_signals = gdelt_future.result(timeout=_SIGNAL_PHASE_DEADLINE)
         signals.extend(gdelt_signals)
     except (concurrent.futures.TimeoutError, Exception) as e:
         errors.append(f"GdeltFetcher: {e}")

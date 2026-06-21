@@ -54,7 +54,7 @@ class WappalyzerFetcher(BaseFetcher):
                 ["wappalyzer", url, "--pretty"],
                 capture_output=True,
                 text=True,
-                timeout=60,
+                timeout=20,
             )
             if proc.returncode != 0 or not proc.stdout.strip():
                 return None
