@@ -65,6 +65,7 @@ def run_analysis(
     competitors: list[str] | None = None,
     spend_tracker: SpendTracker | None = None,
     progress_callback: Callable[[str, float], None] | None = None,
+    pdf_bytes: bytes | None = None,
 ) -> AnalysisResult:
     """
     Run the full narrative stress test pipeline.
@@ -155,9 +156,9 @@ def run_analysis(
             date_label = f" (filed {auto_fetched_date})" if auto_fetched_date else ""
             errors.append(f"Auto-fetched {auto_fetched_form}{date_label}: {auto_fetched_source}")
 
-    # Private company with no pasted text — no source document to extract from.
+    # Private company with no pasted text and no PDF — no source document to extract from.
     # Skip extraction rather than feeding a placeholder string to Claude.
-    if not input_text:
+    if not input_text and not pdf_bytes:
         errors.append(
             "NO_SOURCE_TEXT: Company name only mode auto-fetches SEC filings, "
             "which are only available for public companies. "
@@ -172,6 +173,7 @@ def run_analysis(
                 analysis_id=analysis.analysis_id,
                 entity_id=company.entity_id,
                 company_name=company.name,
+                pdf_bytes=pdf_bytes,
             )
         except Exception as e:
             errors.append(f"ClaimExtractor: {e}")

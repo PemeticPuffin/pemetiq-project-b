@@ -1,10 +1,11 @@
 """
 Claim extraction pipeline step.
-Sends raw text to Claude with a structured tool call.
+Sends raw text (or a native PDF document) to Claude with a structured tool call.
 Returns list[Claim] and the API cost in USD.
 """
 from __future__ import annotations
 
+import base64
 import json
 from pathlib import Path
 
@@ -122,19 +123,25 @@ _EXTRACT_TOOL = {
 
 
 def extract_claims(
-    text: str,
+    text: str | None,
     analysis_id: str,
     entity_id: str,
     company_name: str,
+    pdf_bytes: bytes | None = None,
 ) -> tuple[list[Claim], float]:
     """
-    Extract claims from raw text using Claude.
+    Extract claims from raw text or a native PDF document using Claude.
+
+    When pdf_bytes is provided it is sent as a native document block so Claude
+    reads the full PDF — including images, charts, and layout — rather than
+    receiving pre-extracted text.  text is ignored when pdf_bytes is set.
 
     Args:
-        text: Raw input (pitch deck, earnings transcript, investor memo)
+        text: Raw input text (pitch deck paste, earnings transcript, investor memo)
         analysis_id: FK for the parent Analysis object
         entity_id: Company entity_id
         company_name: Used in user message for context
+        pdf_bytes: Raw PDF bytes; when provided, sent as a native document block
 
     Returns:
         (claims, cost_usd)
@@ -142,22 +149,40 @@ def extract_claims(
     system_prompt = _PROMPT_PATH.read_text()
     client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
 
+    if pdf_bytes:
+        pdf_b64 = base64.standard_b64encode(pdf_bytes).decode("utf-8")
+        user_content = [
+            {
+                "type": "document",
+                "source": {
+                    "type": "base64",
+                    "media_type": "application/pdf",
+                    "data": pdf_b64,
+                },
+                "title": f"{company_name} — uploaded document",
+            },
+            {
+                "type": "text",
+                "text": (
+                    f"Company: {company_name}\n\n"
+                    "Extract all claims from the document above."
+                ),
+            },
+        ]
+    else:
+        user_content = (
+            f"Company: {company_name}\n\n"
+            f"---\n\n{text}\n\n---\n\n"
+            "Extract all claims from the text above."
+        )
+
     response = client.messages.create(
         model=settings.ANTHROPIC_MODEL,
         max_tokens=16384,
         system=system_prompt,
         tools=[_EXTRACT_TOOL],
         tool_choice={"type": "tool", "name": "extract_claims"},
-        messages=[
-            {
-                "role": "user",
-                "content": (
-                    f"Company: {company_name}\n\n"
-                    f"---\n\n{text}\n\n---\n\n"
-                    "Extract all claims from the text above."
-                ),
-            }
-        ],
+        messages=[{"role": "user", "content": user_content}],
     )
 
     if response.stop_reason == "max_tokens":

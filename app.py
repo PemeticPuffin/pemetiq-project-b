@@ -462,12 +462,13 @@ def render_input_form():
     ) or "Company name only"
 
     input_text = None
+    pdf_bytes = None
     if input_mode != "Company name only":
         placeholders = {
             "Earnings transcript": "Paste the full earnings transcript here...",
             "Investor memo":       "Paste the investor memo or pitch deck text here...",
         }
-        tab_paste, tab_upload = st.tabs(["Paste text", "Upload file (.txt / .pdf)"])
+        tab_paste, tab_upload = st.tabs(["Paste text", "Upload PDF or .txt"])
 
         with tab_paste:
             pasted = st.text_area(
@@ -483,19 +484,12 @@ def render_input_form():
                                         label_visibility="collapsed")
             if uploaded:
                 if uploaded.type == "application/pdf":
-                    try:
-                        import io
-                        import pdfminer.high_level as pdfminer  # type: ignore
-                        input_text = pdfminer.extract_text(io.BytesIO(uploaded.read()))
-                    except ImportError:
-                        st.warning(
-                            "PDF extraction requires pdfminer.six — "
-                            "run: pip install pdfminer.six"
-                        )
+                    pdf_bytes = uploaded.read()
+                    st.caption(f"PDF loaded: {uploaded.name} ({len(pdf_bytes):,} bytes) — Claude will read the full document natively.")
                 else:
                     input_text = uploaded.read().decode("utf-8", errors="replace")
-                if input_text:
-                    st.caption(f"Loaded {len(input_text):,} characters from {uploaded.name}")
+                    if input_text:
+                        st.caption(f"Loaded {len(input_text):,} characters from {uploaded.name}")
 
     st.markdown("<div class='nst-spacer'></div>", unsafe_allow_html=True)
 
@@ -561,7 +555,7 @@ def render_input_form():
 
     st.markdown("<div class='nst-spacer'></div>", unsafe_allow_html=True)
 
-    return company_name, company_domain, company_type, input_mode, input_text, competitors_raw
+    return company_name, company_domain, company_type, input_mode, input_text, pdf_bytes, competitors_raw
 
 
 # ── Results ───────────────────────────────────────────────────────────────────
@@ -747,7 +741,7 @@ def render_footer():
 def main():
     render_hero()
 
-    company_name, company_domain, company_type_str, input_mode, input_text, competitors_raw = (
+    company_name, company_domain, company_type_str, input_mode, input_text, pdf_bytes, competitors_raw = (
         render_input_form()
     )
 
@@ -756,6 +750,7 @@ def main():
         type="primary",
         disabled=not (company_name or "").strip() or st.session_state.running,
         use_container_width=True,
+        key="run_btn",
     )
 
     if run_btn and (company_name or "").strip():
@@ -802,6 +797,7 @@ def main():
                 }[input_mode],
                 competitors=competitors,
                 progress_callback=_update_progress,
+                pdf_bytes=pdf_bytes or None,
             )
             st.session_state.result = result
 
