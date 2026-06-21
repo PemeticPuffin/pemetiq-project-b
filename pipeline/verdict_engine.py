@@ -26,6 +26,7 @@ from schema.enums import (
 from schema.models import Claim, ClaimVerdictModel, Evidence, Signal
 
 _PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "verdict.txt"
+_SYSTEM_PROMPT = _PROMPT_PATH.read_text()
 
 _INPUT_COST_PER_M = 3.00
 _OUTPUT_COST_PER_M = 15.00
@@ -112,14 +113,13 @@ def evaluate_claim(
         )
         return verdict_model, [], 0.0
 
-    system_prompt = _PROMPT_PATH.read_text()
     user_message = _format_user_message(claim, signals)
 
     client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
     response = client.messages.create(
         model=settings.ANTHROPIC_MODEL,
         max_tokens=1024,
-        system=system_prompt,
+        system=[{"type": "text", "text": _SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}],
         tools=[_VERDICT_TOOL],
         tool_choice={"type": "tool", "name": "render_verdict"},
         messages=[{"role": "user", "content": user_message}],
@@ -236,6 +236,13 @@ def _parse_response(
 
 
 def _estimate_cost(usage: anthropic.types.Usage) -> float:
-    input_cost = (usage.input_tokens / 1_000_000) * _INPUT_COST_PER_M
+    cache_read = getattr(usage, "cache_read_input_tokens", 0) or 0
+    cache_write = getattr(usage, "cache_creation_input_tokens", 0) or 0
+    uncached = usage.input_tokens - cache_read - cache_write
+    input_cost = (
+        (uncached / 1_000_000) * _INPUT_COST_PER_M
+        + (cache_write / 1_000_000) * _INPUT_COST_PER_M * 1.25
+        + (cache_read / 1_000_000) * _INPUT_COST_PER_M * 0.10
+    )
     output_cost = (usage.output_tokens / 1_000_000) * _OUTPUT_COST_PER_M
     return round(input_cost + output_cost, 6)

@@ -117,18 +117,22 @@ def run_analysis(
     # ------------------------------------------------------------------
     # 2b. Run synchronous fetchers
     # ------------------------------------------------------------------
-    signals: list[Signal] = []
-    for fetcher in _SYNC_FETCHERS:
+    def _run_fetcher(fetcher) -> tuple[list[Signal], list[str]]:
         try:
-            fetcher_name = type(fetcher).__name__
             fetched = (
-                fetcher.fetch(company, competitors)  # GoogleTrendsFetcher accepts competitors
+                fetcher.fetch(company, competitors)
                 if isinstance(fetcher, GoogleTrendsFetcher)
                 else fetcher.fetch(company)
             )
-            signals.extend(fetched)
+            return fetched, []
         except Exception as e:
-            errors.append(f"{type(fetcher).__name__}: {e}")
+            return [], [f"{type(fetcher).__name__}: {e}"]
+
+    signals: list[Signal] = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=len(_SYNC_FETCHERS)) as pool:
+        for fetched, errs in pool.map(_run_fetcher, _SYNC_FETCHERS):
+            signals.extend(fetched)
+            errors.extend(errs)
 
     _progress("Waiting for news signals (GDELT)…", 0.35)
     # ------------------------------------------------------------------
