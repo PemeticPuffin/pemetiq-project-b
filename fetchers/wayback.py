@@ -7,6 +7,7 @@ URL discovery: tries multiple candidate paths and uses whichever has snapshot hi
 """
 from __future__ import annotations
 
+import time
 from datetime import date
 
 from fetchers.base import BaseFetcher
@@ -14,6 +15,15 @@ from schema.enums import DataSource, SignalType
 from schema.models import Company, Signal
 
 _CDX_URL = "http://web.archive.org/cdx/search/cdx"
+
+# Per-request timeout and an overall wall-clock budget across all candidate
+# paths. The fetcher tries up to 6 paths sequentially, so without a budget its
+# worst case is 6 × timeout — far beyond the orchestrator's signal-phase
+# deadline, which is what got it force-dropped. The budget keeps total runtime
+# well under that deadline so a slow Wayback fails cleanly (shows as "no data")
+# rather than being dropped mid-flight with a warning.
+_REQUEST_TIMEOUT = 6
+_TOTAL_BUDGET = 12
 
 # Candidate pricing paths — tried in order, first with results wins
 _PRICING_PATHS = [
@@ -39,8 +49,13 @@ class WaybackFetcher(BaseFetcher):
 
     def _fetch_pricing_history(self, company: Company) -> Signal | None:
         domain = company.domain
+        deadline = time.monotonic() + _TOTAL_BUDGET
 
         for path in _PRICING_PATHS:
+            # Stop trying paths once the budget is spent — fail clean rather than
+            # let the loop run past the orchestrator's signal-phase deadline.
+            if time.monotonic() >= deadline:
+                break
             url = f"https://{domain}{path}"
             result = self._query_cdx(url)
             if result:
@@ -70,7 +85,7 @@ class WaybackFetcher(BaseFetcher):
             "limit": "100",
         }
         try:
-            data = self.get_json(_CDX_URL, params=params, timeout=20)
+            data = self.get_json(_CDX_URL, params=params, timeout=_REQUEST_TIMEOUT)
         except Exception:
             return None
 

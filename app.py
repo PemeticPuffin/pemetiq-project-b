@@ -589,8 +589,14 @@ def render_results(result: AnalysisResult):
 
     info_msgs    = [e for e in result.errors if e.startswith("Auto-fetched")]
     no_src_msgs  = [e for e in result.errors if e.startswith("NO_SOURCE_TEXT:")]
+    # "dropped — exceeded … signal deadline" is an expected, already-disclosed
+    # condition (the source-coverage line above lists the fetcher under "No data
+    # returned from"). It's not an error, so keep it out of the warning box —
+    # that box is for genuine fetcher failures (HTTP errors, exceptions).
     warn_msgs    = [e for e in result.errors
-                    if not e.startswith("Auto-fetched") and not e.startswith("NO_SOURCE_TEXT:")]
+                    if not e.startswith("Auto-fetched")
+                    and not e.startswith("NO_SOURCE_TEXT:")
+                    and "signal deadline" not in e]
 
     for msg in info_msgs:
         parts = msg.split(": ", 1)

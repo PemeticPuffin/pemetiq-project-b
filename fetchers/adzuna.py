@@ -111,8 +111,12 @@ class AdzunaFetcher(BaseFetcher):
         all_results: list[dict] = []
         total_count = 0
 
+        # 8s per page (was 15s) so the 3-page worst case stays under the
+        # orchestrator's 25s signal-phase deadline. Adzuna normally responds in
+        # 1-3s/page and breaks early once it has all results, so this only bites
+        # on a genuinely slow run — where failing fast beats getting dropped.
         for page in range(1, 4):  # pages 1, 2, 3
-            data = self.get_json(f"{_BASE}/search/{page}", params=base_params, timeout=15)
+            data = self.get_json(f"{_BASE}/search/{page}", params=base_params, timeout=8)
             if not isinstance(data, dict):
                 break
             if page == 1:
