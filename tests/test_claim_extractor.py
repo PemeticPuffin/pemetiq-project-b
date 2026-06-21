@@ -122,8 +122,10 @@ def test_parse_response_no_tool_use_block():
     assert claims == []
 
 
-def test_parse_response_implicit_claim_filtered():
-    """Implicit claims are filtered out — they reliably produce insufficient evidence."""
+def test_parse_response_implicit_claim_kept():
+    """Implicit claims are KEPT — the 40-pattern implicit flags are the most
+    analytically valuable output (see _is_testable_claim), even when not
+    directly testable. They must survive parsing, not be filtered out."""
     response = _make_tool_use_block([{
         "assertion": "Implied: the market is growing rapidly",
         "claim_type": "market_position",
@@ -135,7 +137,9 @@ def test_parse_response_implicit_claim_filtered():
         "implicit_pattern_id": 7,
     }])
     claims = _parse_response(response, "analysis-1", "salesforce")
-    assert len(claims) == 0
+    assert len(claims) == 1
+    assert claims[0].is_implicit
+    assert claims[0].implicit_pattern_id == 7
 
 
 def test_parse_response_caps_at_20_claims():

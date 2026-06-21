@@ -275,7 +275,7 @@ class EdgarFetcher(BaseFetcher):
         )]
 
 
-def fetch_recent_filing_text(cik: str, max_chars: int = 20_000) -> tuple[str, str, str, str] | None:
+def fetch_recent_filing_text(cik: str, max_chars: int = 50_000) -> tuple[str, str, str, str] | None:
     """
     Fetch narrative MD&A text from the most recent 10-Q or 10-K.
 
@@ -283,6 +283,13 @@ def fetch_recent_filing_text(cik: str, max_chars: int = 20_000) -> tuple[str, st
     and too inconsistent to be a reliable source for claim extraction.
     Returns (text, source_url, form_type, filing_date) or None if unavailable.
     Strips HTML; extracts MD&A section; truncates to max_chars.
+
+    max_chars is 50K (~12.5K tokens) so the window spans the MD&A overview AND
+    the Results of Operations subsection where the quantitative claims and
+    implicit-pattern signals live — a 20K window stops at the overview and
+    starves claim extraction (the cause of the "only 4 claims" problem).
+    Input processing is fast and this call runs concurrently with signal
+    fetching, so the larger window costs no meaningful wall-clock time.
     """
     import html as _html
     import re as _re

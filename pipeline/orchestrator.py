@@ -107,16 +107,26 @@ def run_analysis(
     )
 
     # ------------------------------------------------------------------
-    # 2a. Fire GDELT in background thread (14s+ latency — don't block)
+    # 2. Parallel phase — signal fetching AND claim extraction run at once.
+    #
+    # Claim extraction (including any EDGAR filing auto-fetch) is independent
+    # of the signal fetchers: extraction turns source text into claims, while
+    # the fetchers gather signals. Evidence mapping below is the join point
+    # that needs both. Overlapping them hides the ~15-20s extraction latency
+    # entirely under the signal-fetch window instead of paying it serially.
     # ------------------------------------------------------------------
-    _progress("Gathering signals from 8 sources…", 0.05)
-    gdelt_future: concurrent.futures.Future = concurrent.futures.ThreadPoolExecutor(
-        max_workers=1
-    ).submit(_run_gdelt_sync, company)
+    _progress("Gathering signals and extracting claims…", 0.05)
 
-    # ------------------------------------------------------------------
-    # 2b. Run synchronous fetchers
-    # ------------------------------------------------------------------
+    # 2a. Fire GDELT (14s+ latency) and claim extraction in their own threads.
+    gdelt_pool = concurrent.futures.ThreadPoolExecutor(max_workers=1)
+    gdelt_future = gdelt_pool.submit(_run_gdelt_sync, company)
+
+    claim_pool = concurrent.futures.ThreadPoolExecutor(max_workers=1)
+    claim_future = claim_pool.submit(
+        _extract_claims_phase, company, input_text, pdf_bytes, analysis.analysis_id
+    )
+
+    # 2b. Run synchronous fetchers concurrently on this thread's pool.
     def _run_fetcher(fetcher) -> tuple[list[Signal], list[str]]:
         try:
             fetched = (
@@ -134,54 +144,25 @@ def run_analysis(
             signals.extend(fetched)
             errors.extend(errs)
 
-    _progress("Waiting for news signals (GDELT)…", 0.35)
-    # ------------------------------------------------------------------
-    # 2c. Join GDELT (wait up to 35s)
-    # ------------------------------------------------------------------
+    # 2c. Join GDELT (wait up to 35s).
     try:
         gdelt_signals = gdelt_future.result(timeout=35)
         signals.extend(gdelt_signals)
     except (concurrent.futures.TimeoutError, Exception) as e:
         errors.append(f"GdeltFetcher: {e}")
+    finally:
+        gdelt_pool.shutdown(wait=False)
 
-    _progress("Extracting claims from filing…", 0.50)
-    # ------------------------------------------------------------------
-    # 3. Claim extraction
-    # ------------------------------------------------------------------
-    # If no text was pasted, auto-fetch the most recent 10-Q/10-K from EDGAR.
-    # This makes "company name only" mode actually useful — it stress-tests
-    # the company's most recent earnings filing automatically.
-    auto_fetched_source = None
-    auto_fetched_form = None
-    if not input_text and company.cik:
-        result_filing = fetch_recent_filing_text(company.cik)
-        if result_filing:
-            input_text, auto_fetched_source, auto_fetched_form, auto_fetched_date = result_filing
-            date_label = f" (filed {auto_fetched_date})" if auto_fetched_date else ""
-            errors.append(f"Auto-fetched {auto_fetched_form}{date_label}: {auto_fetched_source}")
-
-    # Private company with no pasted text and no PDF — no source document to extract from.
-    # Skip extraction rather than feeding a placeholder string to Claude.
-    if not input_text and not pdf_bytes:
-        errors.append(
-            "NO_SOURCE_TEXT: Company name only mode auto-fetches SEC filings, "
-            "which are only available for public companies. "
-            "Paste an earnings transcript, investor memo, or press release to "
-            "extract and stress-test claims for this company."
-        )
+    # 2d. Join claim extraction (already running — usually done by now).
+    _progress("Mapping evidence to claims…", 0.55)
+    try:
+        claims, extraction_cost, claim_errors = claim_future.result()
+        errors.extend(claim_errors)
+    except Exception as e:
+        errors.append(f"ClaimExtractor: {e}")
         claims, extraction_cost = [], 0.0
-    else:
-        try:
-            claims, extraction_cost = extract_claims(
-                text=input_text,
-                analysis_id=analysis.analysis_id,
-                entity_id=company.entity_id,
-                company_name=company.name,
-                pdf_bytes=pdf_bytes,
-            )
-        except Exception as e:
-            errors.append(f"ClaimExtractor: {e}")
-            claims, extraction_cost = [], 0.0
+    finally:
+        claim_pool.shutdown(wait=False)
 
     total_cost = extraction_cost
 
@@ -205,7 +186,11 @@ def run_analysis(
 
     completed = 0
     total_claims = len(claims)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+    # One Claude call per claim, all fired concurrently. The claim cap is 20,
+    # so a 20-wide pool evaluates every claim in a single round (~7s) rather
+    # than batching — this keeps the verdict phase flat as claim count grows.
+    verdict_workers = max(1, min(total_claims, 20))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=verdict_workers) as pool:
         futures = {pool.submit(_evaluate_one, claim): claim for claim in claims}
         for future in concurrent.futures.as_completed(futures):
             completed += 1
@@ -258,3 +243,53 @@ def run_analysis(
 def _run_gdelt_sync(company: Company) -> list[Signal]:
     """Run the async GDELT fetcher in a sync context (for ThreadPoolExecutor)."""
     return asyncio.run(fetch_gdelt(company))
+
+
+def _extract_claims_phase(
+    company: Company,
+    input_text: str | None,
+    pdf_bytes: bytes | None,
+    analysis_id: str,
+) -> tuple[list[Claim], float, list[str]]:
+    """Resolve source text and extract claims. Runs concurrently with fetchers.
+
+    For company-name-only mode this first auto-fetches the most recent 10-Q/10-K
+    from EDGAR, then extracts claims from it — so the entire fetch-then-extract
+    sub-chain overlaps the signal-fetch window rather than running after it.
+
+    Returns (claims, extraction_cost, errors). Never raises — failures are
+    captured in the returned errors list so a bad extraction can't abort the run.
+    """
+    errors: list[str] = []
+
+    # No pasted text → auto-fetch the latest filing (public companies only).
+    if not input_text and company.cik:
+        result_filing = fetch_recent_filing_text(company.cik)
+        if result_filing:
+            input_text, source_url, form_type, filing_date = result_filing
+            date_label = f" (filed {filing_date})" if filing_date else ""
+            errors.append(f"Auto-fetched {form_type}{date_label}: {source_url}")
+
+    # Private company with no pasted text and no PDF — nothing to extract from.
+    if not input_text and not pdf_bytes:
+        errors.append(
+            "NO_SOURCE_TEXT: Company name only mode auto-fetches SEC filings, "
+            "which are only available for public companies. "
+            "Paste an earnings transcript, investor memo, or press release to "
+            "extract and stress-test claims for this company."
+        )
+        return [], 0.0, errors
+
+    try:
+        claims, extraction_cost = extract_claims(
+            text=input_text,
+            analysis_id=analysis_id,
+            entity_id=company.entity_id,
+            company_name=company.name,
+            pdf_bytes=pdf_bytes,
+        )
+    except Exception as e:
+        errors.append(f"ClaimExtractor: {e}")
+        return [], 0.0, errors
+
+    return claims, extraction_cost, errors
