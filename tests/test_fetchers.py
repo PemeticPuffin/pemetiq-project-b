@@ -78,7 +78,9 @@ class TestAdzunaFetcher:
         })
         signals = fetcher.fetch(salesforce)
         mix_signal = next(s for s in signals if s.signal_type == SignalType.hiring_mix)
-        assert mix_signal.value["total"] == 4
+        # sample_size is the number of titles the breakdown was computed over —
+        # distinct from hiring_volume's true open-jobs total from the API.
+        assert mix_signal.value["sample_size"] == 4
         assert mix_signal.value["ai_ml_count"] == 1
         assert mix_signal.value["engineering_count"] == 1
         assert mix_signal.value["sales_count"] == 1
