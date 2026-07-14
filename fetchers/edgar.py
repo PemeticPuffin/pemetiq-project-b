@@ -7,6 +7,7 @@ EDGAR fetcher — three signal types:
 from __future__ import annotations
 
 import re
+from dataclasses import dataclass
 from datetime import date, datetime
 
 from fetchers.base import BaseFetcher
@@ -371,6 +372,142 @@ def fetch_recent_filing_text(cik: str, max_chars: int = 50_000) -> tuple[str, st
 
     source_url = f"{base_url}/{accession}-index.html"
     return text, source_url, form_type, filing_date
+
+
+@dataclass
+class FilingDoc:
+    """One filing's extracted MD&A text plus identifying metadata."""
+    text: str
+    source_url: str
+    form_type: str
+    filing_date: str
+    report_date: str
+
+
+def fetch_comparison_filing_text(
+    cik: str, max_chars: int = 50_000
+) -> tuple[FilingDoc, FilingDoc | None, str] | None:
+    """Fetch the latest 10-Q/10-K MD&A and its year-ago comparable, for claim drift.
+
+    Selects the current filing the same way fetch_recent_filing_text does (most
+    recent 10-Q, else 10-K), then the comparable of the same form whose
+    period-of-report is closest to one year earlier (±45 days), falling back to
+    the immediately-prior same-form filing.
+
+    Returns (current, prior_or_None, basis_label) or None when no current filing
+    is available. basis_label is "" when there is no comparable.
+    """
+    import html as _html
+    import re as _re
+    from datetime import date as _date
+
+    import requests as _req
+
+    cik_padded = cik.zfill(10)
+    cik_int = str(int(cik))
+    headers = {"User-Agent": "Pemetiq/ProjectB contact@pemetiq.com"}
+
+    try:
+        subs = _req.get(
+            f"{_BASE}/submissions/CIK{cik_padded}.json", headers=headers, timeout=15
+        ).json()
+    except Exception:
+        return None
+
+    filings = subs.get("filings", {}).get("recent", {})
+    forms = filings.get("form", [])
+    accessions = filings.get("accessionNumber", [])
+    primary_docs = filings.get("primaryDocument", [""] * len(forms))
+    filing_dates = filings.get("filingDate", [""] * len(forms))
+    report_dates = filings.get("reportDate", [""] * len(forms))
+
+    rows = list(zip(forms, accessions, primary_docs, filing_dates, report_dates))
+
+    # Current: most recent 10-Q, else 10-K (matches fetch_recent_filing_text).
+    current_row = None
+    for target in ("10-Q", "10-K"):
+        for row in rows:
+            if row[0] == target:
+                current_row = row
+                break
+        if current_row:
+            break
+    if not current_row:
+        return None
+
+    cur_form, cur_report = current_row[0], current_row[4]
+    same_form = [r for r in rows if r[0] == cur_form and r is not current_row and r[4]]
+
+    # Comparable: same form, report date closest to one year earlier (±45 days).
+    comparable_row, basis = None, ""
+    if cur_report:
+        try:
+            cur_date = _date.fromisoformat(cur_report)
+            target_date = cur_date.replace(year=cur_date.year - 1)
+        except ValueError:
+            target_date = None
+        if target_date is not None:
+            best, best_gap = None, None
+            for r in same_form:
+                try:
+                    gap = abs((_date.fromisoformat(r[4]) - target_date).days)
+                except ValueError:
+                    continue
+                if gap <= 45 and (best_gap is None or gap < best_gap):
+                    best, best_gap = r, gap
+            if best is not None:
+                comparable_row = best
+                basis = "year-ago quarter" if cur_form == "10-Q" else "prior-year filing"
+    if comparable_row is None and same_form:
+        comparable_row, basis = same_form[0], "prior filing"
+
+    def _fetch_doc(row) -> FilingDoc | None:
+        form, acc, primary, fdate, rdate = row
+        acc_nodash = acc.replace("-", "")
+        base_url = f"https://www.sec.gov/Archives/edgar/data/{cik_int}/{acc_nodash}"
+        try:
+            dir_items = (
+                _req.get(f"{base_url}/index.json", headers=headers, timeout=15)
+                .json()
+                .get("directory", {})
+                .get("item", [])
+            )
+            filenames = [it["name"] for it in dir_items]
+        except Exception:
+            filenames = []
+        doc = _pick_document(form, primary, filenames)
+        if not doc:
+            return None
+        try:
+            resp = _req.get(f"{base_url}/{doc}", headers=headers, timeout=25)
+            resp.raise_for_status()
+            raw = resp.text
+        except Exception:
+            return None
+        text = _re.sub(r"<[^>]+>", " ", raw)
+        text = _html.unescape(text)
+        text = _re.sub(r"\s+", " ", text).strip()
+        if form in ("10-Q", "10-K"):
+            text = _extract_mda_section(text, max_chars)
+        elif len(text) > max_chars:
+            text = text[:max_chars] + "…"
+        if not text or len(text) < 1_000:
+            return None
+        return FilingDoc(
+            text=text,
+            source_url=f"{base_url}/{acc}-index.html",
+            form_type=form,
+            filing_date=fdate,
+            report_date=rdate,
+        )
+
+    current = _fetch_doc(current_row)
+    if current is None:
+        return None
+    prior = _fetch_doc(comparable_row) if comparable_row else None
+    if prior is None:
+        basis = ""
+    return current, prior, basis
 
 
 def _extract_mda_section(text: str, max_chars: int) -> str:

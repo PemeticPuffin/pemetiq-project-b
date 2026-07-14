@@ -559,6 +559,81 @@ def render_input_form():
 
 
 # ── Results ───────────────────────────────────────────────────────────────────
+_DRIFT_KIND_STYLE = {
+    "walked_back": ("Walked back", "#B4650A", "#FDF0DD"),
+    "dropped":     ("Dropped",     "#55606B", "#EEF0F3"),
+    "escalated":   ("Escalated",   "#16534A", "#DFF0EC"),
+    "reversed":    ("Reversed",    "#B3261E", "#FCEBEA"),
+    "new":         ("New",         "#1C5A86", "#E6F1FB"),
+}
+
+
+def _render_claim_drift(drift) -> None:
+    """Render the Narrative Drift section — how the company's own claims shifted."""
+    if drift is None or not getattr(drift, "available", False) or not drift.items:
+        return
+
+    import html as _h
+    esc = _h.escape
+
+    basis = f"{drift.current_form} · {esc(drift.current_period)} vs {esc(drift.prior_period)}"
+    if drift.comparison_basis:
+        basis += f" · {esc(drift.comparison_basis)}"
+
+    out = (
+        '<div style="margin-top:1.5rem;">'
+        '<div style="display:flex;align-items:center;justify-content:space-between;'
+        'gap:12px;flex-wrap:wrap;margin-bottom:0.4rem;">'
+        '<span style="font-size:1.1rem;font-weight:700;color:#001731;">Narrative Drift</span>'
+        f'<span style="font-size:0.78rem;font-weight:500;color:#6B7580;background:#F0F4F8;'
+        f'border-radius:999px;padding:0.28rem 0.75rem;">{basis}</span>'
+        '</div>'
+        '<div style="font-size:0.82rem;color:#6B7580;margin-bottom:0.9rem;">'
+        'How management\'s own stated claims shifted between the two filings — a read on narrative credibility.</div>'
+    )
+    if drift.headline:
+        out += (
+            '<div style="font-size:1.0rem;font-weight:500;line-height:1.55;color:#1A2C3E;'
+            f'margin:0 0 1rem;">{esc(drift.headline)}</div>'
+        )
+
+    for it in drift.items:
+        label_disp, color, bg = _DRIFT_KIND_STYLE.get(
+            it.kind, (it.kind.title(), "#55606B", "#EEF0F3")
+        )
+        then_now = ""
+        if it.then or it.now:
+            then_now = (
+                '<div style="font-size:0.85rem;color:#46525E;margin-top:0.45rem;line-height:1.5;">'
+                f'<span style="color:#6B7580;">Then:</span> {esc(it.then)} &nbsp;'
+                f'<span style="color:#001731;font-weight:600;">→ Now:</span> {esc(it.now)}</div>'
+            )
+        sig = (
+            f'<div style="font-size:0.83rem;color:#6B7580;margin-top:0.4rem;">{esc(it.significance)}</div>'
+            if it.significance else ""
+        )
+        quote = (
+            '<div style="font-size:0.82rem;font-style:italic;color:#6B7580;border-left:2px solid '
+            f'#D5DCE3;padding:0.1rem 0 0.1rem 0.7rem;margin-top:0.5rem;">“{esc(it.quote)}”</div>'
+            if it.quote else ""
+        )
+        out += (
+            '<div style="background:#fff;border:1px solid #E6EAEF;border-radius:12px;'
+            'padding:0.85rem 1rem;margin-bottom:0.65rem;">'
+            '<div style="display:flex;align-items:center;gap:0.55rem;flex-wrap:wrap;">'
+            f'<span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:0.03em;padding:0.18rem 0.55rem;border-radius:6px;'
+            f'background:{bg};color:{color};">{label_disp}</span>'
+            f'<span style="font-size:0.92rem;font-weight:600;color:#001731;">{esc(it.label)}</span>'
+            '</div>'
+            f'{then_now}{sig}{quote}'
+            '</div>'
+        )
+
+    out += '</div>'
+    st.markdown(out, unsafe_allow_html=True)
+
+
 def render_results(result: AnalysisResult):
     analysis  = result.analysis
     claims    = result.claims
@@ -614,6 +689,8 @@ def render_results(result: AnalysisResult):
         with st.expander(f"⚠️ {len(warn_msgs)} fetcher warning(s)", expanded=False):
             for err in warn_msgs:
                 st.markdown(f"<div class='error-box'>{err}</div>", unsafe_allow_html=True)
+
+    _render_claim_drift(result.claim_drift)
 
     if not claims:
         st.info("No claims were extracted. Try pasting more detailed text.")

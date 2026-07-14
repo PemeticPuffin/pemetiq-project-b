@@ -20,7 +20,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Callable
 
-from fetchers.edgar import fetch_recent_filing_text
+from fetchers.edgar import fetch_comparison_filing_text, fetch_recent_filing_text
 from fetchers.adzuna import AdzunaFetcher
 from fetchers.appstore import AppStoreFetcher
 from fetchers.edgar import EdgarFetcher
@@ -29,6 +29,7 @@ from fetchers.github import GitHubFetcher
 from fetchers.google_trends import GoogleTrendsFetcher
 from fetchers.wappalyzer import WappalyzerFetcher
 from fetchers.wayback import WaybackFetcher
+from pipeline.claim_drift import ClaimDriftResult, detect_claim_drift, period_end_label
 from pipeline.claim_extractor import extract_claims
 from pipeline.evidence_mapper import CLAIM_SIGNAL_MAP, coverage_summary, map_evidence
 from pipeline.verdict_engine import evaluate_claim
@@ -64,6 +65,7 @@ class AnalysisResult:
     signals: list[Signal]
     coverage: dict
     errors: list[str] = field(default_factory=list)
+    claim_drift: ClaimDriftResult | None = None
 
 
 def run_analysis(
@@ -132,6 +134,15 @@ def run_analysis(
     claim_pool = concurrent.futures.ThreadPoolExecutor(max_workers=1)
     claim_future = claim_pool.submit(
         _extract_claims_phase, company, input_text, pdf_bytes, analysis.analysis_id
+    )
+
+    # Claim drift (company-name mode, public companies): fetch the year-ago
+    # comparable filing and diff the narratives. Best-effort, runs concurrently.
+    drift_pool = concurrent.futures.ThreadPoolExecutor(max_workers=1)
+    drift_future = (
+        drift_pool.submit(_claim_drift_phase, company)
+        if (not input_text and not pdf_bytes and company.cik)
+        else None
     )
 
     # 2b. Run synchronous fetchers concurrently on this thread's pool.
@@ -231,6 +242,22 @@ def run_analysis(
 
     total_cost += verdict_cost
 
+    # Join claim drift (has been running concurrently since the start).
+    claim_drift: ClaimDriftResult | None = None
+    if drift_future is not None:
+        try:
+            claim_drift = drift_future.result(timeout=40)
+            if claim_drift is not None:
+                total_cost += claim_drift.cost_usd
+                if claim_drift.error:
+                    errors.append(f"ClaimDrift: {claim_drift.error}")
+        except Exception as e:
+            errors.append(f"ClaimDrift: {e}")
+        finally:
+            drift_pool.shutdown(wait=False)
+    else:
+        drift_pool.shutdown(wait=False)
+
     _progress("Finalizing results…", 0.95)
     # ------------------------------------------------------------------
     # 6. Finalise Analysis record
@@ -261,12 +288,43 @@ def run_analysis(
         signals=signals,
         coverage=coverage,
         errors=errors,
+        claim_drift=claim_drift,
     )
 
 
 def _run_gdelt_sync(company: Company) -> list[Signal]:
     """Run the async GDELT fetcher in a sync context (for ThreadPoolExecutor)."""
     return asyncio.run(fetch_gdelt(company))
+
+
+def _claim_drift_phase(company: Company) -> ClaimDriftResult | None:
+    """Fetch the latest filing + its year-ago comparable and detect claim drift.
+
+    Company-name mode for public companies only. Runs concurrently with the rest
+    of the pipeline and never raises — returns None when unavailable so it can't
+    affect the core analysis.
+    """
+    if not company.cik:
+        return None
+    try:
+        result = fetch_comparison_filing_text(company.cik)
+    except Exception:
+        return None
+    if not result:
+        return None
+    current, prior, basis = result
+    if prior is None:
+        return None  # no comparable filing to diff against
+
+    return detect_claim_drift(
+        current_text=current.text,
+        prior_text=prior.text,
+        company_name=company.name,
+        basis=basis,
+        current_form=current.form_type,
+        current_label=period_end_label(current.report_date, current.filing_date),
+        prior_label=period_end_label(prior.report_date, prior.filing_date),
+    )
 
 
 def _extract_claims_phase(
