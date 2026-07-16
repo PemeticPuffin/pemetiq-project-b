@@ -1,0 +1,1348 @@
+{
+ "generated_on": "2026-07-15",
+ "analysis": {
+  "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+  "entity_id": "salesforce",
+  "input_type": "company_name",
+  "input_text": null,
+  "run_at": "2026-07-16T01:02:09.152277Z",
+  "cost_usd": 0.341046,
+  "status": "complete",
+  "claim_count": 16,
+  "tested_count": 13
+ },
+ "claims": [
+  {
+   "claim_id": "a5d80b4b-bb84-48d0-ba93-627febe87d53",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Salesforce total revenue for Q1 fiscal 2027 (three months ended April 30, 2026) was $11.1 billion, representing 13% year-over-year growth.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "ce053daa-5ca0-410e-966b-6dd3742a9b8a",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Subscription and support revenue grew 14% year-over-year to $10.593 billion in Q1 fiscal 2027.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "1a1356e3-47a5-4c41-944c-c632ccf83140",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Total remaining performance obligation as of April 30, 2026 was approximately $67.9 billion, an 11% increase year-over-year; current RPO was $33.6 billion, up 14% year-over-year.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "present",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "bb8c8355-c1e3-412c-bd5c-9cbae93d6b73",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Informatica contributed approximately $444 million of total revenues in Q1 fiscal 2027.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "partial",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "84208821-48d1-47eb-a90f-2c2b74fe3357",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Data 360, Headless Platform, and Other subscription revenue grew 25% year-over-year to $3.683 billion in Q1 fiscal 2027, while Agentforce Apps grew only 9% to $6.910 billion.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "6ac58739-30da-418b-bab1-46343d765319",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Europe revenue grew 18% year-over-year to $2.754 billion in Q1 fiscal 2027, outpacing Americas (12%) and Asia Pacific (12%).",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "982fc2f5-a6d9-4872-82ee-f7912dd45074",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Salesforce's customer attrition rate as of April 30, 2026 was approximately 8%, excluding Slack self-service, Informatica, and current year acquisitions, and was consistent with the prior year.",
+   "claim_type": "unit_economics",
+   "specificity": "quantitative",
+   "testability": "partial",
+   "temporal_framing": "present",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "3a20fd02-e43a-4114-aa6e-f13a4dac1a4f",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Outstanding debt principal increased sharply from $14.5 billion as of January 31, 2026 to $39.5 billion as of April 30, 2026, primarily due to a $25 billion March 2026 notes issuance.",
+   "claim_type": "unit_economics",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "present",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "27183f9d-7be0-4fa1-9ea1-d28082b075e2",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Salesforce describes itself as a global leader in customer relationship management (CRM) technology.",
+   "claim_type": "market_position",
+   "specificity": "comparative",
+   "testability": "partial",
+   "temporal_framing": "present",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "bde3e717-c755-440d-a635-3c41e4acbad9",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Revenue growth of 13% year-over-year is cited, but the revenue mix shift toward inorganic sources (Informatica contributing ~$444M) is not separated from organic growth in the headline figure, obscuring true organic growth rate.",
+   "claim_type": "growth",
+   "specificity": "qualitative",
+   "testability": "partial",
+   "temporal_framing": "past",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 7
+  },
+  {
+   "claim_id": "ddc32625-0079-4c63-a04e-94c66091af59",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Customer attrition rate improvement and retention metrics are cited without disclosure of cohort-level behavior, such as net revenue retention or expansion revenue by cohort vintage.",
+   "claim_type": "growth",
+   "specificity": "qualitative",
+   "testability": "no",
+   "temporal_framing": "present",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 5
+  },
+  {
+   "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "The Agentforce platform is described as enabling autonomous agents that reason, make decisions, and execute tasks, with no reference to third-party benchmarks or independent validation of agent performance.",
+   "claim_type": "product",
+   "specificity": "qualitative",
+   "testability": "no",
+   "temporal_framing": "present",
+   "attribution_clarity": "unverifiable",
+   "is_implicit": true,
+   "implicit_pattern_id": 24
+  },
+  {
+   "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Salesforce claims AI and agentic capabilities are integrated across all products ('every app'), but provides no disclosure of ML engineering headcount, patents, published research, or OSS contributions to substantiate AI differentiation.",
+   "claim_type": "product",
+   "specificity": "qualitative",
+   "testability": "partial",
+   "temporal_framing": "present",
+   "attribution_clarity": "unverifiable",
+   "is_implicit": true,
+   "implicit_pattern_id": 21
+  },
+  {
+   "claim_id": "f0a8ea5c-e550-4173-b4bc-389fcefc1a71",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Operating cash flow growth of 3% year-over-year significantly trails revenue growth of 13%, but no explanation of the margin compression in cash conversion is provided.",
+   "claim_type": "unit_economics",
+   "specificity": "comparative",
+   "testability": "partial",
+   "temporal_framing": "past",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 3
+  },
+  {
+   "claim_id": "8bf8121b-f42c-44da-8644-d2bed32d0644",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Foreign currency fluctuations positively impacted total revenues by approximately 2% year-over-year and current RPO growth by approximately 1% year-over-year in Q1 fiscal 2027.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "partial",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "5a292865-92db-49d3-8740-984bd2f0296e",
+   "analysis_id": "02a172ab-7619-48e1-951f-30e71cfb0f0a",
+   "entity_id": "salesforce",
+   "assertion": "Salesforce expects sales and marketing and general and administrative expenses to decrease as a percentage of revenues over time through self-serve, partner-led channels, AI, and agents, but provides no quantitative targets or timeline.",
+   "claim_type": "unit_economics",
+   "specificity": "qualitative",
+   "testability": "partial",
+   "temporal_framing": "forward",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  }
+ ],
+ "verdicts": {
+  "ddc32625-0079-4c63-a04e-94c66091af59": {
+   "verdict_id": "9894f15d-1f90-4227-8411-9e97f3e533c7",
+   "claim_id": "ddc32625-0079-4c63-a04e-94c66091af59",
+   "verdict": "not_testable",
+   "evidence_strength": "weak",
+   "reasoning": "The claim is fundamentally about a disclosure gap \u2014 specifically, whether cohort-level metrics such as NRR or expansion revenue by vintage are absent from reported retention narratives. None of the available signals (aggregate revenue, revenue growth rate, job postings, or GitHub commits) speak to the presence or absence of such disclosures in investor communications. The most relevant evidence for this claim would be a direct review of earnings transcripts, 10-K/10-Q filings, or investor day materials to check for cohort-level retention disclosures \u2014 none of which are surfaced here. This claim is structural and meta in nature (evaluating what a company chooses to report), making it effectively not testable with the signals provided.",
+   "generated_at": "2026-07-16T01:02:57.602003"
+  },
+  "bb8c8355-c1e3-412c-bd5c-9cbae93d6b73": {
+   "verdict_id": "2d0f259a-b857-4b6c-ba44-ca685846f58a",
+   "claim_id": "bb8c8355-c1e3-412c-bd5c-9cbae93d6b73",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the four available signals speak directly to Informatica's segment-level revenue contribution in Q1 FY2027. The Tier 1 EDGAR signals reflect Salesforce's consolidated annual financials for FY2026 \u2014 a different entity, scope, and time period \u2014 while the Tier 2 signals (job postings, GitHub commits) are operational proxies with no causal link to quarterly revenue figures. The most important gap here is the absence of a segment-level revenue disclosure from Salesforce's Q1 FY2027 earnings filing or press release, which would be the definitive source. To evaluate this claim properly, one would need Salesforce's 10-Q or earnings supplement for Q1 FY2027 explicitly breaking out the Informatica contribution.",
+   "generated_at": "2026-07-16T01:02:57.676636"
+  },
+  "6ac58739-30da-418b-bab1-46343d765319": {
+   "verdict_id": "f62ed9a6-4e05-49ae-a745-e4be31f32e7c",
+   "claim_id": "6ac58739-30da-418b-bab1-46343d765319",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the four signals directly address Europe segment revenue in Q1 fiscal 2027, which is the precise claim being evaluated. The most relevant signal \u2014 full-year company-wide revenue growth of 9.58% \u2014 covers a different time period and a different scope (consolidated vs. regional segment), so while the divergence from the claimed 18% European growth is notable, it cannot be treated as a direct contradiction of a segment-specific quarterly figure. To verify this claim, Q1 FY2027 segment-level revenue disclosures (e.g., 10-Q filings breaking out Americas, Europe, and Asia Pacific) would be required. The absence of any Tier 1 segment data for the relevant quarter makes this claim untestable with the current evidence set.",
+   "generated_at": "2026-07-16T01:02:58.387122"
+  },
+  "a5d80b4b-bb84-48d0-ba93-627febe87d53": {
+   "verdict_id": "226d8ad4-4122-437c-97bb-f494f9f1b9f8",
+   "claim_id": "a5d80b4b-bb84-48d0-ba93-627febe87d53",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "No signal directly covers the claimed period \u2014 Q1 FY2027 (three months ended April 30, 2026). The only financially relevant Tier 1 signal is full-year FY2026 annual revenue and growth (9.58% YoY), which neither confirms nor denies the quarterly claim and in fact shows a significantly lower growth rate than the asserted 13%, introducing mild skepticism. The two Tier 2 signals (job postings, GitHub commits) are entirely tangential to a specific quarterly revenue figure. To assess this claim properly, the definitive evidence needed would be Salesforce's Q1 FY2027 earnings release or 10-Q filing with EDGAR \u2014 which does not appear to be present in the signal set, likely because it had not yet been filed as of the data collection date.",
+   "generated_at": "2026-07-16T01:02:59.140043"
+  },
+  "8bf8121b-f42c-44da-8644-d2bed32d0644": {
+   "verdict_id": "23726427-fb2c-4259-a139-7b4fcfbfd766",
+   "claim_id": "8bf8121b-f42c-44da-8644-d2bed32d0644",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the four signals address the specific claim: the quantitative FX impact (~2% on total revenues, ~1% on current RPO) in Q1 fiscal 2027. The two Tier 1 EDGAR signals cover annual FY2026 financials and do not decompose currency effects, while the Tier 2 signals (job postings, GitHub commits) are entirely orthogonal to FX translation accounting. To validate this claim, one would need Q1 FY2027 earnings disclosures \u2014 specifically the constant-currency revenue and RPO disclosures versus reported figures, or an 8-K/10-Q filing for the quarter in question \u2014 none of which are present in the evidence set. The claim is precise and in principle testable, but the available signals simply cannot speak to it.",
+   "generated_at": "2026-07-16T01:02:59.141837"
+  },
+  "84208821-48d1-47eb-a90f-2c2b74fe3357": {
+   "verdict_id": "4e701270-7a80-44e2-b295-a7f5494b39e1",
+   "claim_id": "84208821-48d1-47eb-a90f-2c2b74fe3357",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the four available signals can address the specific claim, which requires Q1 fiscal 2027 segment-level subscription revenue figures for two distinct product categories. The only Tier 1 signals cover total company annual revenue for FY2026 \u2014 the wrong period, wrong granularity, and wrong fiscal quarter. The Tier 2 signals (job postings, GitHub commits) are useful for general business health proxies but are wholly unsuitable for validating precise dollar figures and growth rates at the sub-segment level. To properly evaluate this claim, one would need Salesforce's Q1 FY2027 10-Q or earnings supplement disclosing segment revenue breakdowns \u2014 data that either does not yet exist in the public record or was not retrieved here.",
+   "generated_at": "2026-07-16T01:02:59.392135"
+  },
+  "ce053daa-5ca0-410e-966b-6dd3742a9b8a": {
+   "verdict_id": "e6d72d01-d484-40c8-b0c9-193eff449e1d",
+   "claim_id": "ce053daa-5ca0-410e-966b-6dd3742a9b8a",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the four available signals directly speak to the claimed Q1 fiscal 2027 subscription and support revenue of $10.593B at 14% YoY growth. The most relevant Tier 1 EDGAR signals cover total annual revenue through January 2026 \u2014 a different period, scope, and revenue line \u2014 and reflect a lower blended growth rate (~9.6%) that cannot be cleanly extrapolated to a specific segment in a later quarter. The key gap is the absence of a Q1 FY2027 quarterly earnings filing or press release (e.g., an EDGAR 10-Q for the quarter ending ~April 2026) that would disclose segment-level revenue. To verify this claim, a Tier 1 filing breaking out subscription and support revenue for the relevant quarter would be necessary and decisive.",
+   "generated_at": "2026-07-16T01:02:59.648255"
+  },
+  "f0a8ea5c-e550-4173-b4bc-389fcefc1a71": {
+   "verdict_id": "2e315dda-c5a3-4d20-aecf-3809069c3b11",
+   "claim_id": "f0a8ea5c-e550-4173-b4bc-389fcefc1a71",
+   "verdict": "contested",
+   "evidence_strength": "moderate",
+   "reasoning": "The most critical finding is that the claim's stated revenue growth rate of 13% is directly contradicted by Tier 1 EDGAR XBRL data showing actual YoY revenue growth of 9.58% \u2014 a meaningful factual error that undermines the entire comparative framing. None of the available signals include operating cash flow figures, so the 3% OCF growth assertion and the implied cash conversion gap cannot be tested at all with the current evidence set. To properly evaluate this claim, prior-year operating cash flow (from the cash flow statement) and current-year OCF would be required, alongside a YoY gross margin comparison. As it stands, the factual premise of the claim is partially falsified, and the core analytical assertion (OCF divergence) is unverifiable with available signals.",
+   "generated_at": "2026-07-16T01:02:59.876709"
+  },
+  "982fc2f5-a6d9-4872-82ee-f7912dd45074": {
+   "verdict_id": "f128092c-eb5e-4f2d-abba-9ad8403dcfd3",
+   "claim_id": "982fc2f5-a6d9-4872-82ee-f7912dd45074",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the six available signals directly measure or proxy customer attrition \u2014 all are financial performance metrics (revenue, margins, EPS, operating income) or filing counts that are structurally disconnected from a retention rate claim. While Salesforce's healthy revenue growth (~9.6% YoY) and strong margins are broadly consistent with a company retaining the majority of its customer base, they cannot corroborate a precise figure of ~8% attrition or confirm year-over-year consistency. The claim is also forward-dated to April 30, 2026, which falls outside the period covered by the available FY2026 EDGAR filings (ending January 31, 2026). To evaluate this claim, analysts would need Salesforce's disclosed attrition or retention rate disclosures (typically found in 10-K/10-Q management commentary or supplemental data packages), ideally for both the current and prior fiscal period.",
+   "generated_at": "2026-07-16T01:03:00.493190"
+  },
+  "1a1356e3-47a5-4c41-944c-c632ccf83140": {
+   "verdict_id": "03992a84-c165-419c-82fa-d32d757a205f",
+   "claim_id": "1a1356e3-47a5-4c41-944c-c632ccf83140",
+   "verdict": "partially_supported",
+   "evidence_strength": "moderate",
+   "reasoning": "The Tier 1 EDGAR signals establish that the company (consistent with Salesforce's scale and trajectory) generated ~$41.5B in revenue with ~9.6% YoY growth through January 2026, which is broadly compatible with $67.9B in total RPO and the claimed growth rates \u2014 RPO of ~1.6x trailing revenue is a normal range for a mature enterprise SaaS firm, and RPO/cRPO growth rates in the 11\u201314% range are plausible given revenue growth near 10%. However, the specific RPO figures ($67.9B total, $33.6B current) as of April 30, 2026 would ordinarily be disclosed in a Q1 FY2027 earnings release or 10-Q filing, and no such direct Tier 1 signal (e.g., an XBRL filing for the quarter ending April 30, 2026) is present in the evidence set. The most meaningful gap is the absence of the actual Q1 FY2027 RPO disclosure itself; confirmation would require the 10-Q or earnings supplement for that period. The Tier 2 signals (job postings, GitHub commits) add no probative value for this specific quantitative claim.",
+   "generated_at": "2026-07-16T01:03:00.736070"
+  },
+  "3a20fd02-e43a-4114-aa6e-f13a4dac1a4f": {
+   "verdict_id": "6096b904-857d-4b32-b8a1-43e088f51e82",
+   "claim_id": "3a20fd02-e43a-4114-aa6e-f13a4dac1a4f",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the six signals directly address the claim's core assertions: the $14.5B outstanding principal as of January 31, 2026, the $39.5B balance as of April 30, 2026, or the $25B March 2026 notes issuance. All available signals are income-statement and earnings metrics (revenue, margins, EPS, operating income), which are structurally incapable of confirming balance sheet debt positions. The 8-K count of 12 is the only signal that could conceivably be proximate \u2014 a large debt issuance would typically trigger an 8-K filing \u2014 but the content of those filings is not provided, making this signal ambiguous at best. To properly evaluate this claim, the required evidence would include EDGAR balance sheet filings (10-Q as of April 30, 2026 disclosing long-term debt), a prospectus or 424B filing for the March 2026 notes, or an 8-K with the specific issuance details \u2014 none of which are present here.",
+   "generated_at": "2026-07-16T01:03:01.184148"
+  },
+  "5a292865-92db-49d3-8740-984bd2f0296e": {
+   "verdict_id": "f61ecc50-8ee0-45d2-b7c3-b5b6330b59ae",
+   "claim_id": "5a292865-92db-49d3-8740-984bd2f0296e",
+   "verdict": "partially_supported",
+   "evidence_strength": "weak",
+   "reasoning": "The available evidence confirms Salesforce is operating at scale with meaningful operating leverage \u2014 an ~20% operating margin in FY2026 versus historical low-single-digit margins is broadly consistent with the directional claim that expense ratios are declining. However, none of the signals directly measure S&M or G&A as a percentage of revenues over time, nor do they speak to the attribution mechanisms cited (self-serve, AI, agents, partner channels). The most relevant signal is operating income, which implies opex compression has already materially occurred, lending credibility to the forward-looking narrative. To meaningfully test the claim, one would need multi-year XBRL breakouts of S&M and G&A as explicit line items, ideally alongside management commentary quantifying channel mix shifts \u2014 none of which are present in these signals.",
+   "generated_at": "2026-07-16T01:03:01.526376"
+  },
+  "bde3e717-c755-440d-a635-3c41e4acbad9": {
+   "verdict_id": "2852a359-5ac1-4343-97fc-4f7c23f3787c",
+   "claim_id": "bde3e717-c755-440d-a635-3c41e4acbad9",
+   "verdict": "partially_supported",
+   "evidence_strength": "moderate",
+   "reasoning": "The Tier 1 EDGAR financials provide the strongest signal: the audited YoY revenue growth rate of ~9.6% diverges from the 13% headline cited in the claim, which itself validates the core assertion that reported growth figures may be selectively framed or period-specific, making organic vs. inorganic disaggregation harder to assess from top-line numbers alone. The ~$41.5B revenue base confirms that a ~$444M Informatica contribution (~1.1% of revenue) would be material enough to meaningfully distort organic growth if not separately disclosed. However, the claim cannot be fully supported because no signal directly confirms whether Informatica's contribution was or was not disclosed separately in segment or acquisition reporting, and the 13% figure itself is unverified against the EDGAR data \u2014 a key gap. To increase confidence, acquisition-specific revenue disclosures or management commentary separating organic growth from M&A contribution would be required.",
+   "generated_at": "2026-07-16T01:03:01.861321"
+  },
+  "7df0421b-2f49-4f28-9576-ac117ea03c37": {
+   "verdict_id": "3a428242-b5e3-4dc6-a2a8-7bd8989ddcf1",
+   "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+   "verdict": "not_testable",
+   "evidence_strength": "weak",
+   "reasoning": "The claim is an implicit assertion about *what is absent* from Agentforce's marketing narrative \u2014 specifically, the lack of third-party benchmarks or independent performance validation for its autonomous agents. None of the available signals (App Store ratings, GitHub activity, or hiring mix) are capable of confirming or denying whether independent benchmarking exists or has been cited by Salesforce. The most notable signal, a 0% AI/ML hiring share in the Adzuna sample, is too small and ambiguous to draw conclusions from. Validating this claim would require direct review of Salesforce's product documentation, press releases, and third-party research publications \u2014 none of which are captured in the available evidence set.",
+   "generated_at": "2026-07-16T01:03:01.952457"
+  },
+  "5ad42b56-8597-4b95-8ae8-f28683d3f664": {
+   "verdict_id": "ee1e4689-7d4f-4347-8bf6-9a2edfb8e74e",
+   "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "Verdict could not be parsed from model response.",
+   "generated_at": "2026-07-16T01:03:02.894774"
+  }
+ },
+ "evidences": {
+  "ddc32625-0079-4c63-a04e-94c66091af59": [
+   {
+    "evidence_id": "74aefb73-43fb-491d-851a-67c3fabdbbf1",
+    "claim_id": "ddc32625-0079-4c63-a04e-94c66091af59",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "Total annual revenue of ~$41.5B confirms scale but provides no granularity on cohort-level retention, net revenue retention (NRR), or expansion revenue by vintage \u2014 precisely the disclosure gap the claim identifies."
+   },
+   {
+    "evidence_id": "526fb80a-886f-49f0-8db3-da79099923bb",
+    "claim_id": "ddc32625-0079-4c63-a04e-94c66091af59",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "insufficient",
+    "reasoning": "A ~9.6% YoY revenue growth figure is consistent with either strong retention or new customer acquisition masking churn \u2014 it cannot distinguish between the two and does not address cohort-level disclosure."
+   },
+   {
+    "evidence_id": "6640dcc4-6c87-47f7-9b4c-8cc6aa27356f",
+    "claim_id": "ddc32625-0079-4c63-a04e-94c66091af59",
+    "signal_id": "90731bdc-2dab-4f63-8161-3213ba6952af",
+    "verdict": "insufficient",
+    "reasoning": "Open job count is a proxy for company activity and investment posture but bears no direct relationship to whether cohort-level retention or NRR metrics are publicly disclosed."
+   },
+   {
+    "evidence_id": "3e83849f-7195-4a17-a87a-583d891766b6",
+    "claim_id": "ddc32625-0079-4c63-a04e-94c66091af59",
+    "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity reflects engineering cadence but provides no signal about customer retention disclosure practices or cohort-level revenue reporting."
+   }
+  ],
+  "bb8c8355-c1e3-412c-bd5c-9cbae93d6b73": [
+   {
+    "evidence_id": "788a2299-e78d-4263-afb0-3bc701c9e7c3",
+    "claim_id": "bb8c8355-c1e3-412c-bd5c-9cbae93d6b73",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "This signal reflects Salesforce's total annual revenue (~$41.5B for FY2026), not Informatica-specific segment revenue, and covers a different time period than Q1 FY2027 \u2014 it provides no direct evidence for the $444M figure."
+   },
+   {
+    "evidence_id": "ccbfe918-0898-4a6e-9e33-02ee58281429",
+    "claim_id": "bb8c8355-c1e3-412c-bd5c-9cbae93d6b73",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "insufficient",
+    "reasoning": "A 9.58% YoY revenue growth figure for Salesforce's overall business is too aggregate and covers the wrong entity and period to validate a specific Informatica segment contribution in Q1 FY2027."
+   },
+   {
+    "evidence_id": "83b76396-8e75-429b-97e6-db91f8b8e175",
+    "claim_id": "bb8c8355-c1e3-412c-bd5c-9cbae93d6b73",
+    "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity across top repositories is an engineering engagement signal that cannot be mapped to segment-level revenue figures."
+   }
+  ],
+  "6ac58739-30da-418b-bab1-46343d765319": [
+   {
+    "evidence_id": "7a5fe5a7-9ab3-4a1b-96f4-823c01bdc1bb",
+    "claim_id": "6ac58739-30da-418b-bab1-46343d765319",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "This is a total annual revenue figure for the full fiscal year ending Jan 2026, not a Q1 fiscal 2027 Europe segment figure \u2014 it cannot confirm or deny the $2.754B European quarterly revenue claim."
+   },
+   {
+    "evidence_id": "1c0ebb34-bcb3-4bf9-a164-cd53ad1a4489",
+    "claim_id": "6ac58739-30da-418b-bab1-46343d765319",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "contradicting",
+    "reasoning": "The company-wide YoY revenue growth rate of 9.58% for the full fiscal year ending Jan 2026 is materially below the claimed 18% Europe segment growth in Q1 FY2027, and the time period doesn't match \u2014 this raises doubt but cannot directly confirm or deny the segment-specific claim."
+   },
+   {
+    "evidence_id": "5075e727-5b79-4f23-aa9c-544cdf03c514",
+    "claim_id": "6ac58739-30da-418b-bab1-46343d765319",
+    "signal_id": "90731bdc-2dab-4f63-8161-3213ba6952af",
+    "verdict": "insufficient",
+    "reasoning": "Open job count is a general business activity indicator with no geographic or revenue segment specificity, making it irrelevant to validating Europe revenue growth."
+   },
+   {
+    "evidence_id": "0a0a6f20-fa5d-414d-96f5-c21ea5bf1545",
+    "claim_id": "6ac58739-30da-418b-bab1-46343d765319",
+    "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity is a product development proxy with no connection to geographic revenue segmentation or quarterly financial results."
+   }
+  ],
+  "a5d80b4b-bb84-48d0-ba93-627febe87d53": [
+   {
+    "evidence_id": "27b531ad-f8b4-4b6f-a4a4-1ef28a5858a3",
+    "claim_id": "a5d80b4b-bb84-48d0-ba93-627febe87d53",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "This signal covers annual revenue for fiscal year 2026 (ending Jan 31, 2026) at ~$41.5B, which is a different period than the claimed Q1 FY2027 quarter ending April 30, 2026 \u2014 it provides useful context on the revenue run-rate but cannot confirm or deny the specific quarterly figure."
+   },
+   {
+    "evidence_id": "4030abf2-532a-4d9d-95a5-ee5ac110e8c8",
+    "claim_id": "a5d80b4b-bb84-48d0-ba93-627febe87d53",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "contradicting",
+    "reasoning": "Full-year FY2026 revenue growth was 9.58% YoY, which is materially below the claimed 13% quarterly growth rate for Q1 FY2027 \u2014 while quarterly growth can deviate from annual trends, the directional gap is large enough to raise meaningful doubt about the 13% figure without corroborating quarterly data."
+   },
+   {
+    "evidence_id": "7937ca8e-9a9c-4244-a802-1b75207d54bd",
+    "claim_id": "a5d80b4b-bb84-48d0-ba93-627febe87d53",
+    "signal_id": "90731bdc-2dab-4f63-8161-3213ba6952af",
+    "verdict": "insufficient",
+    "reasoning": "Open job count is a lagging proxy for business activity and hiring sentiment, but provides no direct evidence about Q1 FY2027 revenue or growth rate."
+   },
+   {
+    "evidence_id": "2cae8e5d-7d86-4a48-b056-c47e6d29ab1b",
+    "claim_id": "a5d80b4b-bb84-48d0-ba93-627febe87d53",
+    "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity is too indirect and unrelated to revenue reporting to inform any assessment of the specific quarterly revenue claim."
+   }
+  ],
+  "8bf8121b-f42c-44da-8644-d2bed32d0644": [
+   {
+    "evidence_id": "738f64c0-3460-4e4a-a59a-78135c4df0c7",
+    "claim_id": "8bf8121b-f42c-44da-8644-d2bed32d0644",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue for FY2026 (ending Jan 31, 2026) confirms scale but does not speak to Q1 FY2027 currency impact specifically, nor does it isolate foreign exchange effects on revenue or RPO."
+   },
+   {
+    "evidence_id": "c4a5cb9f-17cc-44f7-8950-eb66efbb8618",
+    "claim_id": "8bf8121b-f42c-44da-8644-d2bed32d0644",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "insufficient",
+    "reasoning": "The 9.58% YoY revenue growth figure covers the full FY2026 annual period, not Q1 FY2027, and provides no decomposition between organic growth and FX tailwinds, making it impossible to validate the claimed ~2% FX contribution."
+   },
+   {
+    "evidence_id": "7d3e80fe-046c-48dc-8c51-c28df8eb56f1",
+    "claim_id": "8bf8121b-f42c-44da-8644-d2bed32d0644",
+    "signal_id": "90731bdc-2dab-4f63-8161-3213ba6952af",
+    "verdict": "insufficient",
+    "reasoning": "Open job count is a lagging proxy for business momentum and has no bearing on the precision of a currency impact claim tied to a specific quarterly revenue and RPO metric."
+   },
+   {
+    "evidence_id": "7de3472a-a757-40ba-87c9-16fbea63cc37",
+    "claim_id": "8bf8121b-f42c-44da-8644-d2bed32d0644",
+    "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity is a development velocity proxy with no relevance to foreign currency translation effects on reported financial metrics."
+   }
+  ],
+  "84208821-48d1-47eb-a90f-2c2b74fe3357": [
+   {
+    "evidence_id": "2d970df3-eaf1-40b2-98e0-12e522377083",
+    "claim_id": "84208821-48d1-47eb-a90f-2c2b74fe3357",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "This signal reflects total annual revenue of ~$41.5B for fiscal year ending Jan 31, 2026 \u2014 it covers the wrong time period (annual FY2026, not Q1 FY2027) and the wrong granularity (total company, not segment-level), so it cannot confirm or deny the specific segment figures claimed."
+   },
+   {
+    "evidence_id": "895647ff-6a4d-4309-9e08-786eca5012d5",
+    "claim_id": "84208821-48d1-47eb-a90f-2c2b74fe3357",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "insufficient",
+    "reasoning": "A company-wide YoY revenue growth of ~9.6% for FY2026 provides no segment-level or quarterly breakout, making it impossible to validate the claimed 25% growth for Data 360/Headless/Other or the 9% growth for Agentforce Apps in Q1 FY2027 specifically."
+   },
+   {
+    "evidence_id": "7a37bfc5-e623-4148-b285-5c6e3c24f2ef",
+    "claim_id": "84208821-48d1-47eb-a90f-2c2b74fe3357",
+    "signal_id": "90731bdc-2dab-4f63-8161-3213ba6952af",
+    "verdict": "insufficient",
+    "reasoning": "Open job postings (68,104 as of July 2026) are a Tier 2 proxy for hiring activity and business momentum, but they cannot validate specific quarterly revenue figures or segment-level growth rates."
+   },
+   {
+    "evidence_id": "15e01d37-9ca5-4f42-a9bb-e2e99a2ef106",
+    "claim_id": "84208821-48d1-47eb-a90f-2c2b74fe3357",
+    "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity (170 commits over 90 days) is a Tier 2 signal of development activity but is far too indirect and unconnected to revenue segment reporting to support or contradict the specific financial claim."
+   }
+  ],
+  "ce053daa-5ca0-410e-966b-6dd3742a9b8a": [
+   {
+    "evidence_id": "92b4f51f-0825-4021-ac0e-c56032a7d5ab",
+    "claim_id": "ce053daa-5ca0-410e-966b-6dd3742a9b8a",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "This annual total revenue figure ($41.5B for FY ending Jan 2026) covers a different time period and metric than the claim \u2014 which asserts a specific quarterly subscription and support revenue figure for Q1 fiscal 2027 \u2014 making it directionally informative but not directly verifiable against the claim."
+   },
+   {
+    "evidence_id": "4af59308-fa75-456e-8de7-d9dd0a1a0bc5",
+    "claim_id": "ce053daa-5ca0-410e-966b-6dd3742a9b8a",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "insufficient",
+    "reasoning": "The overall annual revenue growth of ~9.6% YoY through Jan 2026 does not match the claimed 14% subscription and support revenue growth in Q1 FY2027, and covers a different period and revenue line, so it neither confirms nor refutes the specific claim."
+   },
+   {
+    "evidence_id": "7f28024c-241d-47c7-a799-8ff006f7adde",
+    "claim_id": "ce053daa-5ca0-410e-966b-6dd3742a9b8a",
+    "signal_id": "90731bdc-2dab-4f63-8161-3213ba6952af",
+    "verdict": "insufficient",
+    "reasoning": "Open job postings (68,104 as of July 2026) indicate ongoing business activity and scale, but provide no direct or meaningful evidence about a specific quarterly revenue figure or growth rate."
+   },
+   {
+    "evidence_id": "838edd44-af39-4566-a27f-24f490973504",
+    "claim_id": "ce053daa-5ca0-410e-966b-6dd3742a9b8a",
+    "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity is a weak proxy for engineering activity and has no traceable link to subscription and support revenue growth in a specific quarter."
+   }
+  ],
+  "f0a8ea5c-e550-4173-b4bc-389fcefc1a71": [
+   {
+    "evidence_id": "4038b7e0-000b-4f6c-bc12-caeaac4d62f6",
+    "claim_id": "f0a8ea5c-e550-4173-b4bc-389fcefc1a71",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue of $41.5B confirms scale but provides no direct data on operating cash flow or the claimed 13% revenue growth rate needed to validate the specific comparative claim."
+   },
+   {
+    "evidence_id": "4a2b8775-a76d-4b3b-b38d-d95dbd33527a",
+    "claim_id": "f0a8ea5c-e550-4173-b4bc-389fcefc1a71",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "contradicting",
+    "reasoning": "Tier 1 EDGAR data shows revenue growth of 9.58% YoY, which directly contradicts the claim's assertion of 13% revenue growth \u2014 a material discrepancy that undermines the premise of the comparison."
+   },
+   {
+    "evidence_id": "28abdacf-3503-4308-ad37-5ba1c9a8d5de",
+    "claim_id": "f0a8ea5c-e550-4173-b4bc-389fcefc1a71",
+    "signal_id": "f4963d68-b8cf-410d-91bb-1002ad41bea1",
+    "verdict": "insufficient",
+    "reasoning": "A gross margin of 77.68% is a strong absolute figure but provides no YoY directional change, so it cannot confirm or deny margin compression in cash conversion without a prior-period comparison."
+   },
+   {
+    "evidence_id": "eba15bf5-9053-4867-a614-7bc93c6efec9",
+    "claim_id": "f0a8ea5c-e550-4173-b4bc-389fcefc1a71",
+    "signal_id": "4308a2f6-8465-427b-8140-ccd297102837",
+    "verdict": "insufficient",
+    "reasoning": "Operating income of $8.33B establishes profitability but does not speak to operating cash flow or its growth rate, which is the core metric in the claim."
+   },
+   {
+    "evidence_id": "33dcb1f0-a6ce-45fd-8069-22661f8c2be2",
+    "claim_id": "f0a8ea5c-e550-4173-b4bc-389fcefc1a71",
+    "signal_id": "fa1f22ce-827c-4a59-84ae-1251e9c8b7ed",
+    "verdict": "insufficient",
+    "reasoning": "Diluted EPS of $7.80 reflects earnings per share but is not a proxy for cash flow generation or the cash conversion gap alleged in the claim."
+   },
+   {
+    "evidence_id": "d313b848-7bbf-4136-9380-c33389e85b34",
+    "claim_id": "f0a8ea5c-e550-4173-b4bc-389fcefc1a71",
+    "signal_id": "250c0180-0d47-4e96-ad20-8d0c4df3b991",
+    "verdict": "insufficient",
+    "reasoning": "The count of 8-K filings (12) indicates regular corporate event disclosures but provides no insight into cash flow dynamics or margin trends."
+   }
+  ],
+  "982fc2f5-a6d9-4872-82ee-f7912dd45074": [
+   {
+    "evidence_id": "345460f8-9957-439e-af20-822c0140cbf3",
+    "claim_id": "982fc2f5-a6d9-4872-82ee-f7912dd45074",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue of $41.5B for FY2026 confirms Salesforce's scale but provides no direct information about customer attrition rates, which are a retention metric not derivable from top-line revenue alone."
+   },
+   {
+    "evidence_id": "553ea4c3-d167-44d5-bcc7-8c16d08ec316",
+    "claim_id": "982fc2f5-a6d9-4872-82ee-f7912dd45074",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "insufficient",
+    "reasoning": "9.58% YoY revenue growth is loosely consistent with a company maintaining low-to-moderate churn, but growth can be driven by new customer acquisition or pricing and does not directly corroborate or refute an 8% attrition figure."
+   },
+   {
+    "evidence_id": "b9de36a1-1baa-497b-b54e-53008065b873",
+    "claim_id": "982fc2f5-a6d9-4872-82ee-f7912dd45074",
+    "signal_id": "f4963d68-b8cf-410d-91bb-1002ad41bea1",
+    "verdict": "insufficient",
+    "reasoning": "A gross margin of 77.68% reflects healthy unit economics broadly, but margin figures carry no information about customer attrition rates specifically."
+   },
+   {
+    "evidence_id": "a41e0780-09b3-46ca-9a6c-65e4b20e6628",
+    "claim_id": "982fc2f5-a6d9-4872-82ee-f7912dd45074",
+    "signal_id": "4308a2f6-8465-427b-8140-ccd297102837",
+    "verdict": "insufficient",
+    "reasoning": "Operating income of $8.33B for FY2026 indicates strong profitability but is irrelevant to the specific claim about an ~8% customer attrition rate."
+   },
+   {
+    "evidence_id": "c4f4710d-829d-4be1-a7ce-70acbd97954a",
+    "claim_id": "982fc2f5-a6d9-4872-82ee-f7912dd45074",
+    "signal_id": "fa1f22ce-827c-4a59-84ae-1251e9c8b7ed",
+    "verdict": "insufficient",
+    "reasoning": "Diluted EPS of $7.80 reflects earnings performance and has no bearing on the customer attrition metric claimed."
+   },
+   {
+    "evidence_id": "f770ce3c-856a-42ba-8e79-a77a17df9a47",
+    "claim_id": "982fc2f5-a6d9-4872-82ee-f7912dd45074",
+    "signal_id": "250c0180-0d47-4e96-ad20-8d0c4df3b991",
+    "verdict": "insufficient",
+    "reasoning": "The count of 12 8-K filings over 12 months is a normal level of corporate disclosure activity and provides no signal about attrition rates."
+   }
+  ],
+  "1a1356e3-47a5-4c41-944c-c632ccf83140": [
+   {
+    "evidence_id": "c2e96908-219d-4235-ae51-cb554b2e5446",
+    "claim_id": "1a1356e3-47a5-4c41-944c-c632ccf83140",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "supporting",
+    "reasoning": "Annual revenue of ~$41.5B for FY2026 (ending Jan 31, 2026) is directionally consistent with a company that could carry $67.9B in RPO \u2014 roughly 1.6x trailing revenue \u2014 which is a plausible RPO/revenue ratio for a large enterprise SaaS business like Salesforce."
+   },
+   {
+    "evidence_id": "787d7cdc-2ad7-4ab7-a05d-c36b983b919a",
+    "claim_id": "1a1356e3-47a5-4c41-944c-c632ccf83140",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "supporting",
+    "reasoning": "~9.6% revenue growth YoY for FY2026 is in the same ballpark as the claimed 11% total RPO growth and 14% cRPO growth, suggesting business momentum that is broadly consistent with those RPO expansion rates, though RPO growth typically leads revenue growth."
+   },
+   {
+    "evidence_id": "a3ec735f-2110-491b-8269-955fb2e87e57",
+    "claim_id": "1a1356e3-47a5-4c41-944c-c632ccf83140",
+    "signal_id": "90731bdc-2dab-4f63-8161-3213ba6952af",
+    "verdict": "insufficient",
+    "reasoning": "Open job count of 68,104 reflects current hiring activity and is too indirect and lagging to corroborate specific RPO figures or their year-over-year growth rates."
+   },
+   {
+    "evidence_id": "19e9492c-0ffe-422b-a939-2c9b487b4c64",
+    "claim_id": "1a1356e3-47a5-4c41-944c-c632ccf83140",
+    "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity (170 commits over 90 days) is a product development proxy with no meaningful relationship to RPO levels or growth rates."
+   }
+  ],
+  "3a20fd02-e43a-4114-aa6e-f13a4dac1a4f": [
+   {
+    "evidence_id": "c6a18c0c-a889-4268-9284-d4bd4e89e437",
+    "claim_id": "3a20fd02-e43a-4114-aa6e-f13a4dac1a4f",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue of $41.5B confirms the scale of the company but provides no direct evidence about debt principal levels or note issuances."
+   },
+   {
+    "evidence_id": "4b620a1f-d3f4-461d-9ec0-621103988233",
+    "claim_id": "3a20fd02-e43a-4114-aa6e-f13a4dac1a4f",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "insufficient",
+    "reasoning": "Revenue growth of ~9.6% YoY is a top-line performance metric and does not speak to changes in debt structure or capital markets activity."
+   },
+   {
+    "evidence_id": "e7dd265d-7695-4556-a880-f4392052af71",
+    "claim_id": "3a20fd02-e43a-4114-aa6e-f13a4dac1a4f",
+    "signal_id": "f4963d68-b8cf-410d-91bb-1002ad41bea1",
+    "verdict": "insufficient",
+    "reasoning": "Gross margin of 77.68% reflects operational efficiency but is entirely unrelated to the debt principal claim being evaluated."
+   },
+   {
+    "evidence_id": "b002a720-3231-4771-adf4-cb91414e8641",
+    "claim_id": "3a20fd02-e43a-4114-aa6e-f13a4dac1a4f",
+    "signal_id": "4308a2f6-8465-427b-8140-ccd297102837",
+    "verdict": "insufficient",
+    "reasoning": "Operating income of $8.3B contextualizes the company's debt-service capacity but provides no data on outstanding principal balances or note issuances."
+   },
+   {
+    "evidence_id": "f618b5a2-9ae6-469a-a718-5600c0d7a279",
+    "claim_id": "3a20fd02-e43a-4114-aa6e-f13a4dac1a4f",
+    "signal_id": "fa1f22ce-827c-4a59-84ae-1251e9c8b7ed",
+    "verdict": "insufficient",
+    "reasoning": "Diluted EPS of $7.80 is an earnings metric with no bearing on the specific debt levels or the March 2026 notes issuance described in the claim."
+   }
+  ],
+  "5a292865-92db-49d3-8740-984bd2f0296e": [
+   {
+    "evidence_id": "4b89dc52-eb43-4e9f-94c0-412324e4201a",
+    "claim_id": "5a292865-92db-49d3-8740-984bd2f0296e",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue of $41.5B confirms Salesforce's scale, but provides no information about the trajectory of S&M or G&A as a percentage of revenue, which is the core of the claim."
+   },
+   {
+    "evidence_id": "8dd78774-926f-43c9-bbac-a13d8c91615e",
+    "claim_id": "5a292865-92db-49d3-8740-984bd2f0296e",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "insufficient",
+    "reasoning": "9.58% YoY revenue growth is a useful baseline \u2014 if opex grows slower than revenue, expense ratios would naturally decline \u2014 but this signal alone does not confirm whether S&M or G&A as a percentage of revenues are actually trending downward."
+   },
+   {
+    "evidence_id": "a48a1301-1262-4b42-bc1b-7750ee45463f",
+    "claim_id": "5a292865-92db-49d3-8740-984bd2f0296e",
+    "signal_id": "f4963d68-b8cf-410d-91bb-1002ad41bea1",
+    "verdict": "insufficient",
+    "reasoning": "A 77.68% gross margin is healthy and consistent with a scalable SaaS model, but gross margin excludes S&M and G&A, so it does not directly address the claim about operating expense ratio trends."
+   },
+   {
+    "evidence_id": "f97baac3-6cd8-4e93-b3f2-4ac55f9c60b8",
+    "claim_id": "5a292865-92db-49d3-8740-984bd2f0296e",
+    "signal_id": "4308a2f6-8465-427b-8140-ccd297102837",
+    "verdict": "supporting",
+    "reasoning": "Operating income of $8.33B on ~$41.5B revenue implies an operating margin of ~20%, which, if compared to historical periods of sub-10% operating margins, would suggest meaningful opex ratio compression has already occurred \u2014 partially corroborating the directional claim."
+   },
+   {
+    "evidence_id": "9fabeb9c-37f3-4753-9937-5d337e479f32",
+    "claim_id": "5a292865-92db-49d3-8740-984bd2f0296e",
+    "signal_id": "fa1f22ce-827c-4a59-84ae-1251e9c8b7ed",
+    "verdict": "insufficient",
+    "reasoning": "Diluted EPS of $7.80 reflects overall profitability but is influenced by share buybacks and tax effects, making it an indirect and ambiguous proxy for the specific S&M/G&A ratio dynamics described in the claim."
+   },
+   {
+    "evidence_id": "bed1f6da-e51d-4224-838b-3efcc0afcd53",
+    "claim_id": "5a292865-92db-49d3-8740-984bd2f0296e",
+    "signal_id": "250c0180-0d47-4e96-ad20-8d0c4df3b991",
+    "verdict": "insufficient",
+    "reasoning": "12 Form 8-K filings in 12 months reflects normal corporate disclosure activity but contains no signal relevant to S&M or G&A expense trajectory or the self-serve/AI channel strategy described in the claim."
+   }
+  ],
+  "bde3e717-c755-440d-a635-3c41e4acbad9": [
+   {
+    "evidence_id": "a56cd36a-8c3e-4bf2-8732-9e0ad7704860",
+    "claim_id": "bde3e717-c755-440d-a635-3c41e4acbad9",
+    "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+    "verdict": "supporting",
+    "reasoning": "Annual revenue of ~$41.5B for FY2026 is consistent with the claim's framing of a large enterprise where an Informatica contribution of ~$444M would represent a meaningful but non-disclosed inorganic component (~1% of total revenue), making organic/inorganic disaggregation materially relevant."
+   },
+   {
+    "evidence_id": "f11e2fd1-3ae4-4074-b1d8-ce24f2b579bd",
+    "claim_id": "bde3e717-c755-440d-a635-3c41e4acbad9",
+    "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+    "verdict": "supporting",
+    "reasoning": "The EDGAR-reported YoY revenue growth of ~9.6% directly contradicts the claimed headline figure of 13%, suggesting either a different reporting period is being cited or the 13% figure may reflect a specific segment/quarter \u2014 this discrepancy itself underscores the claim's point that headline growth figures can obscure true underlying performance."
+   },
+   {
+    "evidence_id": "e74df88a-2b88-4f08-96c6-c85651abecc0",
+    "claim_id": "bde3e717-c755-440d-a635-3c41e4acbad9",
+    "signal_id": "90731bdc-2dab-4f63-8161-3213ba6952af",
+    "verdict": "insufficient",
+    "reasoning": "Open job count of 68,104 provides no direct evidence about revenue composition, organic vs. inorganic growth, or the Informatica acquisition's contribution to reported revenues."
+   }
+  ],
+  "7df0421b-2f49-4f28-9576-ac117ea03c37": [
+   {
+    "evidence_id": "c2419118-cf3c-4bb1-9218-7e2e20cade03",
+    "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+    "signal_id": "b301a49e-948c-45e1-a27e-c1d738659ed2",
+    "verdict": "insufficient",
+    "reasoning": "417 public GitHub repos indicates developer ecosystem breadth but says nothing about whether Agentforce agents are independently validated or benchmarked for performance."
+   },
+   {
+    "evidence_id": "33c8bf3d-7650-4a35-a3f5-4c2dab57661b",
+    "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+    "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+    "verdict": "insufficient",
+    "reasoning": "170 commits over 90 days shows active development but provides no evidence regarding third-party benchmarking or independent performance validation of Agentforce."
+   },
+   {
+    "evidence_id": "19a35391-539f-49e7-98c0-0f119cbfd31a",
+    "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+    "signal_id": "c5d1f8d9-ac44-49a2-8adf-e8f79d83f172",
+    "verdict": "insufficient",
+    "reasoning": "An aggregate App Store rating of 4.75 reflects general user satisfaction with Salesforce apps but is entirely unrelated to Agentforce agent reasoning or independent benchmarking."
+   },
+   {
+    "evidence_id": "97127317-5743-40a4-9005-71efa947bc1d",
+    "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+    "signal_id": "e094978a-ff11-490e-94bd-d21329dea940",
+    "verdict": "insufficient",
+    "reasoning": "The Chatter app rating of 4.75 is for a collaboration tool unrelated to Agentforce's autonomous agent capabilities or their validation."
+   },
+   {
+    "evidence_id": "da36be42-8d47-43bd-b6c7-f093ada0d9c8",
+    "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+    "signal_id": "b0ea0127-f34e-40a1-aa4d-006a1f093948",
+    "verdict": "insufficient",
+    "reasoning": "Field Service app rating reflects mobile operational tooling and has no bearing on Agentforce agent performance benchmarks."
+   },
+   {
+    "evidence_id": "361d4825-6670-4195-95c9-db73845c9395",
+    "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+    "signal_id": "58550f4b-5ac9-4a53-bc72-6a19dbc0cacf",
+    "verdict": "insufficient",
+    "reasoning": "The Authenticator app rating is a security/authentication tool entirely unrelated to the Agentforce claim."
+   },
+   {
+    "evidence_id": "04e7316d-85dd-42a9-9d9c-b04ad0ac1b7e",
+    "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+    "signal_id": "8f578f98-e37e-417a-8d5b-eeabdf1d6d6e",
+    "verdict": "insufficient",
+    "reasoning": "A 4.92 Trailhead rating reflects educational content quality, not agent reasoning capabilities or external validation thereof."
+   },
+   {
+    "evidence_id": "06463687-c736-4765-9cbe-92d94a4c80ce",
+    "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+    "signal_id": "eab839e2-f1f2-4201-a531-dd837925b9b3",
+    "verdict": "insufficient",
+    "reasoning": "The Salesforce Events app rating is peripheral to any assessment of Agentforce's autonomous decision-making or benchmarking."
+   },
+   {
+    "evidence_id": "6ea75806-36c3-46cd-a1b5-10fc867ff2e3",
+    "claim_id": "7df0421b-2f49-4f28-9576-ac117ea03c37",
+    "signal_id": "5bb15127-de2e-40f2-aa40-38ee7f7b9073",
+    "verdict": "insufficient",
+    "reasoning": "A 0% AI/ML hiring share in a 150-job sample is noteworthy but ambiguous \u2014 it could reflect roles being classified differently or hiring elsewhere, and does not speak to benchmark validation of Agentforce."
+   }
+  ],
+  "5ad42b56-8597-4b95-8ae8-f28683d3f664": [
+   {
+    "evidence_id": "c2f9ce50-ffcb-4b58-b68e-249662a16c35",
+    "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+    "signal_id": "b301a49e-948c-45e1-a27e-c1d738659ed2",
+    "verdict": "insufficient",
+    "reasoning": "417 public GitHub repos indicates meaningful OSS presence, but without knowing how many are AI/ML-related, this cannot substantiate AI differentiation specifically."
+   },
+   {
+    "evidence_id": "170b732f-db23-447d-b5a6-b379d1e459f4",
+    "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+    "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+    "verdict": "insufficient",
+    "reasoning": "170 commits over 90 days shows active development, but the absence of repo-level categorization makes it impossible to attribute this activity to AI or agentic capabilities."
+   },
+   {
+    "evidence_id": "1e6d84e2-7a9c-4d6c-92f7-bdc3b3c8a96f",
+    "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+    "signal_id": "c5d1f8d9-ac44-49a2-8adf-e8f79d83f172",
+    "verdict": "insufficient",
+    "reasoning": "A 4.75 App Store rating reflects general user satisfaction, not AI feature integration or differentiation across products."
+   },
+   {
+    "evidence_id": "c7403aa8-5c87-4bcc-8418-480169c979f5",
+    "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+    "signal_id": "e094978a-ff11-490e-94bd-d21329dea940",
+    "verdict": "insufficient",
+    "reasoning": "Chatter app rating of 4.75 reflects user experience quality but provides no signal about AI or agentic capability integration."
+   },
+   {
+    "evidence_id": "769ea7bc-e846-4794-aaee-c7ea7371c781",
+    "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+    "signal_id": "b0ea0127-f34e-40a1-aa4d-006a1f093948",
+    "verdict": "insufficient",
+    "reasoning": "Field Service app rating of 4.64 provides no evidence for or against AI integration claims."
+   },
+   {
+    "evidence_id": "18ac06fd-acf4-4581-a3fb-6009188f93f1",
+    "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+    "signal_id": "58550f4b-5ac9-4a53-bc72-6a19dbc0cacf",
+    "verdict": "insufficient",
+    "reasoning": "Authenticator app rating of 4.58 is unrelated to AI or agentic capabilities and offers no relevant signal."
+   },
+   {
+    "evidence_id": "3edfd55f-46b6-4def-be14-cca6f2b18650",
+    "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+    "signal_id": "8f578f98-e37e-417a-8d5b-eeabdf1d6d6e",
+    "verdict": "insufficient",
+    "reasoning": "Trailhead app rating of 4.92 reflects learning platform satisfaction, not AI product differentiation."
+   },
+   {
+    "evidence_id": "2f878701-024b-49f4-8012-1a10a1992d95",
+    "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+    "signal_id": "eab839e2-f1f2-4201-a531-dd837925b9b3",
+    "verdict": "insufficient",
+    "reasoning": "Salesforce Events app rating of 4.77 is unrelated to the AI integration claim being assessed."
+   },
+   {
+    "evidence_id": "f643b858-78ac-438e-a215-fa381480c8dd",
+    "claim_id": "5ad42b56-8597-4b95-8ae8-f28683d3f664",
+    "signal_id": "5bb15127-de2e-40f2-aa40-38ee7f7b9073",
+    "verdict": "contradicting",
+    "reasoning": "The Adzuna hiring data shows 0 AI/ML job postings out of a 150-job sample (0.0%), with only 5 engineering roles \u2014 this directly undermines the claim of broad, substantive AI/agentic capability integration across all products, as a company genuinely embedding AI at scale would be expected to show measurable ML engineering hiring activity."
+   }
+  ]
+ },
+ "signals": [
+  {
+   "signal_id": "c5d1f8d9-ac44-49a2-8adf-e8f79d83f172",
+   "entity_id": "salesforce",
+   "signal_type": "app_store_rating",
+   "signal_name": "appstore_rating_top_app",
+   "value": 4.75,
+   "unit": "rating_5",
+   "period_start": null,
+   "period_end": null,
+   "source": "apple_appstore",
+   "source_url": "https://apps.apple.com/us/app/salesforce/id404249815?uo=4",
+   "fetched_at": "2026-07-16T01:02:09.667626",
+   "reliability_tier": 2,
+   "raw": {
+    "app_name": "Salesforce",
+    "review_count": 348251,
+    "bundle_id": "com.salesforce.chatter"
+   }
+  },
+  {
+   "signal_id": "e094978a-ff11-490e-94bd-d21329dea940",
+   "entity_id": "salesforce",
+   "signal_type": "mobile_ratings",
+   "signal_name": "appstore_app_com_salesforce_chatter",
+   "value": 4.75,
+   "unit": "rating_5",
+   "period_start": null,
+   "period_end": null,
+   "source": "apple_appstore",
+   "source_url": "https://apps.apple.com/us/app/salesforce/id404249815?uo=4",
+   "fetched_at": "2026-07-16T01:02:09.667656",
+   "reliability_tier": 2,
+   "raw": {
+    "app_name": "Salesforce",
+    "review_count": 348251
+   }
+  },
+  {
+   "signal_id": "b0ea0127-f34e-40a1-aa4d-006a1f093948",
+   "entity_id": "salesforce",
+   "signal_type": "mobile_ratings",
+   "signal_name": "appstore_app_com_salesforce_fieldservice",
+   "value": 4.64,
+   "unit": "rating_5",
+   "period_start": null,
+   "period_end": null,
+   "source": "apple_appstore",
+   "source_url": "https://apps.apple.com/us/app/salesforce-field-service/id1163307568?uo=4",
+   "fetched_at": "2026-07-16T01:02:09.667667",
+   "reliability_tier": 2,
+   "raw": {
+    "app_name": "Salesforce Field Service",
+    "review_count": 19657
+   }
+  },
+  {
+   "signal_id": "58550f4b-5ac9-4a53-bc72-6a19dbc0cacf",
+   "entity_id": "salesforce",
+   "signal_type": "mobile_ratings",
+   "signal_name": "appstore_app_com_salesforce_authenticator1",
+   "value": 4.58,
+   "unit": "rating_5",
+   "period_start": null,
+   "period_end": null,
+   "source": "apple_appstore",
+   "source_url": "https://apps.apple.com/us/app/salesforce-authenticator/id782057975?uo=4",
+   "fetched_at": "2026-07-16T01:02:09.667683",
+   "reliability_tier": 2,
+   "raw": {
+    "app_name": "Salesforce Authenticator",
+    "review_count": 4263
+   }
+  },
+  {
+   "signal_id": "8f578f98-e37e-417a-8d5b-eeabdf1d6d6e",
+   "entity_id": "salesforce",
+   "signal_type": "mobile_ratings",
+   "signal_name": "appstore_app_com_salesforce_trailheadapp",
+   "value": 4.92,
+   "unit": "rating_5",
+   "period_start": null,
+   "period_end": null,
+   "source": "apple_appstore",
+   "source_url": "https://apps.apple.com/us/app/trailhead-go/id1478801670?uo=4",
+   "fetched_at": "2026-07-16T01:02:09.667692",
+   "reliability_tier": 2,
+   "raw": {
+    "app_name": "Trailhead GO",
+    "review_count": 8786
+   }
+  },
+  {
+   "signal_id": "eab839e2-f1f2-4201-a531-dd837925b9b3",
+   "entity_id": "salesforce",
+   "signal_type": "mobile_ratings",
+   "signal_name": "appstore_app_com_salesforce_salesforceevents",
+   "value": 4.77,
+   "unit": "rating_5",
+   "period_start": null,
+   "period_end": null,
+   "source": "apple_appstore",
+   "source_url": "https://apps.apple.com/us/app/salesforce-events/id1021413071?uo=4",
+   "fetched_at": "2026-07-16T01:02:09.667701",
+   "reliability_tier": 2,
+   "raw": {
+    "app_name": "Salesforce Events",
+    "review_count": 13049
+   }
+  },
+  {
+   "signal_id": "5adc0a9f-6167-406f-a952-ebcbfff17f94",
+   "entity_id": "salesforce",
+   "signal_type": "annual_revenue",
+   "signal_name": "annual_revenue_usd",
+   "value": 41525000000,
+   "unit": "USD",
+   "period_start": "2025-02-01",
+   "period_end": "2026-01-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001108524",
+   "fetched_at": "2026-07-16T01:02:09.702884",
+   "reliability_tier": 1,
+   "raw": {
+    "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "entry": {
+     "start": "2025-02-01",
+     "end": "2026-01-31",
+     "val": 41525000000,
+     "accn": "0001108524-26-000060",
+     "fy": 2025,
+     "fp": "FY",
+     "form": "10-K",
+     "filed": "2026-03-02",
+     "frame": "CY2025"
+    }
+   }
+  },
+  {
+   "signal_id": "c97f5fcf-e692-4c1c-8c40-c7ab0bf81f3d",
+   "entity_id": "salesforce",
+   "signal_type": "revenue_growth",
+   "signal_name": "revenue_growth_yoy_pct",
+   "value": 9.58,
+   "unit": "pct",
+   "period_start": "2025-01-31",
+   "period_end": "2026-01-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001108524",
+   "fetched_at": "2026-07-16T01:02:09.704661",
+   "reliability_tier": 1,
+   "raw": {
+    "current": 41525000000,
+    "prior": 37895000000
+   }
+  },
+  {
+   "signal_id": "f4963d68-b8cf-410d-91bb-1002ad41bea1",
+   "entity_id": "salesforce",
+   "signal_type": "gross_margin",
+   "signal_name": "gross_margin_pct",
+   "value": 77.68,
+   "unit": "pct",
+   "period_start": null,
+   "period_end": "2026-01-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001108524",
+   "fetched_at": "2026-07-16T01:02:09.705588",
+   "reliability_tier": 1,
+   "raw": null
+  },
+  {
+   "signal_id": "4308a2f6-8465-427b-8140-ccd297102837",
+   "entity_id": "salesforce",
+   "signal_type": "operating_income",
+   "signal_name": "operating_income_usd",
+   "value": 8331000000,
+   "unit": "USD",
+   "period_start": "2025-02-01",
+   "period_end": "2026-01-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001108524",
+   "fetched_at": "2026-07-16T01:02:09.706710",
+   "reliability_tier": 1,
+   "raw": {
+    "concept": "OperatingIncomeLoss",
+    "entry": {
+     "start": "2025-02-01",
+     "end": "2026-01-31",
+     "val": 8331000000,
+     "accn": "0001108524-26-000060",
+     "fy": 2025,
+     "fp": "FY",
+     "form": "10-K",
+     "filed": "2026-03-02",
+     "frame": "CY2025"
+    }
+   }
+  },
+  {
+   "signal_id": "fa1f22ce-827c-4a59-84ae-1251e9c8b7ed",
+   "entity_id": "salesforce",
+   "signal_type": "eps",
+   "signal_name": "eps_diluted_usd",
+   "value": 7.8,
+   "unit": "USD/shares",
+   "period_start": "2025-02-01",
+   "period_end": "2026-01-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001108524",
+   "fetched_at": "2026-07-16T01:02:09.707694",
+   "reliability_tier": 1,
+   "raw": {
+    "concept": "EarningsPerShareDiluted",
+    "entry": {
+     "start": "2025-02-01",
+     "end": "2026-01-31",
+     "val": 7.8,
+     "accn": "0001108524-26-000060",
+     "fy": 2025,
+     "fp": "FY",
+     "form": "10-K",
+     "filed": "2026-03-02",
+     "frame": "CY2025"
+    }
+   }
+  },
+  {
+   "signal_id": "250c0180-0d47-4e96-ad20-8d0c4df3b991",
+   "entity_id": "salesforce",
+   "signal_type": "filing_language_change",
+   "signal_name": "8k_count_12mo",
+   "value": 12,
+   "unit": "count",
+   "period_start": null,
+   "period_end": null,
+   "source": "edgar_filings",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001108524&type=8-K",
+   "fetched_at": "2026-07-16T01:02:09.902271",
+   "reliability_tier": 1,
+   "raw": {
+    "recent_8k_dates": [
+     "2026-06-02",
+     "2026-06-01",
+     "2026-05-27",
+     "2026-03-16",
+     "2026-03-13",
+     "2026-03-12",
+     "2026-03-06",
+     "2026-02-25",
+     "2025-12-03",
+     "2025-11-18"
+    ]
+   }
+  },
+  {
+   "signal_id": "b301a49e-948c-45e1-a27e-c1d738659ed2",
+   "entity_id": "salesforce",
+   "signal_type": "oss_activity",
+   "signal_name": "github_public_repos",
+   "value": 417,
+   "unit": "count",
+   "period_start": null,
+   "period_end": null,
+   "source": "github_api",
+   "source_url": "https://github.com/salesforce",
+   "fetched_at": "2026-07-16T01:02:09.510967",
+   "reliability_tier": 2,
+   "raw": {
+    "followers": 3458,
+    "created_at": "2010-10-25T21:15:24Z",
+    "org": "salesforce"
+   }
+  },
+  {
+   "signal_id": "95bd5b3e-17d5-4c10-8df1-e4abaeaaf2ef",
+   "entity_id": "salesforce",
+   "signal_type": "github_commit_velocity",
+   "signal_name": "commits_90d_top_repos",
+   "value": 170,
+   "unit": "count",
+   "period_start": "2026-04-16",
+   "period_end": "2026-07-15",
+   "source": "github_api",
+   "source_url": "https://github.com/salesforce",
+   "fetched_at": "2026-07-16T01:02:11.595620",
+   "reliability_tier": 2,
+   "raw": {
+    "repos_checked": 3,
+    "org": "salesforce"
+   }
+  },
+  {
+   "signal_id": "90731bdc-2dab-4f63-8161-3213ba6952af",
+   "entity_id": "salesforce",
+   "signal_type": "hiring_volume",
+   "signal_name": "open_jobs_count",
+   "value": 68104,
+   "unit": "count",
+   "period_start": null,
+   "period_end": "2026-07-15",
+   "source": "adzuna",
+   "source_url": "https://www.adzuna.com/search?q=Salesforce",
+   "fetched_at": "2026-07-16T01:02:15.824906",
+   "reliability_tier": 2,
+   "raw": {
+    "query": "Salesforce",
+    "total_count": 68104,
+    "sample_size": 150
+   }
+  },
+  {
+   "signal_id": "5bb15127-de2e-40f2-aa40-38ee7f7b9073",
+   "entity_id": "salesforce",
+   "signal_type": "hiring_mix",
+   "signal_name": "hiring_mix_breakdown",
+   "value": {
+    "ai_ml_pct": 0.0,
+    "engineering_pct": 3.3,
+    "sales_pct": 0.7,
+    "ai_ml_count": 0,
+    "engineering_count": 5,
+    "sales_count": 1,
+    "sample_size": 150
+   },
+   "unit": "pct_breakdown",
+   "period_start": null,
+   "period_end": "2026-07-15",
+   "source": "adzuna",
+   "source_url": null,
+   "fetched_at": "2026-07-16T01:02:15.826690",
+   "reliability_tier": 2,
+   "raw": {
+    "sample_titles": [
+     "Salesforce Developer (Senior)",
+     "Salesforce Data Architect",
+     "Salesforce Developer (Senior)",
+     "Salesforce",
+     "Salesforce",
+     "Salesforce Developer",
+     "Salesforce Developer",
+     "Salesforce Developer",
+     "Salesforce Solutions Architect",
+     "Salesforce Solutions Architect",
+     "Salesforce Architect",
+     "Sr Salesforce Engineer",
+     "Salesforce Developer",
+     "Salesforce Developer",
+     "Salesforce Developer",
+     "Salesforce Consultant",
+     "Salesforce Developer",
+     "Salesforce Developer",
+     "Salesforce Analyst",
+     "Salesforce Developer"
+    ]
+   }
+  }
+ ],
+ "coverage": {
+  "total_claims": 16,
+  "strong_coverage": 16,
+  "partial_coverage": 0,
+  "no_coverage": 0,
+  "coverage_pct": 100.0
+ },
+ "errors": [
+  "Auto-fetched 10-Q (filed 2026-05-28): https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/0001108524-26-000127-index.html",
+  "VerdictEngine[27183f9d]: 'int' object has no attribute 'get'"
+ ],
+ "claim_drift": {
+  "comparison_basis": "year-ago quarter",
+  "current_form": "10-Q",
+  "current_period": "Apr 2026",
+  "prior_period": "Apr 2025",
+  "headline": "Salesforce's Q1 FY2027 MD&A reflects a materially more aggressive posture: revenue growth accelerated to 13% on the Informatica acquisition, debt ballooned ~4\u00d7 to fund a $25B accelerated buyback, the product taxonomy was overhauled to center on Agentforce, and macro/tariff risk language was quietly dropped while FX tailwinds replaced headwinds.",
+  "items": [
+   {
+    "kind": "escalated",
+    "label": "Revenue growth rate",
+    "then": "Revenue of $9.8B, up 8% year-over-year for Q1 FY2026.",
+    "now": "Revenue of $11.1B, up 13% year-over-year for Q1 FY2027.",
+    "significance": "The acceleration from 8% to 13% growth is a material step-up; management attributes the bulk of incremental growth to Informatica ($444M contribution), making it important for analysts to assess organic vs. inorganic trajectory.",
+    "quote": "For the three months ended April 30, 2026, revenue was $11.1 billion, an increase of 13 percent year-over-year."
+   },
+   {
+    "kind": "reversed",
+    "label": "Foreign currency impact on revenue",
+    "then": "Total revenues were minimally impacted by foreign currency fluctuations in Q1 FY2026.",
+    "now": "Total revenues in Q1 FY2027 were positively impacted by approximately two percent from foreign currency fluctuations.",
+    "significance": "A swing from neutral/minimal FX to a ~2% tailwind materially flatters the reported 13% headline growth; on a constant-currency basis organic growth would be closer to 11%, a key distinction for analysts modeling underlying demand.",
+    "quote": "Total revenues in the three months ended April 30, 2026 were positively impacted by approximately two percent in foreign currency fluctuations compared to the three months ended April 30, 2025."
+   },
+   {
+    "kind": "dropped",
+    "label": "Macro/tariff uncertainty risk",
+    "then": "Prior filing explicitly warned: 'Unpredictability around economic policies or international trade, including tariffs, could result in consumer and economic uncertainty which may lead to slower growth in new and renewal business, potentially impacting our financial results.'",
+    "now": "\u2014",
+    "significance": "The complete removal of the tariff and macro-uncertainty caution language, despite no resolution in the macro environment, signals a notable shift in management's risk narrative and may indicate higher confidence in demand or a desire to project resilience.",
+    "quote": "Unpredictability around economic policies or international trade, including tariffs, could result in consumer and economic uncertainty which may lead to slower growth in new and renewal business, potentially impacting our financial results."
+   },
+   {
+    "kind": "new",
+    "label": "Debt load \u2013 massive increase via $25B Senior Notes + $6B term loan",
+    "then": "As of April 30, 2025, principal due on outstanding debt was $8.5B; no term loans outstanding.",
+    "now": "As of April 30, 2026, principal due on outstanding debt is $39.5B, including $25B in March 2026 Senior Notes and a $6B term loan.",
+    "significance": "Debt outstanding increased roughly 4.6\u00d7, a landmark capital structure shift driven by the leveraged buyback; interest expense jumped to $317M vs. $68M, directly compressing free cash flow and introducing meaningful new financial risk.",
+    "quote": "In March 2026, we also issued unsecured Senior Notes with an aggregate principal of $25.0 billion... We used the net proceeds from the March 2026 Notes to fund an accelerated share repurchase program."
+   },
+   {
+    "kind": "new",
+    "label": "$25B Accelerated Share Repurchase (ASR)",
+    "then": "Prior filing reported a regular open-market repurchase of ~10M shares for ~$2.7B in Q1 FY2026; total board authorization was $30B aggregate.",
+    "now": "In March 2026, Salesforce executed a $25B ASR, initially repurchasing ~103M shares at ~$198/share; board authorization increased to $50B, replacing the prior authorization.",
+    "significance": "The ASR is one of the largest in US corporate history and represents a fundamental change in capital allocation strategy, funded by debt issuance, which analysts must factor into diluted share count, leverage, and sustainability of capital returns.",
+    "quote": "In March 2026, we entered into the ASR Agreements with a syndicate of financial institutions to repurchase an aggregate of $25.0 billion of our common stock and received an initial delivery of approximately 103 million shares."
+   },
+   {
+    "kind": "new",
+    "label": "Product taxonomy overhauled to Agentforce Apps vs. Data 360/Headless Platform",
+    "then": "Revenue disaggregated into five offerings: Sales (7% growth), Service (7%), Platform & Other (14%), Marketing & Commerce (3%), Integration & Analytics (10%).",
+    "now": "Revenue disaggregated into two categories: Agentforce Apps (65% of sub revenue, 9% growth) and Data 360, Headless Platform & Other (35%, 25% growth); prior five-category breakout eliminated.",
+    "significance": "The recast makes year-over-year comparisons impossible on a like-for-like basis and reframes the company's identity squarely around Agentforce/AI, while also obscuring individual product-line performance that analysts previously tracked.",
+    "quote": "Effective as of the first quarter of fiscal year 2027, we have revised the presentation of our disaggregated revenue disclosures to reflect the evolution of our product architecture to deliver the Agentic Enterprise."
+   },
+   {
+    "kind": "walked_back",
+    "label": "Restructuring future cash obligations",
+    "then": "As of April 30, 2025, expected approximately $160M\u2013$190M in future cash payments related to restructuring.",
+    "now": "As of April 30, 2026, expected approximately $130M\u2013$150M in future cash payments related to restructuring.",
+    "significance": "While the reduction suggests restructuring is winding down, the current quarter's restructuring charge doubled to $80M (from $36M), indicating ongoing workforce and data-center actions that belie a clean conclusion.",
+    "quote": "As of April 30, 2026, we expect approximately $130 million to $150 million in future cash payments related to our restructuring initiatives."
+   },
+   {
+    "kind": "escalated",
+    "label": "Agentforce / agentic AI platform positioning",
+    "then": "Agentforce described as 'a new layer of our trusted platform that enables companies to build and deploy AI agents'; introduced in Q3 FY2025, momentum noted in Q1 FY2026.",
+    "now": "Agentforce repositioned as the core identity of the company: 'Salesforce is the platform that powers how humans and agents work together'; company mission reframed as helping organizations 'become agentic enterprises'; Agentforce embedded in every app and given top-level product-taxonomy status.",
+    "significance": "The shift from Agentforce as a new product feature to the defining architecture of the entire company signals a major strategic pivot that underpins pricing, go-to-market, and M&A strategy (Informatica, Qualified, Regrello), and is the central thesis management is asking investors to underwrite.",
+    "quote": "Salesforce is the platform that powers how humans and agents work together, whether using Customer 360 apps, Slack, Headless 360, or other user interfaces."
+   }
+  ],
+  "cost_usd": 0.096414,
+  "error": null,
+  "available": true
+ }
+}

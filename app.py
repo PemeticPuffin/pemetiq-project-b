@@ -5,6 +5,7 @@ Run: streamlit run app.py
 from __future__ import annotations
 
 import base64
+import datetime as _dt
 import os
 from pathlib import Path
 
@@ -28,6 +29,7 @@ def _b64_img(path: Path) -> str:
     mime = "png" if suffix == "png" else "jpeg"
     return f"data:image/{mime};base64,{data}"
 
+from samples import SAMPLES, load_sample, sample_available
 from schema.enums import CompanyType, DataSource, InputType
 from schema.models import Company
 from pipeline.orchestrator import AnalysisResult, run_analysis
@@ -339,7 +341,7 @@ header[data-testid="stHeader"], #MainMenu, footer,
 """, unsafe_allow_html=True)
 
 # ── Session state ─────────────────────────────────────────────────────────────
-for _k, _v in [("result", None), ("running", False),
+for _k, _v in [("result", None), ("running", False), ("sample_generated_on", None),
                 ("company_domain_input", ""), ("competitors_input", "")]:
     if _k not in st.session_state:
         st.session_state[_k] = _v
@@ -836,9 +838,29 @@ def main():
         key="run_btn",
     )
 
+    # ── Sample chips — instant cached results, no live run needed ─────────
+    _available = [s for s in SAMPLES if sample_available(s)]
+    if _available:
+        cols = st.columns([2.2] + [1] * len(_available) + [3], gap="small")
+        with cols[0]:
+            st.markdown(
+                "<div style='font-size:0.8rem;color:#6B7580;padding-top:0.45rem;"
+                "text-align:right;'>Or see an instant sample:</div>",
+                unsafe_allow_html=True,
+            )
+        for _i, _slug in enumerate(_available):
+            with cols[_i + 1]:
+                if st.button(SAMPLES[_slug], key=f"sample_{_slug}",
+                             use_container_width=True):
+                    result, generated_on = load_sample(_slug)
+                    st.session_state.result = result
+                    st.session_state.sample_generated_on = generated_on
+                    st.rerun()
+
     if run_btn and (company_name or "").strip():
         st.session_state.running = True
         st.session_state.result  = None
+        st.session_state.sample_generated_on = None
 
         progress_bar  = st.progress(0.0)
         progress_text = st.empty()
@@ -895,6 +917,21 @@ def main():
         st.rerun()
 
     if st.session_state.result:
+        if st.session_state.sample_generated_on:
+            try:
+                _nice = _dt.date.fromisoformat(
+                    st.session_state.sample_generated_on
+                ).strftime("%b %d, %Y")
+            except ValueError:
+                _nice = st.session_state.sample_generated_on
+            st.markdown(
+                f"<div style='background:#F0F4F8;border:1px solid rgba(0,23,49,0.12);"
+                f"border-radius:8px;padding:0.55rem 0.9rem;margin:0.75rem 0 1rem;"
+                f"font-size:0.82rem;color:#39485A;'>"
+                f"<strong>Cached sample</strong> · generated {_nice} · "
+                f"run any company or paste a document above for fresh results.</div>",
+                unsafe_allow_html=True,
+            )
         render_results(st.session_state.result)
 
     render_footer()

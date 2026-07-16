@@ -1,0 +1,920 @@
+{
+ "generated_on": "2026-07-15",
+ "analysis": {
+  "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+  "entity_id": "gartner",
+  "input_type": "company_name",
+  "input_text": null,
+  "run_at": "2026-07-16T01:01:04.727687Z",
+  "cost_usd": 0.303381,
+  "status": "complete",
+  "claim_count": 12,
+  "tested_count": 11
+ },
+ "claims": [
+  {
+   "claim_id": "cb6b044b-1697-4e2b-9949-e92761721e4f",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Total revenues for Q1 2026 were $1.511 billion, a decrease of 2% compared to Q1 2025 on a reported basis and 4% excluding foreign currency impact",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "c9ac7558-5f50-4cfb-a89a-75f6ac8833f1",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Insights segment revenues increased 3% YoY to $1.294 billion in Q1 2026, but were nearly flat excluding foreign currency impact",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "58c63cd2-f7a6-47a6-bf18-7a19c71f649f",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Insights total contract value reached $5.268 billion as of March 31, 2026, up 1% year-over-year on a foreign currency neutral basis",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "partial",
+   "temporal_framing": "present",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "ef7e2b6d-0033-4f03-88a0-ee367d9b18f8",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Consulting revenues declined 15% YoY to $119.1 million in Q1 2026, with labor-based consulting down 13% and contract optimization revenue down 19%",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "98708a56-d68d-456b-a5fd-049390ed5501",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Conferences revenues increased 8% YoY to $78.3 million in Q1 2026, driven primarily by higher exhibitor revenue, despite a 4% decline in attendees",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "47054a44-b5d8-46f6-837f-435f74bf9bb6",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "GTS wallet retention fell to 97% from 101% YoY, and GBS wallet retention fell to 98% from 105% YoY, indicating lower spending by existing clients",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "partial",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "be7713e1-b923-45d3-9cc5-16625b8a79ad",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Total headcount was 19,367 as of March 31, 2026, a decrease of 8% from March 31, 2025",
+   "claim_type": "team",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "present",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "f68490df-5502-4381-ae6a-5df3e6bdc758",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Quota-bearing sales associates in Global Technology Sales decreased 3% to 3,584 and in Global Business Sales decreased 4% to 1,282 versus March 31, 2025",
+   "claim_type": "team",
+   "specificity": "quantitative",
+   "testability": "partial",
+   "temporal_framing": "present",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "04e6080f-8097-48ce-8a93-1c7020ed2bf0",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Insights segment gross contribution margin was 78% in Q1 2026, up 1 point from 77% in Q1 2025, on revenues that were nearly flat in constant currency \u2014 implying margin improvement may be driven by cost cuts (headcount reduction) rather than true operating leverage",
+   "claim_type": "unit_economics",
+   "specificity": "quantitative",
+   "testability": "partial",
+   "temporal_framing": "past",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 3
+  },
+  {
+   "claim_id": "696c5f4c-4c8f-48f3-9cc8-05b151abe5f1",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Revenue growth in Insights (3% reported, ~0% constant currency) is cited without disclosing cohort-level retention dynamics or net revenue retention by vintage",
+   "claim_type": "growth",
+   "specificity": "qualitative",
+   "testability": "no",
+   "temporal_framing": "past",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 5
+  },
+  {
+   "claim_id": "f364e46c-189b-4779-a525-7c62aa68f971",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Public sector contract value declined by high single digits (GTS) and mid single digits (GBS), suggesting meaningful customer concentration risk in a contracting segment that is not separately quantified",
+   "claim_type": "growth",
+   "specificity": "qualitative",
+   "testability": "partial",
+   "temporal_framing": "present",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 34
+  },
+  {
+   "claim_id": "b1ae1996-6ea8-4011-8aa4-6e08d448cea7",
+   "analysis_id": "1dc9d7b8-8dd6-4906-af3d-37579d4391ca",
+   "entity_id": "gartner",
+   "assertion": "Consulting backlog declined 9% to $200.5 million with billable headcount down 10% and utilization rate at 61% vs. 64% prior year, but no forward guidance is provided on whether the segment decline will continue",
+   "claim_type": "unit_economics",
+   "specificity": "quantitative",
+   "testability": "partial",
+   "temporal_framing": "past",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 29
+  }
+ ],
+ "verdicts": {
+  "be7713e1-b923-45d3-9cc5-16625b8a79ad": {
+   "verdict_id": "8aecfede-2f61-462c-bfab-b9a6b0909490",
+   "claim_id": "be7713e1-b923-45d3-9cc5-16625b8a79ad",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "Neither signal is capable of validating a precise headcount figure or a year-over-year percentage change. The open jobs count (2,301) and hiring mix breakdown are current-period Tier 2 proxies that reflect recruiting activity in mid-2026, not actual employee counts as of March 31, 2026. The most important gap is the absence of any Tier 1 source \u2014 such as an SEC filing (10-K, 10-Q, or proxy statement) that typically discloses headcount \u2014 which would be near-definitive for this type of quantitative claim. To increase confidence, audited or regulatory filings disclosing headcount at the relevant dates would be required.",
+   "generated_at": "2026-07-16T01:02:00.378155"
+  },
+  "f68490df-5502-4381-ae6a-5df3e6bdc758": {
+   "verdict_id": "85756628-a700-4f22-ac7c-e74fbb86cbae",
+   "claim_id": "f68490df-5502-4381-ae6a-5df3e6bdc758",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "The two available signals are both Tier 2 job-posting data from Adzuna, which measures open hiring requisitions rather than actual employee headcount \u2014 an entirely different metric from quota-bearing sales associate counts. Neither signal provides divisional segmentation (Global Technology Sales vs. Global Business Sales), nor a point-in-time headcount comparable to March 31, 2025. To meaningfully evaluate this claim, one would need Tier 1 evidence such as a 10-Q or 10-K EDGAR filing disclosing segment-level headcount, or an official investor supplement with comparable period data; the available signals cannot move confidence in either direction.",
+   "generated_at": "2026-07-16T01:02:01.148879"
+  },
+  "98708a56-d68d-456b-a5fd-049390ed5501": {
+   "verdict_id": "07f502ab-8292-4306-b047-75864a1b460e",
+   "claim_id": "98708a56-d68d-456b-a5fd-049390ed5501",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the three available signals address the specific claim. The two Tier 1 EDGAR signals cover total company revenue at annual granularity for FY2025, while the claim requires Q1 2026 segment-level Conferences revenue. The Adzuna job-count signal is entirely tangential. To properly evaluate this claim, one would need Q1 2026 earnings filings or press releases with segment-level revenue disclosures, ideally accompanied by management commentary on exhibitor revenue and attendee count \u2014 none of which are present here. The evidence base is too narrow and misaligned to support or contest the claim.",
+   "generated_at": "2026-07-16T01:02:01.890798"
+  },
+  "cb6b044b-1697-4e2b-9949-e92761721e4f": {
+   "verdict_id": "e470d684-b4e6-4847-878a-58a75b451f9a",
+   "claim_id": "cb6b044b-1697-4e2b-9949-e92761721e4f",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the three signals directly addresses Q1 2026 revenue or the claimed year-over-year comparison. The annual 2025 revenue figure (~$6.5B) provides a rough order-of-magnitude sanity check \u2014 $1.511B for a single quarter is plausible \u2014 but this is not the same as verifying the specific figure or the 2%/4% decline. The most important gap is the absence of any Tier 1 or Tier 2 signal covering Q1 2026 financials (e.g., a 10-Q filing or earnings release for the quarter ended March 2026). To validate this claim, an EDGAR 10-Q filing for Q1 2026 with quarterly revenue disclosures and a constant-currency reconciliation table would be required.",
+   "generated_at": "2026-07-16T01:02:02.281554"
+  },
+  "58c63cd2-f7a6-47a6-bf18-7a19c71f649f": {
+   "verdict_id": "489ad6e4-5d32-4eb8-bf2a-df6d30d080b6",
+   "claim_id": "58c63cd2-f7a6-47a6-bf18-7a19c71f649f",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the three signals directly address the specific claim \u2014 Insights segment total contract value of $5.268B as of March 31, 2026, growing 1% on a foreign currency neutral basis. The Tier 1 EDGAR signals reflect full-company annual revenue and growth for FY2025, not a specific business segment's TCV at a quarterly date point in 2026, and the FCN adjustment methodology cannot be verified from public XBRL data alone. The job postings signal is too indirect to be probative. To substantiate this claim, one would need segment-level TCV disclosures from a Q1 2026 earnings release, 10-Q filing, or supplemental financial data that breaks out the Insights segment and applies a currency-neutral methodology.",
+   "generated_at": "2026-07-16T01:02:02.636162"
+  },
+  "696c5f4c-4c8f-48f3-9cc8-05b151abe5f1": {
+   "verdict_id": "cef661fc-af43-4a14-9f51-f7a4a3ac4243",
+   "claim_id": "696c5f4c-4c8f-48f3-9cc8-05b151abe5f1",
+   "verdict": "not_testable",
+   "evidence_strength": "weak",
+   "reasoning": "The claim is fundamentally an assertion about a disclosure gap \u2014 specifically, that revenue growth is reported without accompanying cohort-level retention dynamics or net revenue retention by vintage. No public data source (including Tier 1 EDGAR filings) routinely contains cohort-level NRR breakdowns by business segment, so the absence of such data in the signals is itself expected and uninformative. The available signals confirm aggregate revenue scale and growth, but cannot confirm or deny whether internal disclosures exist, nor can they proxy for vintage-level retention analysis. This claim is structurally untestable with observable public data; verifying it would require access to internal CRM or billing data, or an explicit NRR disclosure in supplemental filings that does not exist in the evidence provided.",
+   "generated_at": "2026-07-16T01:02:02.878519"
+  },
+  "ef7e2b6d-0033-4f03-88a0-ee367d9b18f8": {
+   "verdict_id": "6685756e-e369-41e8-ba67-a961f5d2cf02",
+   "claim_id": "ef7e2b6d-0033-4f03-88a0-ee367d9b18f8",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the three available signals address the specific claim: Q1 2026 consulting segment revenue of $119.1M with a 15% YoY decline, broken down into labor-based (\u201313%) and contract optimization (\u201319%) sub-components. The Tier 1 EDGAR signals cover total company annual revenue for FY2025 \u2014 the wrong time period, the wrong granularity, and the wrong segment \u2014 making them unable to corroborate or contradict the claim. The most important gap is the absence of any Q1 2026 segment-level earnings disclosure (e.g., a 10-Q filing with consulting revenue line items) that would be required to verify a quantitative, segment-specific quarterly claim. To increase confidence, a Tier 1 10-Q for the quarter ending in early 2026 with explicit consulting segment breakdowns would be necessary.",
+   "generated_at": "2026-07-16T01:02:03.250067"
+  },
+  "c9ac7558-5f50-4cfb-a89a-75f6ac8833f1": {
+   "verdict_id": "466a0509-3402-4060-b578-9ed65c55f764",
+   "claim_id": "c9ac7558-5f50-4cfb-a89a-75f6ac8833f1",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the three available signals can be matched to the specific claim, which requires Insights segment-level revenue data for Q1 2026. The full-year 2025 consolidated revenue (~$6.5B) and the 3.67% YoY growth rate are company-wide annual figures, not segment-level quarterly figures, making direct validation impossible. The job posting count is entirely unrelated to segment revenue verification. To substantiate this claim, a Tier 1 signal would be needed \u2014 specifically, a 10-Q filing for the quarter ending closest to Q1 2026 disclosing Insights segment revenue with a prior-year comparable and constant-currency breakdown.",
+   "generated_at": "2026-07-16T01:02:03.385310"
+  },
+  "f364e46c-189b-4779-a525-7c62aa68f971": {
+   "verdict_id": "4d31f574-b1ed-4d5a-835b-bfd64715e235",
+   "claim_id": "f364e46c-189b-4779-a525-7c62aa68f971",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the three available signals provide segment-level revenue disclosure for GTS or GBS, nor do they isolate public sector contract values or customer concentration metrics. The total revenue and growth figures (Tier 1) confirm overall financial health but are aggregated in a way that masks the sub-segment dynamics the claim specifically invokes. The hiring signal (Tier 2) is too indirect to bear on contract-level revenue trends. To meaningfully assess this claim, segment-level revenue disclosures \u2014 ideally broken out by GTS/GBS and by customer vertical (public vs. private sector) \u2014 would be required, along with any contract concentration disclosures in 10-K risk factors or MD&A. The claim remains plausible given the 3.67% blended growth rate (suggesting mix-shift pressures), but is not testable with the evidence available.",
+   "generated_at": "2026-07-16T01:02:03.571506"
+  },
+  "47054a44-b5d8-46f6-837f-435f74bf9bb6": {
+   "verdict_id": "6d44c3b8-1c33-4873-b188-c76b68f3f7b3",
+   "claim_id": "47054a44-b5d8-46f6-837f-435f74bf9bb6",
+   "verdict": "partially_supported",
+   "evidence_strength": "weak",
+   "reasoning": "The available evidence provides only indirect support for the claim. The 3.67% YoY revenue growth rate is consistent with a scenario where wallet retention has declined below 100% in both segments \u2014 implying existing clients are net spending less \u2014 but it cannot confirm the precise figures cited (GTS: 97% vs. 101%; GBS: 98% vs. 105%). No Tier 1 segment-level financial data is available to validate the GTS/GBS split or the specific retention percentages. To increase confidence, one would need segment-disclosed revenue disclosures from EDGAR filings (e.g., 10-K or 10-Q) that break out GTS and GBS performance, or direct management commentary with quantified wallet retention metrics.",
+   "generated_at": "2026-07-16T01:02:05.148195"
+  },
+  "b1ae1996-6ea8-4011-8aa4-6e08d448cea7": {
+   "verdict_id": "98fd47e1-dba5-4a25-8df2-44bc68b67b3e",
+   "claim_id": "b1ae1996-6ea8-4011-8aa4-6e08d448cea7",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "All six available signals are consolidated, company-level financial metrics (revenue, margins, EPS, operating income) sourced from EDGAR XBRL filings \u2014 none of them speak to segment-level consulting backlog, billable headcount changes, or utilization rates. The claim is highly specific and quantitative ($200.5M backlog, -9%, -10% headcount, 61% vs. 64% utilization), requiring segment-disaggregated disclosures \u2014 typically found in a 10-K/10-Q segment footnote or management discussion \u2014 which are absent from the evidence set. The mild positive total revenue growth (~3.7%) at the consolidated level is directionally inconsistent with acute segment deterioration, but this is too indirect to constitute a contradiction. To properly evaluate this claim, segment-level revenue, backlog, and headcount disclosures from EDGAR filings or an earnings transcript would be required.",
+   "generated_at": "2026-07-16T01:02:06.916818"
+  },
+  "04e6080f-8097-48ce-8a93-1c7020ed2bf0": {
+   "verdict_id": "a6aa076b-d01e-4e9d-85e2-8d463032ad34",
+   "claim_id": "04e6080f-8097-48ce-8a93-1c7020ed2bf0",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "All six available signals are Tier 1 EDGAR/XBRL financials, but every one of them is consolidated and annual \u2014 none provides the segment-level (Insights) or quarterly (Q1 2026 vs. Q1 2025) granularity required to evaluate this claim. The claim hinges on three specific, interlocking data points: the Insights segment's gross contribution margin in Q1 2026 (78%), the year-over-year improvement (+1pp from 77%), and the near-flat constant-currency revenue trend \u2014 none of which can be derived from company-wide annual figures. The most critical missing evidence would be the Q1 2026 earnings release or 10-Q with segment-level revenue and gross profit disclosures, alongside any headcount or restructuring disclosures from those same 8-Ks that could confirm the cost-cut hypothesis. Without these, the claim is analytically plausible but entirely unverifiable from the signals provided.",
+   "generated_at": "2026-07-16T01:02:09.135269"
+  }
+ },
+ "evidences": {
+  "be7713e1-b923-45d3-9cc5-16625b8a79ad": [
+   {
+    "evidence_id": "72b42ff5-ca77-43e1-9fa3-59b14fdae182",
+    "claim_id": "be7713e1-b923-45d3-9cc5-16625b8a79ad",
+    "signal_id": "cf692834-1f0b-4b40-b331-5c66273bdfd6",
+    "verdict": "insufficient",
+    "reasoning": "A current open jobs count of 2,301 provides a rough proxy for organizational scale but cannot confirm or deny a specific headcount figure of 19,367 as of March 31, 2026, nor validate the precise 8% year-over-year decrease."
+   },
+   {
+    "evidence_id": "8c3737f5-001e-44d0-80f2-a87283ca4dad",
+    "claim_id": "be7713e1-b923-45d3-9cc5-16625b8a79ad",
+    "signal_id": "2aecbc27-d7c2-4160-94d4-175416ab6b14",
+    "verdict": "insufficient",
+    "reasoning": "The hiring mix breakdown describes current job posting composition (e.g., 30% sales) but offers no information about total headcount levels or the direction of workforce change between March 2025 and March 2026."
+   }
+  ],
+  "f68490df-5502-4381-ae6a-5df3e6bdc758": [
+   {
+    "evidence_id": "1a593a15-e6bf-44af-9993-e4e8db2072e6",
+    "claim_id": "f68490df-5502-4381-ae6a-5df3e6bdc758",
+    "signal_id": "cf692834-1f0b-4b40-b331-5c66273bdfd6",
+    "verdict": "insufficient",
+    "reasoning": "A total open jobs count of 2,301 provides no granularity on quota-bearing sales roles specifically within Global Technology Sales or Global Business Sales divisions, making it impossible to corroborate or contradict the precise headcount figures cited in the claim."
+   },
+   {
+    "evidence_id": "e7eedc99-b999-4a6e-8178-05e31979bd5b",
+    "claim_id": "f68490df-5502-4381-ae6a-5df3e6bdc758",
+    "signal_id": "2aecbc27-d7c2-4160-94d4-175416ab6b14",
+    "verdict": "insufficient",
+    "reasoning": "While 30% of sampled postings are sales roles (45 of 150), this hiring mix data reflects open requisitions rather than current headcount levels, and lacks the divisional breakdown (Global Technology Sales vs. Global Business Sales) needed to validate the specific quota-bearing associate counts of 3,584 and 1,282 or the 3\u20134% reduction figures."
+   }
+  ],
+  "98708a56-d68d-456b-a5fd-049390ed5501": [
+   {
+    "evidence_id": "d0cd0ad9-f5d3-4f38-973f-81e354200b21",
+    "claim_id": "98708a56-d68d-456b-a5fd-049390ed5501",
+    "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+    "verdict": "insufficient",
+    "reasoning": "This signal reflects total annual company revenue (~$6.5B for FY2025), providing no segment-level breakdown of Conferences revenue, making it impossible to verify the claimed $78.3M figure for Q1 2026."
+   },
+   {
+    "evidence_id": "5a21d676-bee4-49a6-8b80-559dd73cb702",
+    "claim_id": "98708a56-d68d-456b-a5fd-049390ed5501",
+    "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+    "verdict": "insufficient",
+    "reasoning": "The 3.67% YoY total revenue growth for FY2025 is at the wrong time period (full-year 2025 vs. Q1 2026) and wrong granularity (total company vs. Conferences segment), so it neither supports nor contradicts the claimed 8% segment growth."
+   },
+   {
+    "evidence_id": "b5375ac9-9ed4-436a-9ab0-bd13e7ffcb15",
+    "claim_id": "98708a56-d68d-456b-a5fd-049390ed5501",
+    "signal_id": "cf692834-1f0b-4b40-b331-5c66273bdfd6",
+    "verdict": "insufficient",
+    "reasoning": "Open job count is a broad operational signal with no direct connection to Conferences segment revenue, exhibitor dynamics, or attendee figures, providing no traction on the specific claim."
+   }
+  ],
+  "cb6b044b-1697-4e2b-9949-e92761721e4f": [
+   {
+    "evidence_id": "a7ba5fa4-aa40-451d-b62d-f828201b9526",
+    "claim_id": "cb6b044b-1697-4e2b-9949-e92761721e4f",
+    "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+    "verdict": "insufficient",
+    "reasoning": "This signal provides full-year 2025 annual revenue of ~$6.5B, which offers a rough baseline (implying ~$1.6B average quarterly revenue) but does not speak to Q1 2026 performance or the specific $1.511B figure claimed."
+   },
+   {
+    "evidence_id": "bbb1844a-13d5-4f0f-b5c2-196b1c8e0114",
+    "claim_id": "cb6b044b-1697-4e2b-9949-e92761721e4f",
+    "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+    "verdict": "insufficient",
+    "reasoning": "A full-year 2025 YoY revenue growth rate of 3.67% provides useful context on the prior trajectory but cannot confirm or deny the Q1 2026 decline of 2% reported / 4% constant currency asserted in the claim."
+   },
+   {
+    "evidence_id": "fd0f0c24-cc52-489e-a79a-b836d35c3073",
+    "claim_id": "cb6b044b-1697-4e2b-9949-e92761721e4f",
+    "signal_id": "cf692834-1f0b-4b40-b331-5c66273bdfd6",
+    "verdict": "insufficient",
+    "reasoning": "Open job count as of mid-2026 is a very indirect proxy for business momentum and has no meaningful bearing on the specific Q1 2026 revenue figures or the year-over-year change claimed."
+   }
+  ],
+  "58c63cd2-f7a6-47a6-bf18-7a19c71f649f": [
+   {
+    "evidence_id": "e72102f6-f323-41df-b419-86c5521b1fec",
+    "claim_id": "58c63cd2-f7a6-47a6-bf18-7a19c71f649f",
+    "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue of $6.5B for FY2025 represents total company revenue, not the specific 'Insights' segment TCV of $5.268B as of March 31, 2026 \u2014 the figures are neither directly comparable nor sufficiently granular to confirm the segment-level claim."
+   },
+   {
+    "evidence_id": "c9c854cd-60bc-4cd2-a147-0d48c7884fa8",
+    "claim_id": "58c63cd2-f7a6-47a6-bf18-7a19c71f649f",
+    "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+    "verdict": "insufficient",
+    "reasoning": "A 3.67% YoY revenue growth for FY2025 directionally conflicts with the claimed 1% FCN growth for the Insights segment, but this is total company revenue growth, not segment TCV growth, so it cannot directly validate or refute the specific metric claimed."
+   },
+   {
+    "evidence_id": "7cee0983-8f8b-4541-849d-7104db605a2d",
+    "claim_id": "58c63cd2-f7a6-47a6-bf18-7a19c71f649f",
+    "signal_id": "cf692834-1f0b-4b40-b331-5c66273bdfd6",
+    "verdict": "insufficient",
+    "reasoning": "Open job count of 2,301 as of mid-2026 provides no direct insight into Insights segment TCV levels or growth rates, and is too indirect to corroborate or contradict the claim."
+   }
+  ],
+  "696c5f4c-4c8f-48f3-9cc8-05b151abe5f1": [
+   {
+    "evidence_id": "23f0a93c-2d0a-4128-8148-bbd44206b9a1",
+    "claim_id": "696c5f4c-4c8f-48f3-9cc8-05b151abe5f1",
+    "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+    "verdict": "insufficient",
+    "reasoning": "Total annual revenue of ~$6.5B confirms scale but provides no segment-level breakdown for the Insights division, and offers zero visibility into cohort retention or net revenue retention (NRR) by vintage."
+   },
+   {
+    "evidence_id": "18732b73-9bdd-4863-a3aa-09842ab52e96",
+    "claim_id": "696c5f4c-4c8f-48f3-9cc8-05b151abe5f1",
+    "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+    "verdict": "insufficient",
+    "reasoning": "A consolidated YoY revenue growth of 3.67% is directionally consistent with the cited ~3% Insights growth figure, but aggregate growth rates cannot substitute for cohort-level retention dynamics or NRR disclosures, which are entirely absent."
+   }
+  ],
+  "ef7e2b6d-0033-4f03-88a0-ee367d9b18f8": [
+   {
+    "evidence_id": "12d8120f-085b-40a4-9009-399ecb969863",
+    "claim_id": "ef7e2b6d-0033-4f03-88a0-ee367d9b18f8",
+    "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+    "verdict": "insufficient",
+    "reasoning": "This signal provides total annual revenue of ~$6.5B for FY2025, but the claim is about a specific consulting revenue sub-segment (~$119.1M) in Q1 2026 \u2014 the aggregate annual figure cannot confirm or deny the granular segment-level quarterly result."
+   },
+   {
+    "evidence_id": "0c774fb6-4d5d-4c5e-89e8-2b58ce5e377b",
+    "claim_id": "ef7e2b6d-0033-4f03-88a0-ee367d9b18f8",
+    "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+    "verdict": "insufficient",
+    "reasoning": "A 3.67% YoY total revenue growth for FY2025 is directionally inconsistent with a steep consulting segment decline, but this is full-year aggregate data for a prior fiscal period and cannot be mapped to a specific Q1 2026 consulting sub-segment result."
+   },
+   {
+    "evidence_id": "934aca30-8051-4880-a1ed-3a293d0da76e",
+    "claim_id": "ef7e2b6d-0033-4f03-88a0-ee367d9b18f8",
+    "signal_id": "cf692834-1f0b-4b40-b331-5c66273bdfd6",
+    "verdict": "insufficient",
+    "reasoning": "Open job count of 2,301 as of mid-2026 provides no direct evidence about Q1 2026 consulting revenue figures or their YoY trajectory; hiring activity is too indirect a proxy for segment-level revenue performance."
+   }
+  ],
+  "c9ac7558-5f50-4cfb-a89a-75f6ac8833f1": [
+   {
+    "evidence_id": "ae447610-850a-44fc-b424-7cb8adb8d146",
+    "claim_id": "c9ac7558-5f50-4cfb-a89a-75f6ac8833f1",
+    "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+    "verdict": "insufficient",
+    "reasoning": "This is total annual revenue for full-year 2025 (~$6.5B), which cannot be directly mapped to the Insights segment alone for a single quarter (Q1 2026); the scale and scope mismatch makes this signal non-comparable to the claimed $1.294B quarterly segment figure."
+   },
+   {
+    "evidence_id": "798687e2-d4c7-4d40-ab2d-18a8f3b5db2e",
+    "claim_id": "c9ac7558-5f50-4cfb-a89a-75f6ac8833f1",
+    "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+    "verdict": "insufficient",
+    "reasoning": "This 3.67% YoY revenue growth figure covers full-year 2025 at the consolidated company level, not the Insights segment in Q1 2026 specifically \u2014 directionally in the same ballpark as the claimed 3% growth, but the temporal and segment scope mismatch prevents meaningful validation."
+   },
+   {
+    "evidence_id": "eb5e37e1-8f22-44cc-92a8-aaccbdab5654",
+    "claim_id": "c9ac7558-5f50-4cfb-a89a-75f6ac8833f1",
+    "signal_id": "cf692834-1f0b-4b40-b331-5c66273bdfd6",
+    "verdict": "insufficient",
+    "reasoning": "Open job count is a hiring activity proxy with no direct bearing on verifying a specific quarterly segment revenue figure or its foreign currency decomposition."
+   }
+  ],
+  "f364e46c-189b-4779-a525-7c62aa68f971": [
+   {
+    "evidence_id": "2687f5cd-2e2a-4fe7-be1d-f2ba97915dbe",
+    "claim_id": "f364e46c-189b-4779-a525-7c62aa68f971",
+    "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+    "verdict": "insufficient",
+    "reasoning": "Total annual revenue of ~$6.5B confirms the company's scale but provides no segment-level breakdown between GTS, GBS, or public sector vs. private sector contracts, making it impossible to assess public sector concentration risk from this figure alone."
+   },
+   {
+    "evidence_id": "92f692e6-66c8-4caa-ac7d-6accc2ee0ef6",
+    "claim_id": "f364e46c-189b-4779-a525-7c62aa68f971",
+    "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+    "verdict": "insufficient",
+    "reasoning": "A modest 3.67% YoY total revenue growth is consistent with a scenario where public sector decline is being offset by growth elsewhere, but without segment-level disclosure it neither confirms nor refutes the high/mid single-digit declines specifically attributed to GTS/GBS public sector contracts."
+   },
+   {
+    "evidence_id": "b4e1cf68-4ce2-4a13-88ff-4bb7ae620b95",
+    "claim_id": "f364e46c-189b-4779-a525-7c62aa68f971",
+    "signal_id": "cf692834-1f0b-4b40-b331-5c66273bdfd6",
+    "verdict": "insufficient",
+    "reasoning": "The open job count of 2,301 provides a rough proxy for operational activity and growth investment, but cannot be mapped to public sector contract exposure, GTS/GBS segment performance, or customer concentration risk without role-level or sector-level tagging."
+   }
+  ],
+  "47054a44-b5d8-46f6-837f-435f74bf9bb6": [
+   {
+    "evidence_id": "bc6c1a32-786d-4579-aaa9-7513597562b5",
+    "claim_id": "47054a44-b5d8-46f6-837f-435f74bf9bb6",
+    "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+    "verdict": "insufficient",
+    "reasoning": "Total annual revenue of ~$6.5B confirms the company's scale but provides no segment-level breakdown between GTS and GBS, nor does it isolate wallet retention metrics \u2014 it cannot confirm or deny the specific retention figures cited."
+   },
+   {
+    "evidence_id": "74456324-292f-4412-810e-82b3c461bf69",
+    "claim_id": "47054a44-b5d8-46f6-837f-435f74bf9bb6",
+    "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+    "verdict": "supporting",
+    "reasoning": "A modest YoY revenue growth rate of 3.67% is directionally consistent with the claim of declining wallet retention (from above 100% to below 100% in both segments), suggesting existing clients are spending less and new client additions are doing most of the heavy lifting to sustain any growth at all."
+   },
+   {
+    "evidence_id": "f2915df6-9ffb-419c-ab91-eb491af6ee74",
+    "claim_id": "47054a44-b5d8-46f6-837f-435f74bf9bb6",
+    "signal_id": "cf692834-1f0b-4b40-b331-5c66273bdfd6",
+    "verdict": "insufficient",
+    "reasoning": "Open job count of 2,301 reflects current hiring activity but has no direct bearing on historical wallet retention rates for GTS or GBS segments, making it irrelevant to validating the specific claim."
+   }
+  ],
+  "b1ae1996-6ea8-4011-8aa4-6e08d448cea7": [
+   {
+    "evidence_id": "1ce29969-ab22-46a3-977d-09586513e70b",
+    "claim_id": "b1ae1996-6ea8-4011-8aa4-6e08d448cea7",
+    "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+    "verdict": "insufficient",
+    "reasoning": "Total company annual revenue of $6.5B is an enterprise-level aggregate and provides no visibility into the consulting segment's backlog figure of $200.5M or its year-over-year decline."
+   },
+   {
+    "evidence_id": "3c1c1fa0-d479-4b79-a176-fd02c3e55695",
+    "claim_id": "b1ae1996-6ea8-4011-8aa4-6e08d448cea7",
+    "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+    "verdict": "insufficient",
+    "reasoning": "A 3.67% YoY total revenue growth at the consolidated level actually mildly contradicts a narrative of broad deterioration, but cannot confirm or deny segment-level consulting backlog or headcount metrics."
+   },
+   {
+    "evidence_id": "5208fe2b-0d2b-4850-adb0-b38184706a9c",
+    "claim_id": "b1ae1996-6ea8-4011-8aa4-6e08d448cea7",
+    "signal_id": "f48422d9-c21c-4890-8872-e97217c45869",
+    "verdict": "insufficient",
+    "reasoning": "A 68.77% gross margin is a company-wide figure that provides no granularity on consulting segment utilization rates or backlog composition."
+   },
+   {
+    "evidence_id": "79499092-286d-4604-a879-3c2fe40de524",
+    "claim_id": "b1ae1996-6ea8-4011-8aa4-6e08d448cea7",
+    "signal_id": "eef8d71c-a6e8-4502-9d5f-a930b7384733",
+    "verdict": "insufficient",
+    "reasoning": "Operating income of ~$1.03B is a consolidated metric and cannot be mapped to consulting segment performance, backlog trends, or billable headcount."
+   },
+   {
+    "evidence_id": "1c1d7ed2-3876-412a-b397-76c1b3a52bb9",
+    "claim_id": "b1ae1996-6ea8-4011-8aa4-6e08d448cea7",
+    "signal_id": "903154e9-1c1a-4af4-9044-c6da205da48a",
+    "verdict": "insufficient",
+    "reasoning": "Diluted EPS of $9.65 reflects total company profitability and offers no signal on consulting-specific operational metrics such as utilization rate or headcount changes."
+   },
+   {
+    "evidence_id": "8c1a4b82-92e4-4a4f-977c-33eb04705865",
+    "claim_id": "b1ae1996-6ea8-4011-8aa4-6e08d448cea7",
+    "signal_id": "76d3b1b1-e25d-4b1d-9fa2-a912e1fe80f4",
+    "verdict": "insufficient",
+    "reasoning": "The count of 8-K filings over the trailing 12 months is a disclosure-activity proxy and bears no direct relationship to the consulting segment's backlog, headcount, or utilization rate."
+   }
+  ],
+  "04e6080f-8097-48ce-8a93-1c7020ed2bf0": [
+   {
+    "evidence_id": "d3e98ac9-f251-49a3-8344-9d57a69737b5",
+    "claim_id": "04e6080f-8097-48ce-8a93-1c7020ed2bf0",
+    "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+    "verdict": "insufficient",
+    "reasoning": "This is an annual, company-wide revenue figure ($6.5B for full-year 2025) and cannot be used to verify the Insights segment's Q1 2026 revenue or its near-flat constant-currency growth \u2014 segment-level and quarter-level granularity is absent."
+   },
+   {
+    "evidence_id": "83592c5c-b921-423d-877f-93993373c23a",
+    "claim_id": "04e6080f-8097-48ce-8a93-1c7020ed2bf0",
+    "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+    "verdict": "insufficient",
+    "reasoning": "A 3.67% annual company-wide revenue growth rate for 2025 provides no insight into the Insights segment's Q1 2026 constant-currency revenue trajectory, which is the specific metric the claim relies upon."
+   },
+   {
+    "evidence_id": "15e86df4-fe64-4f8f-8d92-988036f5e8b8",
+    "claim_id": "04e6080f-8097-48ce-8a93-1c7020ed2bf0",
+    "signal_id": "f48422d9-c21c-4890-8872-e97217c45869",
+    "verdict": "insufficient",
+    "reasoning": "The consolidated gross margin of 68.77% (full-year 2025) is materially different from the claimed 78% Insights segment margin, but the difference is expected given segment mix \u2014 this signal cannot confirm or deny the segment-specific figure or its 1-point improvement."
+   },
+   {
+    "evidence_id": "549919c9-45ba-45a4-9f80-a93a84b9ecaa",
+    "claim_id": "04e6080f-8097-48ce-8a93-1c7020ed2bf0",
+    "signal_id": "eef8d71c-a6e8-4502-9d5f-a930b7384733",
+    "verdict": "insufficient",
+    "reasoning": "Company-wide operating income of $1.03B for full-year 2025 offers no segment-level or quarterly breakdowns needed to assess whether Insights margin improvement is cost-driven versus operating leverage."
+   },
+   {
+    "evidence_id": "baf2ff6e-4637-47e6-8271-ad7e33d15bcf",
+    "claim_id": "04e6080f-8097-48ce-8a93-1c7020ed2bf0",
+    "signal_id": "903154e9-1c1a-4af4-9044-c6da205da48a",
+    "verdict": "insufficient",
+    "reasoning": "Diluted EPS of $9.65 for full-year 2025 is a consolidated profitability measure and does not map to the Insights segment's Q1 2026 gross contribution margin or its cost structure."
+   },
+   {
+    "evidence_id": "777def93-b47a-4841-a29b-a2fdf0d28b96",
+    "claim_id": "04e6080f-8097-48ce-8a93-1c7020ed2bf0",
+    "signal_id": "76d3b1b1-e25d-4b1d-9fa2-a912e1fe80f4",
+    "verdict": "insufficient",
+    "reasoning": "Eight 8-K filings in the past 12 months could indicate material events (potentially including restructuring or headcount actions), but without reviewing their content, this signal is too indirect to confirm cost-cut-driven margin expansion in the Insights segment."
+   }
+  ]
+ },
+ "signals": [
+  {
+   "signal_id": "d5b8b682-3bc6-4260-aaa5-c35ebd137ca6",
+   "entity_id": "gartner",
+   "signal_type": "app_store_rating",
+   "signal_name": "appstore_rating_top_app",
+   "value": 4.92,
+   "unit": "rating_5",
+   "period_start": null,
+   "period_end": null,
+   "source": "apple_appstore",
+   "source_url": "https://apps.apple.com/us/app/my-gartner-mobile/id1202220943?uo=4",
+   "fetched_at": "2026-07-16T01:01:09.632981",
+   "reliability_tier": 2,
+   "raw": {
+    "app_name": "My Gartner Mobile",
+    "review_count": 3699,
+    "bundle_id": "com.gartner.gartnerapp2"
+   }
+  },
+  {
+   "signal_id": "0b1cb5c1-1bba-4b1e-adf6-b3f81b0eff8e",
+   "entity_id": "gartner",
+   "signal_type": "mobile_ratings",
+   "signal_name": "appstore_app_com_gartner_gartnerapp2",
+   "value": 4.92,
+   "unit": "rating_5",
+   "period_start": null,
+   "period_end": null,
+   "source": "apple_appstore",
+   "source_url": "https://apps.apple.com/us/app/my-gartner-mobile/id1202220943?uo=4",
+   "fetched_at": "2026-07-16T01:01:09.637200",
+   "reliability_tier": 2,
+   "raw": {
+    "app_name": "My Gartner Mobile",
+    "review_count": 3699
+   }
+  },
+  {
+   "signal_id": "5a7656dd-d682-456c-a59f-b598a1a3bb55",
+   "entity_id": "gartner",
+   "signal_type": "mobile_ratings",
+   "signal_name": "appstore_app_com_gartner_pyxisiphoneapp",
+   "value": 4.5,
+   "unit": "rating_5",
+   "period_start": null,
+   "period_end": null,
+   "source": "apple_appstore",
+   "source_url": "https://apps.apple.com/us/app/gartner-conference-navigator/id443990407?uo=4",
+   "fetched_at": "2026-07-16T01:01:09.823779",
+   "reliability_tier": 2,
+   "raw": {
+    "app_name": "Gartner Conference Navigator",
+    "review_count": 660
+   }
+  },
+  {
+   "signal_id": "8da3299c-b283-4d3b-89e5-a606092af153",
+   "entity_id": "gartner",
+   "signal_type": "annual_revenue",
+   "signal_name": "annual_revenue_usd",
+   "value": 6497226000,
+   "unit": "USD",
+   "period_start": "2025-01-01",
+   "period_end": "2025-12-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000749251",
+   "fetched_at": "2026-07-16T01:01:13.230842",
+   "reliability_tier": 1,
+   "raw": {
+    "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "entry": {
+     "start": "2025-01-01",
+     "end": "2025-12-31",
+     "val": 6497226000,
+     "accn": "0000749251-26-000112",
+     "fy": 2025,
+     "fp": "FY",
+     "form": "10-K",
+     "filed": "2026-02-12",
+     "frame": "CY2025"
+    }
+   }
+  },
+  {
+   "signal_id": "30b3b230-2096-474f-9dee-3a71eda025ec",
+   "entity_id": "gartner",
+   "signal_type": "revenue_growth",
+   "signal_name": "revenue_growth_yoy_pct",
+   "value": 3.67,
+   "unit": "pct",
+   "period_start": "2024-12-31",
+   "period_end": "2025-12-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000749251",
+   "fetched_at": "2026-07-16T01:01:13.231838",
+   "reliability_tier": 1,
+   "raw": {
+    "current": 6497226000,
+    "prior": 6267411000
+   }
+  },
+  {
+   "signal_id": "f48422d9-c21c-4890-8872-e97217c45869",
+   "entity_id": "gartner",
+   "signal_type": "gross_margin",
+   "signal_name": "gross_margin_pct",
+   "value": 68.77,
+   "unit": "pct",
+   "period_start": null,
+   "period_end": "2025-12-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000749251",
+   "fetched_at": "2026-07-16T01:01:13.232060",
+   "reliability_tier": 1,
+   "raw": null
+  },
+  {
+   "signal_id": "eef8d71c-a6e8-4502-9d5f-a930b7384733",
+   "entity_id": "gartner",
+   "signal_type": "operating_income",
+   "signal_name": "operating_income_usd",
+   "value": 1025711000,
+   "unit": "USD",
+   "period_start": "2025-01-01",
+   "period_end": "2025-12-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000749251",
+   "fetched_at": "2026-07-16T01:01:13.232616",
+   "reliability_tier": 1,
+   "raw": {
+    "concept": "OperatingIncomeLoss",
+    "entry": {
+     "start": "2025-01-01",
+     "end": "2025-12-31",
+     "val": 1025711000,
+     "accn": "0000749251-26-000112",
+     "fy": 2025,
+     "fp": "FY",
+     "form": "10-K",
+     "filed": "2026-02-12",
+     "frame": "CY2025"
+    }
+   }
+  },
+  {
+   "signal_id": "903154e9-1c1a-4af4-9044-c6da205da48a",
+   "entity_id": "gartner",
+   "signal_type": "eps",
+   "signal_name": "eps_diluted_usd",
+   "value": 9.65,
+   "unit": "USD/shares",
+   "period_start": "2025-01-01",
+   "period_end": "2025-12-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000749251",
+   "fetched_at": "2026-07-16T01:01:13.233134",
+   "reliability_tier": 1,
+   "raw": {
+    "concept": "EarningsPerShareDiluted",
+    "entry": {
+     "start": "2025-01-01",
+     "end": "2025-12-31",
+     "val": 9.65,
+     "accn": "0000749251-26-000112",
+     "fy": 2025,
+     "fp": "FY",
+     "form": "10-K",
+     "filed": "2026-02-12",
+     "frame": "CY2025"
+    }
+   }
+  },
+  {
+   "signal_id": "76d3b1b1-e25d-4b1d-9fa2-a912e1fe80f4",
+   "entity_id": "gartner",
+   "signal_type": "filing_language_change",
+   "signal_name": "8k_count_12mo",
+   "value": 8,
+   "unit": "count",
+   "period_start": null,
+   "period_end": null,
+   "source": "edgar_filings",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000749251&type=8-K",
+   "fetched_at": "2026-07-16T01:01:14.014340",
+   "reliability_tier": 1,
+   "raw": {
+    "recent_8k_dates": [
+     "2026-06-02",
+     "2026-05-05",
+     "2026-02-03",
+     "2026-01-29",
+     "2025-11-20",
+     "2025-11-04",
+     "2025-09-12",
+     "2025-08-05"
+    ]
+   }
+  },
+  {
+   "signal_id": "cf692834-1f0b-4b40-b331-5c66273bdfd6",
+   "entity_id": "gartner",
+   "signal_type": "hiring_volume",
+   "signal_name": "open_jobs_count",
+   "value": 2301,
+   "unit": "count",
+   "period_start": null,
+   "period_end": "2026-07-15",
+   "source": "adzuna",
+   "source_url": "https://www.adzuna.com/search?q=Gartner",
+   "fetched_at": "2026-07-16T01:01:24.517149",
+   "reliability_tier": 2,
+   "raw": {
+    "query": "Gartner",
+    "total_count": 2301,
+    "sample_size": 150
+   }
+  },
+  {
+   "signal_id": "2aecbc27-d7c2-4160-94d4-175416ab6b14",
+   "entity_id": "gartner",
+   "signal_type": "hiring_mix",
+   "signal_name": "hiring_mix_breakdown",
+   "value": {
+    "ai_ml_pct": 0.0,
+    "engineering_pct": 0.0,
+    "sales_pct": 30.0,
+    "ai_ml_count": 0,
+    "engineering_count": 0,
+    "sales_count": 45,
+    "sample_size": 150
+   },
+   "unit": "pct_breakdown",
+   "period_start": null,
+   "period_end": "2026-07-15",
+   "source": "adzuna",
+   "source_url": null,
+   "fetched_at": "2026-07-16T01:01:24.519966",
+   "reliability_tier": 2,
+   "raw": {
+    "sample_titles": [
+     "Business Development Executive at Gartner",
+     "Mortgage Originator | Gartner/Naperville",
+     "Account Executive, Supply Chain at Gartner",
+     "Account Executive, Large Enterprise at Gartner",
+     "Large Enterprise Account Executive, Gartner for Finance",
+     "shift supervisor - Store 60979, WASHINGTON & GARTNER",
+     "Director, Gartner Analyst, Data Quality (Remote US)",
+     "Business Development Executive, Large Enterprise, Gartner for Finance",
+     "Vice President, Team Manager (VPTM) Gartner Research Board CIO Research",
+     "Senior Manager \u2013 Production Experience and Marquee Content - Gartner C-Level Communities",
+     "Graphic Designer",
+     "Implementation Engineer",
+     "Technology Analyst Relations Consultant",
+     "Sales Development Manager",
+     "Druid Administrator",
+     "Client Success Associate (Bilingual Spanish / English Speaking)",
+     "Senior Executive Partner - CIO Advisory for Global Enterprises",
+     "Conference Sales Executive",
+     "Client Success Associate",
+     "Senior Account Executive, High Tech Global Enterprise"
+    ]
+   }
+  }
+ ],
+ "coverage": {
+  "total_claims": 12,
+  "strong_coverage": 10,
+  "partial_coverage": 2,
+  "no_coverage": 0,
+  "coverage_pct": 100.0
+ },
+ "errors": [
+  "Auto-fetched 10-Q (filed 2026-05-05): https://www.sec.gov/Archives/edgar/data/749251/000074925126000167/0000749251-26-000167-index.html"
+ ],
+ "claim_drift": {
+  "comparison_basis": "year-ago quarter",
+  "current_form": "10-Q",
+  "current_period": "Mar 2026",
+  "prior_period": "Mar 2025",
+  "headline": "Gartner's narrative shifted sharply from a growth story to one of contraction, with wallet retention collapsing, contract value growth slowing dramatically, Consulting revenue and backlog reversing, headcount declining, and the company completing a business divestiture \u2014 while total revenue turned negative year-over-year.",
+  "items": [
+   {
+    "kind": "reversed",
+    "label": "Total Revenue Growth",
+    "then": "Total revenues increased 4% YoY to $1.5 billion in Q1 2025.",
+    "now": "Total revenues decreased 2% YoY to $1.5 billion in Q1 2026 (down 4% ex-FX).",
+    "significance": "A top-line reversal from growth to decline is the most fundamental signal of business momentum change, even if partly attributable to the Digital Markets divestiture.",
+    "quote": "We had total revenues of $1.5 billion during the first quarter of 2026, a decrease of 2% compared to the first quarter of 2025."
+   },
+   {
+    "kind": "walked_back",
+    "label": "Wallet Retention \u2014 GTS and GBS",
+    "then": "GTS wallet retention was 101% and GBS wallet retention was 105% as of March 31, 2025.",
+    "now": "GTS wallet retention fell to 97% and GBS wallet retention fell to 98% as of March 31, 2026.",
+    "significance": "Both metrics dropping below 100% signals existing clients are now net spending less \u2014 a direct indicator of deteriorating subscription health and a leading indicator of future revenue pressure.",
+    "quote": "The decrease in GTS and GBS wallet retention was largely due to lower levels of spending by existing clients compared to the same period in 2025."
+   },
+   {
+    "kind": "walked_back",
+    "label": "Contract Value Growth Rate",
+    "then": "Total contract value grew 7% YoY (FX-neutral) to $5.1 billion; GTS +6%, GBS +11%.",
+    "now": "Total contract value grew only 1% YoY (FX-neutral) to $5.3 billion; GTS flat (0%), GBS +3%.",
+    "significance": "Contract value growth \u2014 the primary leading indicator of Research/Insights revenue \u2014 decelerated dramatically across both sales channels, pointing to meaningful future revenue headwinds.",
+    "quote": "Contract value increased to $5.3 billion at March 31, 2026, or 1% compared to March 31, 2025 excluding the foreign currency impact."
+   },
+   {
+    "kind": "reversed",
+    "label": "Consulting Revenue and Backlog",
+    "then": "Consulting revenues grew 4% YoY; backlog grew 16% to $213.5M; gross contribution margin was 38%.",
+    "now": "Consulting revenues fell 15% YoY; backlog declined 9% to $200.5M; gross contribution margin collapsed to 31%.",
+    "significance": "A reversal in both current revenue and forward-looking backlog in Consulting signals broad-based demand weakness, particularly in the US public sector, with a 7-point margin compression compounding the damage.",
+    "quote": "Consulting revenues decreased by 15% during the three months ended March 31, 2026 compared to the same period in 2025 on a reported basis and 17% excluding the foreign currency impact."
+   },
+   {
+    "kind": "reversed",
+    "label": "Employee Headcount",
+    "then": "Gartner had 21,107 employees globally as of March 31, 2025, an increase of 4.0% from March 31, 2024.",
+    "now": "Gartner had 19,367 employees globally as of March 31, 2026, a decrease of 8% from March 31, 2025.",
+    "significance": "A swing from +4% to -8% headcount growth indicates a significant strategic shift toward cost reduction and likely reflects both the Digital Markets divestiture and broader restructuring, with implications for future growth capacity.",
+    "quote": "As of March 31, 2026, we had 19,367 employees globally, a decrease of 8% from March 31, 2025."
+   },
+   {
+    "kind": "new",
+    "label": "Digital Markets Business Divestiture",
+    "then": "\u2014",
+    "now": "Gartner completed the sale of its Digital Markets business in February 2026 for approximately $104.8 million net of cash, recording a $6.1 million pre-tax gain; Digital Markets represented the entirety of the Other segment.",
+    "significance": "The divestiture eliminated an entire reporting segment, is the primary driver of the top-line revenue decline, and represents a material strategic portfolio change not present in the prior filing.",
+    "quote": "In February 2026, we completed the sale of our Digital Markets business, for approximately $104.8 million net of cash transferred, subject to post-close adjustments."
+   },
+   {
+    "kind": "reversed",
+    "label": "Quota-Bearing Sales Force Size",
+    "then": "GTS sales associates increased 3% to 3,707; GBS increased 9% to 1,331; combined +4% YoY.",
+    "now": "GTS sales associates decreased 3% to 3,584; GBS decreased 4% to 1,282; combined -3% YoY.",
+    "significance": "A reversal from expanding to contracting sales force directly constrains the company's ability to grow new contract value and signals a deliberate pullback in go-to-market investment.",
+    "quote": "The number of quota-bearing sales associates in Global Technology Sales decreased by 3% to 3,584 and in Global Business Sales, decreased by 4% to 1,282 compared to March 31, 2025."
+   },
+   {
+    "kind": "dropped",
+    "label": "US Federal Government Contract Value Disclosure",
+    "then": "Gartner disclosed US federal government Research contract value of ~$225M (down from ~$275M at year-end 2024), noted ~40% of federal contracts transacted in Q1 2025, and flagged $30M of termination-for-convenience notices.",
+    "now": "No specific US federal government contract value figure or renewal rate is disclosed; the current filing only notes a 'high single digit decrease in public sector, primarily related to the US federal government.'",
+    "significance": "The omission of granular federal contract metrics \u2014 after they were specifically highlighted as a key risk in the prior filing \u2014 makes it harder for analysts to track the ongoing runoff of this exposure.",
+    "quote": "Growth was led by the banking and energy sectors, partially offset by a high single digit decrease in public sector, primarily related to the US federal government."
+   }
+  ],
+  "cost_usd": 0.085995,
+  "error": null,
+  "available": true
+ }
+}
