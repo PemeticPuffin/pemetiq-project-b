@@ -20,7 +20,7 @@ from schema.models import Company
 from utils.company_lookup import lookup_cik
 
 
-def generate(slug: str, name: str, domain: str = "") -> None:
+def generate(slug: str, name: str, domain: str = ""):
     print(f"── {slug}: resolving {name!r}…")
     cik, ticker = lookup_cik(name)
     company = Company(
@@ -42,6 +42,7 @@ def generate(slug: str, name: str, domain: str = "") -> None:
     print(f"   saved {path.name}: {len(result.claims)} claims, "
           f"{len(result.verdicts)} verdicts, {len(result.signals)} signals, "
           f"drift={'yes' if result.claim_drift and result.claim_drift.available else 'no'}")
+    return result
 
 
 if __name__ == "__main__":

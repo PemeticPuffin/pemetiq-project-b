@@ -1,0 +1,60 @@
+name: Curate sample stress tests
+
+# Monthly, Claude picks the most demo-worthy companies to stress-test (grounded
+# in current news via web search), regenerates their results, and opens a pull
+# request for Aaron to approve. Nothing goes live without a merge.
+
+on:
+  schedule:
+    - cron: "0 13 1 * *"   # 09:00 ET on the 1st of each month
+  workflow_dispatch: {}      # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run curator
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python curate_samples.py
+
+      - name: Read PR body
+        id: body
+        run: |
+          if [ -f curation_summary.md ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            {
+              echo "text<<PR_EOF"
+              cat curation_summary.md
+              echo "PR_EOF"
+            } >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open pull request
+        if: steps.body.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/sample-curation
+          delete-branch: true
+          title: "Monthly sample refresh"
+          body: ${{ steps.body.outputs.text }}
+          add-paths: |
+            sample_data/**
