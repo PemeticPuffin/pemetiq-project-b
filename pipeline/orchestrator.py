@@ -35,7 +35,7 @@ from pipeline.evidence_mapper import CLAIM_SIGNAL_MAP, coverage_summary, map_evi
 from pipeline.verdict_engine import evaluate_claim
 from schema.enums import AnalysisStatus, InputType
 from schema.models import Analysis, Claim, ClaimVerdictModel, Company, Evidence, Signal
-from spend.tracker import SpendTracker
+from spend.tracker import SpendLimitExceeded, SpendTracker
 
 _SYNC_FETCHERS = [
     EdgarFetcher(),
@@ -103,7 +103,7 @@ def run_analysis(
     ESTIMATED_COST = 0.10
     if tracker.would_exceed(ESTIMATED_COST):
         status = tracker.status()
-        raise RuntimeError(
+        raise SpendLimitExceeded(
             f"Daily spend limit reached (${status['spent_usd']:.2f} / "
             f"${status['limit_usd']:.2f}). Resets tomorrow."
         )

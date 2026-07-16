@@ -28,6 +28,14 @@ from pathlib import Path
 from config import settings
 
 
+class SpendLimitExceeded(RuntimeError):
+    """Raised when a run would exceed the daily spend limit.
+
+    Distinct from a genuine failure: the app degrades to the cached sample
+    stress tests rather than showing an error.
+    """
+
+
 class SpendTracker:
 
     def __init__(self, ledger_path: str | None = None):

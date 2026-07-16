@@ -33,6 +33,7 @@ from samples import list_samples, load_sample
 from schema.enums import CompanyType, DataSource, InputType
 from schema.models import Company
 from pipeline.orchestrator import AnalysisResult, run_analysis
+from spend.tracker import SpendLimitExceeded
 from utils.company_lookup import lookup_cik
 
 NAVY  = "#001731"
@@ -906,6 +907,17 @@ def main():
             )
             st.session_state.result = result
 
+        except SpendLimitExceeded:
+            # Budget reached — degrade to the cached samples, don't show an error.
+            st.markdown(
+                "<div style='background:#FFF6F2;border:1px solid rgba(232,100,59,0.35);"
+                "border-left:3px solid #E8643B;border-radius:8px;padding:0.9rem 1.1rem;"
+                "margin:1rem 0;font-size:0.88rem;line-height:1.6;color:#39485A;'>"
+                "Manseil has reached its daily analysis budget — live stress tests are "
+                "paused until tomorrow so the tool stays free. The sample stress tests "
+                "below are full real runs and are still available.</div>",
+                unsafe_allow_html=True,
+            )
         except RuntimeError as e:
             st.error(str(e))
         except Exception as e:
