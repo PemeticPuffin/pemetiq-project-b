@@ -14,17 +14,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from pipeline.orchestrator import run_analysis
-from samples import SAMPLES, save_sample
+from samples import list_samples, save_sample
 from schema.enums import CompanyType, InputType
 from schema.models import Company
 from utils.company_lookup import lookup_cik
 
-_DOMAINS = {
-    "salesforce": "salesforce.com",
-}
 
-
-def generate(slug: str, name: str) -> None:
+def generate(slug: str, name: str, domain: str = "") -> None:
     print(f"── {slug}: resolving {name!r}…")
     cik, ticker = lookup_cik(name)
     company = Company(
@@ -32,7 +28,7 @@ def generate(slug: str, name: str) -> None:
         name=name,
         ticker=ticker,
         cik=cik,
-        domain=_DOMAINS.get(slug, f"{slug}.com"),
+        domain=domain or f"{slug}.com",
         company_type=CompanyType.public,
     )
     print("   running full pipeline (company-name mode)…")
@@ -49,6 +45,8 @@ def generate(slug: str, name: str) -> None:
 
 
 if __name__ == "__main__":
-    slugs = sys.argv[1:] or list(SAMPLES)
+    lineup = {s["slug"]: s for s in list_samples()}
+    slugs = sys.argv[1:] or list(lineup)
     for slug in slugs:
-        generate(slug, SAMPLES[slug])
+        s = lineup[slug]
+        generate(slug, s.get("ticker") or s["label"])

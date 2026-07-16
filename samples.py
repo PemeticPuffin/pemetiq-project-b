@@ -16,11 +16,30 @@ from pipeline.orchestrator import AnalysisResult
 from schema.models import Analysis, Claim, ClaimVerdictModel, Evidence, Signal
 
 SAMPLES_DIR = Path(__file__).parent / "sample_data"
+MANIFEST_PATH = SAMPLES_DIR / "manifest.json"
 
-# slug -> button label. Keep in sync with the JSON files in sample_data/.
-SAMPLES = {
-    "salesforce": "Salesforce",
-}
+
+def list_samples() -> list[dict]:
+    """Ordered sample metadata from the manifest, filtered to fixtures present.
+
+    Each entry: {"slug", "label", "ticker", "generated_on"}. The curator owns
+    the manifest; the app only reads it, so add/remove is a data operation.
+    """
+    if MANIFEST_PATH.exists():
+        data = json.loads(MANIFEST_PATH.read_text())
+        return [s for s in data.get("samples", []) if sample_available(s["slug"])]
+    return [
+        {"slug": p.stem, "label": p.stem.title(), "ticker": "", "generated_on": ""}
+        for p in sorted(SAMPLES_DIR.glob("*.json"))
+        if p.name != "manifest.json"
+    ]
+
+
+def write_manifest(samples: list[dict]) -> None:
+    """Persist the featured-sample lineup (used by the curator)."""
+    MANIFEST_PATH.write_text(
+        json.dumps({"updated": date.today().isoformat(), "samples": samples}, indent=1)
+    )
 
 
 def save_sample(slug: str, result: AnalysisResult) -> Path:

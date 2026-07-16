@@ -29,7 +29,7 @@ def _b64_img(path: Path) -> str:
     mime = "png" if suffix == "png" else "jpeg"
     return f"data:image/{mime};base64,{data}"
 
-from samples import SAMPLES, load_sample, sample_available
+from samples import list_samples, load_sample
 from schema.enums import CompanyType, DataSource, InputType
 from schema.models import Company
 from pipeline.orchestrator import AnalysisResult, run_analysis
@@ -839,20 +839,20 @@ def main():
     )
 
     # ── Sample chips — instant cached results, no live run needed ─────────
-    _available = [s for s in SAMPLES if sample_available(s)]
-    if _available:
-        cols = st.columns([2.2] + [1] * len(_available) + [3], gap="small")
+    _samples = list_samples()
+    if _samples:
+        cols = st.columns([2.2] + [1] * len(_samples) + [3], gap="small")
         with cols[0]:
             st.markdown(
                 "<div style='font-size:0.8rem;color:#6B7580;padding-top:0.45rem;"
                 "text-align:right;'>Or see an instant sample:</div>",
                 unsafe_allow_html=True,
             )
-        for _i, _slug in enumerate(_available):
+        for _i, _s in enumerate(_samples):
             with cols[_i + 1]:
-                if st.button(SAMPLES[_slug], key=f"sample_{_slug}",
+                if st.button(_s["label"], key=f"sample_{_s['slug']}",
                              use_container_width=True):
-                    result, generated_on = load_sample(_slug)
+                    result, generated_on = load_sample(_s["slug"])
                     st.session_state.result = result
                     st.session_state.sample_generated_on = generated_on
                     st.rerun()
