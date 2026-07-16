@@ -1,6 +1,17 @@
 {
- "updated": "2026-07-15",
+ "updated": "2026-07-16",
  "samples": [
-  {"slug": "salesforce", "label": "Salesforce", "ticker": "CRM", "generated_on": "2026-07-15"}
+  {
+   "slug": "salesforce",
+   "label": "Salesforce",
+   "ticker": "CRM",
+   "generated_on": "2026-07-15"
+  },
+  {
+   "slug": "palantir",
+   "label": "Palantir",
+   "ticker": "PLTR",
+   "generated_on": "2026-07-16"
+  }
  ]
 }
