@@ -20,7 +20,6 @@ from schema.models import Company
 from utils.company_lookup import lookup_cik
 
 _DOMAINS = {
-    "gartner": "gartner.com",
     "salesforce": "salesforce.com",
 }
 

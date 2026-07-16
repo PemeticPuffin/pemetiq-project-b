@@ -19,7 +19,6 @@ SAMPLES_DIR = Path(__file__).parent / "sample_data"
 
 # slug -> button label. Keep in sync with the JSON files in sample_data/.
 SAMPLES = {
-    "gartner": "Gartner",
     "salesforce": "Salesforce",
 }
 
