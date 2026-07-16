@@ -1,0 +1,1129 @@
+{
+ "generated_on": "2026-07-16",
+ "analysis": {
+  "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+  "entity_id": "palantir",
+  "input_type": "company_name",
+  "input_text": null,
+  "run_at": "2026-07-16T02:13:30.662554Z",
+  "cost_usd": 0.370194,
+  "status": "complete",
+  "claim_count": 15,
+  "tested_count": 13
+ },
+ "claims": [
+  {
+   "claim_id": "fdc6ecf0-b1f1-4317-8dcd-f482d7e71866",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Palantir generated $1.632 billion in total revenue for Q1 2026, representing 85% year-over-year growth from $884 million in Q1 2025.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "ee95c32c-9d45-45cd-8836-e3d3c13be711",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "U.S. commercial revenue grew 133% year-over-year in Q1 2026, from $255 million to $595 million.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "1ad3a5e1-0d95-481b-a2fa-51582c2ea8bd",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Revenue from U.S. customers during the trailing twelve months ended March 31, 2026 was $4.0 billion, growing 87% from the prior twelve-month period.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "1bc2edf3-c53d-40bf-affa-03156ec097ce",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Palantir had 1,007 customers in the trailing twelve months ended March 31, 2026, up from 769 in the same period ended March 31, 2025 \u2014 a 31% increase.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "partial",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "20db0ddc-1fd5-4258-be9f-a7ef24d54475",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Average revenue from the top 20 customers in the trailing twelve months ended March 31, 2026 was $108 million, up 55% from $70 million in the prior comparable period.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "partial",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "4fba39dc-5705-4c23-ae6a-0db8b834c142",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Palantir held $8.0 billion in cash, cash equivalents, and short-term U.S. Treasury securities as of March 31, 2026, with no outstanding debt.",
+   "claim_type": "unit_economics",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "present",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "c44e5146-d143-4668-ba5a-9dfec36f51bb",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Government revenue grew 76% year-over-year to $858 million in Q1 2026, while commercial revenue grew 95% to $774 million.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "8d122ce5-77fc-4a62-bcec-d8ad65d2d209",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "U.S. government revenue was $687 million in Q1 2026, up from $373 million in Q1 2025 \u2014 approximately 84% growth.",
+   "claim_type": "growth",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "clear",
+   "is_implicit": false,
+   "implicit_pattern_id": null
+  },
+  {
+   "claim_id": "42fdc700-1e7e-44f7-a853-8c5e6fc0f0e3",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Revenue growth metrics (85% YoY) are presented with no disclosure of customer churn, net revenue retention rate, or cohort-level retention data.",
+   "claim_type": "growth",
+   "specificity": "qualitative",
+   "testability": "no",
+   "temporal_framing": "past",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 1
+  },
+  {
+   "claim_id": "23d6e314-1aff-415d-8d5b-f9f2c797f889",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Revenue mix between one-time and recurring contract types is not explicitly disclosed; Palantir blends cloud subscriptions, on-premises licenses, and professional services without breaking out recurring vs. non-recurring proportions.",
+   "claim_type": "unit_economics",
+   "specificity": "qualitative",
+   "testability": "partial",
+   "temporal_framing": "present",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 29
+  },
+  {
+   "claim_id": "868f79ca-bf59-4f97-8026-d56a427fbc98",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Palantir's AIP is described as an AI-powered generative platform uniquely enabling LLM connectivity within legal, ethical, and security constraints, but no patents, published ML research papers, or open-source contributions are cited to substantiate proprietary AI capability.",
+   "claim_type": "product",
+   "specificity": "qualitative",
+   "testability": "partial",
+   "temporal_framing": "present",
+   "attribution_clarity": "unverifiable",
+   "is_implicit": true,
+   "implicit_pattern_id": 22
+  },
+  {
+   "claim_id": "d41f3453-d595-4079-bcf7-d911c33f8733",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "AIP's performance and differentiation claims (e.g., 'uniquely allows users to connect LLMs with data and operations') are made without reference to any third-party benchmarks or independent evaluations.",
+   "claim_type": "product",
+   "specificity": "qualitative",
+   "testability": "no",
+   "temporal_framing": "present",
+   "attribution_clarity": "unverifiable",
+   "is_implicit": true,
+   "implicit_pattern_id": 24
+  },
+  {
+   "claim_id": "4a7a7617-c937-4b8e-b051-284989193d83",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Revenue growth rate of 85% is highlighted without disclosing absolute customer count growth by segment or cohort-level behavior data showing whether growth is driven by new logos vs. expansion of existing accounts.",
+   "claim_type": "growth",
+   "specificity": "qualitative",
+   "testability": "partial",
+   "temporal_framing": "past",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 5
+  },
+  {
+   "claim_id": "c18bbf9f-e110-4339-8b46-f3615180d95f",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Gross margin expansion from 80% to 87% is highlighted, but stock-based compensation \u2014 which totaled $202 million in Q1 2026 (approximately 12% of revenue) \u2014 is excluded from key non-GAAP measures, potentially obscuring total compensation cost trends relative to revenue growth.",
+   "claim_type": "unit_economics",
+   "specificity": "quantitative",
+   "testability": "yes",
+   "temporal_framing": "past",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 3
+  },
+  {
+   "claim_id": "e09c7727-f53a-4a5f-a605-ba26017dcd05",
+   "analysis_id": "ed5d3022-e6c4-4cc8-ac00-3305a20396b1",
+   "entity_id": "palantir",
+   "assertion": "Palantir describes Foundry as becoming a 'central operating system not only for individual institutions but also for entire industries,' implying platform-level market dominance without citing market share data, customer penetration rates, or a denominator for that claim.",
+   "claim_type": "market_position",
+   "specificity": "qualitative",
+   "testability": "no",
+   "temporal_framing": "present",
+   "attribution_clarity": "ambiguous",
+   "is_implicit": true,
+   "implicit_pattern_id": 12
+  }
+ ],
+ "verdicts": {
+  "e09c7727-f53a-4a5f-a605-ba26017dcd05": {
+   "verdict_id": "8703b011-b6d8-4f72-b227-d11030a9eacf",
+   "claim_id": "e09c7727-f53a-4a5f-a605-ba26017dcd05",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "The available signals \u2014 a GitHub repository count and a top-line revenue figure \u2014 do not speak to the substance of the claim, which is about Foundry achieving platform-level dominance across industries. Revenue confirms Palantir's commercial scale but supplies no market share, penetration rate, or cross-industry adoption metrics that would be necessary to evaluate whether Foundry functions as a true \"central operating system\" for entire industries. The claim is explicitly qualitative and untestable by design, which is itself the core analytical concern: Palantir asserts industry-wide platform dominance while providing no public denominator (e.g., share of industry IT spend, number of institutions using Foundry vs. total addressable universe). To increase confidence in either direction, one would need customer count disclosures by vertical, third-party market share data, or evidence of multi-institution interoperability within a defined industry.",
+   "generated_at": "2026-07-16T02:14:15.663323"
+  },
+  "d41f3453-d595-4079-bcf7-d911c33f8733": {
+   "verdict_id": "dad186b0-2f09-4c9d-958f-fe7f3ac645c8",
+   "claim_id": "d41f3453-d595-4079-bcf7-d911c33f8733",
+   "verdict": "not_testable",
+   "evidence_strength": "weak",
+   "reasoning": "The claim is fundamentally about what is *absent* from AIP's marketing and pitch materials \u2014 specifically, the lack of third-party benchmarks or independent evaluations supporting performance differentiation claims. None of the three signals (GitHub repo count, commit activity, hiring mix) are capable of addressing this question; they measure engineering output and hiring posture, not benchmark citation practices. Verifying this claim would require direct analysis of AIP's pitch decks, product documentation, earnings transcripts, or third-party review databases (e.g., Gartner, independent ML leaderboards), none of which are present here. As an implicit, qualitative claim about the absence of evidence in promotional materials, it is not testable with the available signal set.",
+   "generated_at": "2026-07-16T02:14:16.048661"
+  },
+  "42fdc700-1e7e-44f7-a853-8c5e6fc0f0e3": {
+   "verdict_id": "ddc748bb-bea1-479a-ad42-7ff77d319ec0",
+   "claim_id": "42fdc700-1e7e-44f7-a853-8c5e6fc0f0e3",
+   "verdict": "not_testable",
+   "evidence_strength": "weak",
+   "reasoning": "The claim is fundamentally about a disclosure gap \u2014 specifically, the absence of churn, NRR, and cohort data alongside revenue growth figures in investor materials. None of the available signals (EDGAR revenue, job postings, GitHub commits) can confirm or deny what was or was not disclosed in a pitch deck or earnings communication. Notably, the EDGAR-derived YoY growth of 56% does not match the claimed 85%, which raises a separate concern about the accuracy of the growth figure itself, but this does not address the disclosure omission claim. Evaluating this claim would require direct review of the investor materials in question \u2014 a pitch deck, earnings transcript, or investor memo \u2014 to assess what metrics were and were not included alongside revenue growth.",
+   "generated_at": "2026-07-16T02:14:17.910414"
+  },
+  "c44e5146-d143-4668-ba5a-9dfec36f51bb": {
+   "verdict_id": "13354bd8-e201-4fdc-939c-308ee32dcb86",
+   "claim_id": "c44e5146-d143-4668-ba5a-9dfec36f51bb",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the four available signals directly address the core claim: Q1 2026 segment-level revenues of $858M (government, +76% YoY) and $774M (commercial, +95% YoY). The most relevant signal \u2014 FY2025 annual revenue of $4.475B with 56% YoY growth \u2014 establishes that this is a large, fast-growing company, but it covers a different period and does not break out segment revenues. The remaining signals (job postings, GitHub commits) are too indirect to be probative for precise quantitative financial claims. What would be needed to validate this claim is a Tier 1 source \u2014 specifically a Q1 2026 earnings release, 10-Q filing with segment disclosures, or XBRL data covering the quarter ending in early 2026.",
+   "generated_at": "2026-07-16T02:14:18.028896"
+  },
+  "1bc2edf3-c53d-40bf-affa-03156ec097ce": {
+   "verdict_id": "e9e7cbdc-a926-4eed-be03-eea76f6a4a45",
+   "claim_id": "1bc2edf3-c53d-40bf-affa-03156ec097ce",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the four available signals directly addresses the specific customer count figures (1,007 vs. 769) or the TTM periods cited in the claim. The most relevant signal \u2014 Palantir's 56% YoY revenue growth from EDGAR filings \u2014 provides indirect plausibility that the company was expanding its commercial footprint rapidly, but revenue growth and customer count growth are distinct KPIs that do not move in lockstep. The claim is quantitative and specific, requiring direct disclosure from Palantir's earnings releases or SEC filings (e.g., 10-Q for Q1 2026) to verify; none of those are present in the evidence set. To increase confidence, Q1 2026 10-Q or earnings supplement disclosures reporting customer count would be needed.",
+   "generated_at": "2026-07-16T02:14:18.064251"
+  },
+  "868f79ca-bf59-4f97-8026-d56a427fbc98": {
+   "verdict_id": "5cfbe15c-0a0f-48ee-94e7-92095f3a8a76",
+   "claim_id": "868f79ca-bf59-4f97-8026-d56a427fbc98",
+   "verdict": "partially_supported",
+   "evidence_strength": "weak",
+   "reasoning": "The evidence is largely insufficient to directly confirm or deny Palantir's AIP proprietary AI claims, but the hiring mix signal is meaningfully suggestive. A company with genuinely differentiated, frontier AI capability would typically exhibit a much heavier AI/ML hiring footprint than 1.3% \u2014 this weakly corroborates the implicit claim that AIP's differentiation may rest more on integration architecture and governance frameworks than on novel ML research. The GitHub activity does not resolve the question of patent filings, published research, or open-source AI contributions, which are the core substantiation gap the claim identifies. To increase confidence, one would need to search USPTO/EPO for AIP-related patent filings, scan arXiv/NeurIPS/ICML for Palantir-affiliated ML research, and audit the public GitHub repos for AI/ML-specific substantive content.",
+   "generated_at": "2026-07-16T02:14:18.457297"
+  },
+  "8d122ce5-77fc-4a62-bcec-d8ad65d2d209": {
+   "verdict_id": "dcdf948b-f563-44d6-8fdf-ce24106c5e65",
+   "claim_id": "8d122ce5-77fc-4a62-bcec-d8ad65d2d209",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the four available signals directly address U.S. government segment revenue for Q1 2026 or Q1 2025. The most relevant signal \u2014 Tier 1 EDGAR XBRL full-year 2025 revenue \u2014 establishes meaningful scale context and confirms strong company-wide growth (56% YoY), but segment-level quarterly breakdowns are not present in this data. The claimed 84% U.S. government segment growth is a precise quantitative assertion that would require audited quarterly segment disclosures (e.g., a 10-Q filing with disaggregated revenue by customer type) to verify. Without that, no verdict on the claim's accuracy can be rendered.",
+   "generated_at": "2026-07-16T02:14:18.467536"
+  },
+  "20db0ddc-1fd5-4258-be9f-a7ef24d54475": {
+   "verdict_id": "7fc21557-9279-48c7-b5e9-bcf5e827183d",
+   "claim_id": "20db0ddc-1fd5-4258-be9f-a7ef24d54475",
+   "verdict": "partially_supported",
+   "evidence_strength": "moderate",
+   "reasoning": "The two Tier 1 EDGAR signals establish that the company's overall revenue scale (~$4.5B) and FY2025 growth rate (~56% YoY) are broadly consistent with the claimed 55% growth in top-20 customer average revenue \u2014 making the claim plausible and directionally corroborated. However, the claim is specifically about customer-level concentration metrics (top-20 customer averages) for a trailing twelve-month period ending March 31, 2026, which is a more granular and forward-leaning window that the available annual filings do not directly cover. No customer-level disaggregation data (e.g., 10-K major customer disclosures, segment filings, or earnings call specifics) is available to verify the $108M and $70M figures. To raise confidence to \"supported,\" direct disclosure of top-customer revenue concentration in SEC filings or an earnings transcript would be needed.",
+   "generated_at": "2026-07-16T02:14:18.882924"
+  },
+  "ee95c32c-9d45-45cd-8836-e3d3c13be711": {
+   "verdict_id": "88a91ccd-39a0-4f39-997a-707149bfdce0",
+   "claim_id": "ee95c32c-9d45-45cd-8836-e3d3c13be711",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the four available signals directly addresses Q1 2026 U.S. commercial revenue, either in absolute dollar terms ($255M \u2192 $595M) or the claimed 133% growth rate. The most relevant Tier 1 signals (annual revenue and YoY growth) cover full-year 2025 total company revenue, not the U.S. commercial segment in a specific quarter. The claim is highly specific and quantitative, requiring segment-level quarterly disclosure \u2014 ideally a Q1 2026 earnings release, 10-Q filing, or investor presentation with geographic/segment breakdowns \u2014 which is absent here. No signal contradicts the claim either; the evidence base is simply too indirect and temporally misaligned to form a view.",
+   "generated_at": "2026-07-16T02:14:18.933484"
+  },
+  "4a7a7617-c937-4b8e-b051-284989193d83": {
+   "verdict_id": "30ec224b-0e71-4131-b02e-972a77ff5f58",
+   "claim_id": "4a7a7617-c937-4b8e-b051-284989193d83",
+   "verdict": "partially_supported",
+   "evidence_strength": "moderate",
+   "reasoning": "The claim asserts that an 85% revenue growth rate is presented without the segmentation or cohort data necessary to understand its drivers. Tier 1 EDGAR financials are available and actually show a materially lower YoY growth rate (~56%), which both undercuts the specific 85% figure and reinforces the broader concern that the headline metric lacks transparent decomposition \u2014 no customer count by segment or new-logo-vs.-expansion split is publicly disclosed in these signals. The most important signal is the audited revenue growth rate, which diverges significantly from the claimed 85%, making the original assertion doubly opaque. To fully support the claim, one would need public disclosure of net revenue retention rate, customer count by tier, and cohort-level expansion revenue \u2014 none of which are present in the available evidence.",
+   "generated_at": "2026-07-16T02:14:19.038427"
+  },
+  "1ad3a5e1-0d95-481b-a2fa-51582c2ea8bd": {
+   "verdict_id": "7d72c44b-230a-489e-8afd-cf57e7cfaa40",
+   "claim_id": "1ad3a5e1-0d95-481b-a2fa-51582c2ea8bd",
+   "verdict": "contested",
+   "evidence_strength": "moderate",
+   "reasoning": "The most important signal here is the Tier 1 EDGAR-sourced YoY revenue growth figure of 56% for CY2025, which materially conflicts with the claimed 87% growth rate for the TTM ending March 31, 2026. While the time periods differ slightly, an acceleration from 56% to 87% would require an extraordinary step-change in Q1 2026 performance, for which there is no supporting evidence. Additionally, the total revenue figure of ~$4.5B for CY2025 covers a broader geographic scope than the claimed $4.0B U.S.-only figure, so the geographic disaggregation cannot be verified. To increase confidence, U.S.-segment-specific revenue disclosures for the TTM period ending March 31, 2026 \u2014 ideally from a 10-Q or 8-K filing \u2014 would be required.",
+   "generated_at": "2026-07-16T02:14:19.221408"
+  },
+  "fdc6ecf0-b1f1-4317-8dcd-f482d7e71866": {
+   "verdict_id": "3d590cff-aea9-48cd-8c04-723fc7def09a",
+   "claim_id": "fdc6ecf0-b1f1-4317-8dcd-f482d7e71866",
+   "verdict": "contested",
+   "evidence_strength": "moderate",
+   "reasoning": "The most authoritative available evidence \u2014 Palantir's full-year 2025 EDGAR XBRL filing \u2014 shows annual revenue of ~$4.475B and YoY growth of 56.18%, which is structurally inconsistent with an 85% YoY growth rate claimed for Q1 2026. While Q1 2026 quarterly performance could theoretically accelerate beyond the full-year 2025 average, an 85% growth rate would represent a dramatic step-change that is not anchored by any available Tier 1 or Tier 2 evidence. The most critical gap is the absence of a Q1 2026 10-Q or earnings release filing in the provided signals; definitive verification requires actual Q1 2026 quarterly financials, which have not been surfaced here. Based on available evidence, the specific revenue figure of $1.632B and the 85% growth claim appear inconsistent with observable financial data and should be treated with significant skepticism.",
+   "generated_at": "2026-07-16T02:14:19.687598"
+  },
+  "4fba39dc-5705-4c23-ae6a-0db8b834c142": {
+   "verdict_id": "b3b05c81-60c2-4be6-86f1-627a71d84751",
+   "claim_id": "4fba39dc-5705-4c23-ae6a-0db8b834c142",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "None of the six available signals directly address the specific claim \u2014 a $8.0B cash/treasury balance and zero debt as of March 31, 2026. All signals reflect FY2025 income statement metrics (revenue, margins, EPS, operating income), which are directionally consistent with a cash-rich balance sheet but cannot validate a precise Q1 2026 balance sheet figure. The definitive evidence required would be Palantir's Q1 2026 10-Q or an 8-K containing the March 31, 2026 balance sheet, neither of which is present in the signal set. The strong profitability profile makes the claim plausible but entirely unverified by the available evidence.",
+   "generated_at": "2026-07-16T02:14:20.130906"
+  },
+  "23d6e314-1aff-415d-8d5b-f9f2c797f889": {
+   "verdict_id": "af2e9374-ced6-45b0-b75d-ea233a279238",
+   "claim_id": "23d6e314-1aff-415d-8d5b-f9f2c797f889",
+   "verdict": "insufficient_evidence",
+   "evidence_strength": "weak",
+   "reasoning": "All six available signals are high-quality Tier 1 EDGAR/XBRL financials, but they uniformly capture aggregate financial outcomes \u2014 total revenue, growth rate, margins, earnings \u2014 rather than revenue disaggregation by contract type. The claim is specifically about a disclosure omission (i.e., whether Palantir explicitly breaks out recurring vs. non-recurring revenue), which requires examination of the notes to financial statements, MD&A, or supplemental disclosures \u2014 none of which are surfaced by these signals. The 82% gross margin is weakly consistent with subscription-heavy revenue mix, but this is circumstantial and cannot confirm or deny the disclosure pattern alleged. To properly evaluate this claim, one would need direct inspection of Palantir's 10-K revenue disaggregation footnote (ASC 606 disclosures) or earnings supplement tables showing contract-type breakdowns.",
+   "generated_at": "2026-07-16T02:14:20.588226"
+  },
+  "c18bbf9f-e110-4339-8b46-f3615180d95f": {
+   "verdict_id": "3ad7782b-4a8c-4d41-aa02-53819bd9e225",
+   "claim_id": "c18bbf9f-e110-4339-8b46-f3615180d95f",
+   "verdict": "partially_supported",
+   "evidence_strength": "moderate",
+   "reasoning": "The available GAAP financials collectively support the structural concern raised in the claim: a GAAP gross margin of 82.37% \u2014 well below the claimed 87% non-GAAP figure \u2014 implies meaningful SBC exclusions are boosting reported margins, and the gap between ~31.6% GAAP operating margin and typical non-GAAP levels further corroborates large non-GAAP add-backs. The most important signal is the GAAP gross margin (82.37%), which directly validates that the 80%-to-87% expansion narrative is non-GAAP-driven and not fully reflected in audited results. However, the specific Q1 2026 SBC figure of $202M cannot be independently verified from FY2025 annual filings alone \u2014 quarterly SBC breakdowns and explicit non-GAAP reconciliation schedules would be needed to confirm the exact magnitude and the claim's ~12%-of-revenue assertion with precision.",
+   "generated_at": "2026-07-16T02:14:23.943714"
+  }
+ },
+ "evidences": {
+  "e09c7727-f53a-4a5f-a605-ba26017dcd05": [
+   {
+    "evidence_id": "17c44cdb-4d91-4bd2-9ce3-2fe94ffd77c6",
+    "claim_id": "e09c7727-f53a-4a5f-a605-ba26017dcd05",
+    "signal_id": "a538d18f-ec48-4172-8436-cc6c4f5a474c",
+    "verdict": "insufficient",
+    "reasoning": "266 public GitHub repositories indicates active software development but provides no evidence of platform-level market dominance, industry-wide adoption, or the breadth of Foundry's deployment across institutions or industries."
+   },
+   {
+    "evidence_id": "8ccaf1b0-ceda-4072-b773-16931410d7cb",
+    "claim_id": "e09c7727-f53a-4a5f-a605-ba26017dcd05",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue of ~$4.5B (FY2025) confirms Palantir is a substantive enterprise software business, but revenue alone provides no denominator \u2014 no total addressable market share, customer count by industry, or evidence of cross-industry 'operating system' penetration is derivable from this figure."
+   }
+  ],
+  "d41f3453-d595-4079-bcf7-d911c33f8733": [
+   {
+    "evidence_id": "e4d51bf0-beab-4e4f-9c45-6dbbeb564faf",
+    "claim_id": "d41f3453-d595-4079-bcf7-d911c33f8733",
+    "signal_id": "a538d18f-ec48-4172-8436-cc6c4f5a474c",
+    "verdict": "insufficient",
+    "reasoning": "The number of public GitHub repositories (266) speaks to development activity breadth but provides no information about whether third-party benchmarks or independent evaluations of AIP exist or are referenced."
+   },
+   {
+    "evidence_id": "36caa77a-df6b-440a-8487-78d4e90c64bc",
+    "claim_id": "d41f3453-d595-4079-bcf7-d911c33f8733",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "Commit cadence over 90 days reflects engineering activity but is entirely orthogonal to whether performance claims are validated by independent benchmarks."
+   },
+   {
+    "evidence_id": "bd832bcb-acf9-4bc5-99db-b388c34620f7",
+    "claim_id": "d41f3453-d595-4079-bcf7-d911c33f8733",
+    "signal_id": "15d4bff2-0821-40a2-b477-3326503dd837",
+    "verdict": "insufficient",
+    "reasoning": "Hiring mix data shows predominantly engineering roles with minimal AI/ML-specific hiring, but this cannot speak to the presence or absence of third-party benchmark references in AIP's marketing or product claims."
+   }
+  ],
+  "42fdc700-1e7e-44f7-a853-8c5e6fc0f0e3": [
+   {
+    "evidence_id": "9386ffe5-3232-4303-ae4d-95cd530cf1b0",
+    "claim_id": "42fdc700-1e7e-44f7-a853-8c5e6fc0f0e3",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue confirms a large, real business (~$4.5B), but absolute revenue figures say nothing about whether churn, NRR, or cohort retention data was disclosed alongside growth metrics."
+   },
+   {
+    "evidence_id": "a1cea7d5-81bb-4dac-b9b6-c2054287a232",
+    "claim_id": "42fdc700-1e7e-44f7-a853-8c5e6fc0f0e3",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "insufficient",
+    "reasoning": "The actual YoY growth rate from EDGAR (56%) diverges from the claimed 85%, but neither figure confirms nor denies whether retention or churn disclosures were made \u2014 it only establishes the growth claim itself is somewhat overstated."
+   },
+   {
+    "evidence_id": "801ce3a6-672b-4862-91bb-16c82e970818",
+    "claim_id": "42fdc700-1e7e-44f7-a853-8c5e6fc0f0e3",
+    "signal_id": "29db1b57-ea47-45f1-994a-d6517eaa557e",
+    "verdict": "insufficient",
+    "reasoning": "Open job count is a proxy for business activity but provides no signal whatsoever about retention metric disclosure practices."
+   },
+   {
+    "evidence_id": "3b987821-0854-4e23-85ee-880caf4556d4",
+    "claim_id": "42fdc700-1e7e-44f7-a853-8c5e6fc0f0e3",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity reflects engineering cadence but is entirely unrelated to whether customer retention or cohort data was disclosed in investor materials."
+   }
+  ],
+  "c44e5146-d143-4668-ba5a-9dfec36f51bb": [
+   {
+    "evidence_id": "6b420df3-52a8-4c59-912f-31e35e455aa4",
+    "claim_id": "c44e5146-d143-4668-ba5a-9dfec36f51bb",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue of $4.475B for FY2025 provides a scale reference but does not speak to the Q1 2026 segment-level breakdown between government ($858M) and commercial ($774M) revenues, nor their specific growth rates."
+   },
+   {
+    "evidence_id": "d7d9254d-01bb-4015-b777-9c14ce42acd1",
+    "claim_id": "c44e5146-d143-4668-ba5a-9dfec36f51bb",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "insufficient",
+    "reasoning": "FY2025 YoY revenue growth of 56.18% is directionally consistent with a high-growth company capable of 76\u201395% segment growth in a subsequent quarter, but it covers a different time period and does not validate the specific Q1 2026 segment growth rates claimed."
+   },
+   {
+    "evidence_id": "0eb21753-c50e-44a9-94c7-464821412b77",
+    "claim_id": "c44e5146-d143-4668-ba5a-9dfec36f51bb",
+    "signal_id": "29db1b57-ea47-45f1-994a-d6517eaa557e",
+    "verdict": "insufficient",
+    "reasoning": "2,554 open job postings as of July 2026 suggests continued organizational expansion, which is loosely consistent with rapid revenue growth, but is far too indirect to validate specific segment revenue figures or growth rates."
+   },
+   {
+    "evidence_id": "47fc2a57-6235-4c27-94c4-5873bbeaa308",
+    "claim_id": "c44e5146-d143-4668-ba5a-9dfec36f51bb",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "131 GitHub commits over 90 days is a weak proxy for product activity and has no meaningful bearing on the specific financial claims about government or commercial revenue in Q1 2026."
+   }
+  ],
+  "1bc2edf3-c53d-40bf-affa-03156ec097ce": [
+   {
+    "evidence_id": "e2a2ef86-8204-494c-8f24-7519e961f162",
+    "claim_id": "1bc2edf3-c53d-40bf-affa-03156ec097ce",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue of $4.47B for FY2025 confirms Palantir's scale and commercial momentum, but provides no direct data on customer count metrics for the TTM periods specified in the claim."
+   },
+   {
+    "evidence_id": "8d6292b8-81e9-4fbf-bbdf-d365c5b0b60b",
+    "claim_id": "1bc2edf3-c53d-40bf-affa-03156ec097ce",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "insufficient",
+    "reasoning": "56% YoY revenue growth is consistent with a rapidly expanding customer base and lends indirect plausibility to the 31% customer count increase, but revenue growth and customer count growth are distinct metrics and this signal cannot verify the specific figures cited."
+   },
+   {
+    "evidence_id": "9a04caaa-3fd2-487b-9ce5-aff0ecf78410",
+    "claim_id": "1bc2edf3-c53d-40bf-affa-03156ec097ce",
+    "signal_id": "29db1b57-ea47-45f1-994a-d6517eaa557e",
+    "verdict": "insufficient",
+    "reasoning": "2,554 open job listings as of July 2026 suggests continued organizational expansion, which is loosely consistent with growing customer demand, but provides no direct evidence of customer count figures."
+   },
+   {
+    "evidence_id": "610c29bb-09ea-4245-bd78-343fbf10301a",
+    "claim_id": "1bc2edf3-c53d-40bf-affa-03156ec097ce",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "131 commits across top repos over the trailing 90 days reflects ongoing product development activity but is entirely disconnected from customer count metrics or their trajectory."
+   }
+  ],
+  "868f79ca-bf59-4f97-8026-d56a427fbc98": [
+   {
+    "evidence_id": "39d56a38-0539-4fcf-92c7-a334e2d24a1e",
+    "claim_id": "868f79ca-bf59-4f97-8026-d56a427fbc98",
+    "signal_id": "a538d18f-ec48-4172-8436-cc6c4f5a474c",
+    "verdict": "insufficient",
+    "reasoning": "266 public GitHub repos indicates some open-source presence, but without knowing the content, relevance to AIP, or AI/ML specificity of those repos, this number alone cannot substantiate or refute proprietary AI capability claims."
+   },
+   {
+    "evidence_id": "322a9d6d-8155-4121-a1ed-16c05a160bcf",
+    "claim_id": "868f79ca-bf59-4f97-8026-d56a427fbc98",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "131 commits over 90 days across top repos signals active development, but commit volume is too indirect and unattributed to AIP-specific or AI/ML work to meaningfully address the claim about proprietary AI capability."
+   },
+   {
+    "evidence_id": "9ed9fe13-a601-4709-885a-a36d685f6963",
+    "claim_id": "868f79ca-bf59-4f97-8026-d56a427fbc98",
+    "signal_id": "15d4bff2-0821-40a2-b477-3326503dd837",
+    "verdict": "contradicting",
+    "reasoning": "An AI/ML hiring mix of only 1.3% (2 out of 150 open roles) is strikingly low for a company claiming a uniquely differentiated AI platform, suggesting limited current investment in building out novel AI/ML research capacity and weakly corroborating the absence of deep proprietary AI R&D infrastructure."
+   }
+  ],
+  "8d122ce5-77fc-4a62-bcec-d8ad65d2d209": [
+   {
+    "evidence_id": "85192c73-25ce-4c48-a850-e78c4ead71f6",
+    "claim_id": "8d122ce5-77fc-4a62-bcec-d8ad65d2d209",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "Full-year 2025 revenue of ~$4.48B provides a useful scale anchor but does not break out U.S. government as a segment for Q1 2026, making it impossible to verify the specific quarterly figures cited in the claim."
+   },
+   {
+    "evidence_id": "014e3d4b-33a3-4d9b-9e02-1416d97700ff",
+    "claim_id": "8d122ce5-77fc-4a62-bcec-d8ad65d2d209",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "insufficient",
+    "reasoning": "A 56% company-wide YoY revenue growth rate for FY2025 is directionally consistent with strong growth but cannot confirm the claimed 84% segment-specific growth in U.S. government revenue for Q1 2026, which spans a different time period and a different scope."
+   },
+   {
+    "evidence_id": "23094ea4-8dc2-48f1-8122-813aae2f074e",
+    "claim_id": "8d122ce5-77fc-4a62-bcec-d8ad65d2d209",
+    "signal_id": "29db1b57-ea47-45f1-994a-d6517eaa557e",
+    "verdict": "insufficient",
+    "reasoning": "2,554 open job postings signals ongoing organizational expansion but provides no information about revenue composition, government segment performance, or quarterly financial results."
+   },
+   {
+    "evidence_id": "f9e3ea91-3779-41ac-9cc9-fe287c06eb70",
+    "claim_id": "8d122ce5-77fc-4a62-bcec-d8ad65d2d209",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity is too far removed from segment-level financial metrics to provide any meaningful signal about U.S. government revenue growth."
+   }
+  ],
+  "20db0ddc-1fd5-4258-be9f-a7ef24d54475": [
+   {
+    "evidence_id": "a381667d-f909-44de-a4a9-25853d8f6f9e",
+    "claim_id": "20db0ddc-1fd5-4258-be9f-a7ef24d54475",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "supporting",
+    "reasoning": "Full-year 2025 annual revenue of ~$4.5B from EDGAR XBRL is Tier 1 evidence confirming the company operates at a scale where top-20 customer averages of $70\u2013108M are plausible, though it does not directly verify the customer-level concentration figures."
+   },
+   {
+    "evidence_id": "b4a644b3-404a-4950-b8c1-aa3a5e92debc",
+    "claim_id": "20db0ddc-1fd5-4258-be9f-a7ef24d54475",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "supporting",
+    "reasoning": "A 56.18% YoY revenue growth rate for FY2025 is directionally consistent with the claimed 55% growth in top-20 customer average revenue, lending meaningful corroboration that growth of this magnitude is occurring at the company level."
+   },
+   {
+    "evidence_id": "398c84c4-74b2-4383-8d77-2d2c230034fa",
+    "claim_id": "20db0ddc-1fd5-4258-be9f-a7ef24d54475",
+    "signal_id": "29db1b57-ea47-45f1-994a-d6517eaa557e",
+    "verdict": "insufficient",
+    "reasoning": "Open job count of 2,554 is a Tier 2 operational signal that reflects company expansion but provides no information about customer revenue concentration or growth rates."
+   },
+   {
+    "evidence_id": "10e1bdec-c024-44a1-90bf-a4ed718348e1",
+    "claim_id": "20db0ddc-1fd5-4258-be9f-a7ef24d54475",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity is a Tier 2 development-activity proxy with no bearing on customer-level revenue figures or the specific claim about top-20 customer averages."
+   }
+  ],
+  "ee95c32c-9d45-45cd-8836-e3d3c13be711": [
+   {
+    "evidence_id": "5dd11533-171c-481b-9d6f-ac8ed85987b3",
+    "claim_id": "ee95c32c-9d45-45cd-8836-e3d3c13be711",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "Full-year 2025 annual revenue of ~$4.48B provides a useful baseline for scale, but does not speak to Q1 2026 quarterly figures or the U.S. commercial segment specifically, making it insufficient to verify the claimed growth."
+   },
+   {
+    "evidence_id": "bed5d1ad-a00f-4342-aeab-99275228debc",
+    "claim_id": "ee95c32c-9d45-45cd-8836-e3d3c13be711",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "insufficient",
+    "reasoning": "A 56% YoY total revenue growth rate for full-year 2025 is directionally positive but pertains to total company revenue across all geographies in a prior period \u2014 it neither confirms nor contradicts a 133% YoY growth rate in U.S. commercial revenue for Q1 2026."
+   },
+   {
+    "evidence_id": "f3f32050-6c54-4058-aad1-ce0fc67512d6",
+    "claim_id": "ee95c32c-9d45-45cd-8836-e3d3c13be711",
+    "signal_id": "29db1b57-ea47-45f1-994a-d6517eaa557e",
+    "verdict": "insufficient",
+    "reasoning": "An open job count of 2,554 as of mid-2026 suggests ongoing business activity and scaling, but headcount demand is far too indirect a proxy to corroborate a specific quarterly revenue figure or growth rate."
+   },
+   {
+    "evidence_id": "fe9f18af-44a8-447c-8d05-5c9563331347",
+    "claim_id": "ee95c32c-9d45-45cd-8836-e3d3c13be711",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity in top repos reflects R&D or engineering output but has no meaningful connection to U.S. commercial revenue performance in any specific quarter."
+   }
+  ],
+  "4a7a7617-c937-4b8e-b051-284989193d83": [
+   {
+    "evidence_id": "fbbb739b-3e89-494e-aecf-ffc637964be7",
+    "claim_id": "4a7a7617-c937-4b8e-b051-284989193d83",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "Absolute revenue of ~$4.5B confirms meaningful scale but provides no visibility into customer count by segment, new logo contribution, or net revenue retention \u2014 the exact dimensions the claim flags as undisclosed."
+   },
+   {
+    "evidence_id": "a6ee32a3-52cf-490f-a8ea-4873e69c6b0f",
+    "claim_id": "4a7a7617-c937-4b8e-b051-284989193d83",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "supporting",
+    "reasoning": "The observed YoY revenue growth of 56% contradicts the claimed 85% figure, which itself strengthens the assertion that the headline growth rate lacks context \u2014 the actual rate appears overstated, and without cohort or segment disclosure it is impossible to audit the driver mix."
+   },
+   {
+    "evidence_id": "7dc683d8-dd83-4e98-b779-8edfa5933714",
+    "claim_id": "4a7a7617-c937-4b8e-b051-284989193d83",
+    "signal_id": "29db1b57-ea47-45f1-994a-d6517eaa557e",
+    "verdict": "insufficient",
+    "reasoning": "2,554 open roles suggests organizational expansion, which is weakly consistent with revenue growth, but hiring data cannot distinguish between growth driven by new customer acquisition versus expansion of existing accounts."
+   },
+   {
+    "evidence_id": "4ae89b39-f266-49a4-a766-92ad51b0e543",
+    "claim_id": "4a7a7617-c937-4b8e-b051-284989193d83",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "131 commits across top repos over 90 days reflects modest engineering activity but is entirely unrelated to revenue attribution or customer cohort behavior."
+   }
+  ],
+  "1ad3a5e1-0d95-481b-a2fa-51582c2ea8bd": [
+   {
+    "evidence_id": "2a0f43ed-6198-49ba-bbb7-d40f5c10a7c2",
+    "claim_id": "1ad3a5e1-0d95-481b-a2fa-51582c2ea8bd",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "This signal reports total annual revenue of ~$4.5B for the calendar year ending December 31, 2025 \u2014 not U.S.-only revenue for the trailing twelve months ending March 31, 2026, making it a temporal and geographic mismatch that cannot directly confirm or deny the $4.0B U.S.-specific figure."
+   },
+   {
+    "evidence_id": "836f0b6f-2737-47ca-a192-572f9e13fb80",
+    "claim_id": "1ad3a5e1-0d95-481b-a2fa-51582c2ea8bd",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "contradicting",
+    "reasoning": "The available Tier 1 audited growth figure for the full calendar year 2025 is 56% YoY, which materially contradicts the claimed 87% growth rate for the TTM period ending March 31, 2026 \u2014 even accounting for the different time windows, the gap is large enough to cast serious doubt on the 87% assertion."
+   },
+   {
+    "evidence_id": "dcc132a9-851a-4cf7-a48f-36a5ebd153ea",
+    "claim_id": "1ad3a5e1-0d95-481b-a2fa-51582c2ea8bd",
+    "signal_id": "29db1b57-ea47-45f1-994a-d6517eaa557e",
+    "verdict": "insufficient",
+    "reasoning": "Open job count is a very indirect proxy for business momentum and provides no meaningful signal about the specific revenue figure or growth rate claimed."
+   },
+   {
+    "evidence_id": "d79c45f6-fc5c-4e79-8a8e-93208024212b",
+    "claim_id": "1ad3a5e1-0d95-481b-a2fa-51582c2ea8bd",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity is too indirect and unrelated to revenue attribution to corroborate or contradict a specific revenue or growth rate claim."
+   }
+  ],
+  "fdc6ecf0-b1f1-4317-8dcd-f482d7e71866": [
+   {
+    "evidence_id": "d2222182-5fb6-4bf0-b0d0-7dbe046d0aa0",
+    "claim_id": "fdc6ecf0-b1f1-4317-8dcd-f482d7e71866",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "This signal covers full-year 2025 annual revenue of ~$4.475B, which implies an average quarterly run-rate of ~$1.12B \u2014 well below the claimed Q1 2026 figure of $1.632B, but it provides no direct Q1 2026 quarterly data to confirm or deny the specific claim."
+   },
+   {
+    "evidence_id": "e81237bf-609e-4529-ab45-d4c161655f3c",
+    "claim_id": "fdc6ecf0-b1f1-4317-8dcd-f482d7e71866",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "contradicting",
+    "reasoning": "Full-year 2025 YoY revenue growth was 56.18% per EDGAR filings, which is materially inconsistent with the claimed 85% YoY growth rate for Q1 2026; while quarterly growth can exceed annual averages, the magnitude of the discrepancy (85% vs. 56%) raises significant doubt about the claimed growth figure."
+   },
+   {
+    "evidence_id": "74512763-4911-4fdb-975e-67662c1350fd",
+    "claim_id": "fdc6ecf0-b1f1-4317-8dcd-f482d7e71866",
+    "signal_id": "29db1b57-ea47-45f1-994a-d6517eaa557e",
+    "verdict": "insufficient",
+    "reasoning": "Open job count is a weak proxy for business momentum and provides no direct evidence about Q1 2026 revenue levels or growth rates."
+   },
+   {
+    "evidence_id": "aa8d90f8-3b86-4414-a16e-24c64bfeef39",
+    "claim_id": "fdc6ecf0-b1f1-4317-8dcd-f482d7e71866",
+    "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+    "verdict": "insufficient",
+    "reasoning": "GitHub commit activity is a very indirect signal of engineering activity and has no meaningful bearing on verifying specific quarterly revenue or growth figures."
+   }
+  ],
+  "4fba39dc-5705-4c23-ae6a-0db8b834c142": [
+   {
+    "evidence_id": "9be604fe-0f48-4fff-ac0b-d264d345be30",
+    "claim_id": "4fba39dc-5705-4c23-ae6a-0db8b834c142",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "Annual revenue of ~$4.5B for FY2025 confirms Palantir's scale and cash-generative capacity, but does not directly evidence the specific balance sheet figures claimed (cash/treasuries as of March 31, 2026)."
+   },
+   {
+    "evidence_id": "a44c67d0-6435-4e9b-87a5-766767ce0ab9",
+    "claim_id": "4fba39dc-5705-4c23-ae6a-0db8b834c142",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "insufficient",
+    "reasoning": "56% YoY revenue growth is directionally positive for cash accumulation, but growth rates alone cannot confirm a specific cash/treasury balance or zero-debt position on a given date."
+   },
+   {
+    "evidence_id": "d951fc95-827b-45fe-aa4f-4b8e6c6f78aa",
+    "claim_id": "4fba39dc-5705-4c23-ae6a-0db8b834c142",
+    "signal_id": "0ec6cdf2-7f5d-4a6b-9a3e-e205ad6d2a57",
+    "verdict": "insufficient",
+    "reasoning": "An 82% gross margin indicates strong cash conversion economics that could support high cash reserves, but this is indirect and cannot substantiate the precise $8.0B figure or debt status."
+   },
+   {
+    "evidence_id": "7d1801bc-dca6-4119-95f6-7d9426bad20c",
+    "claim_id": "4fba39dc-5705-4c23-ae6a-0db8b834c142",
+    "signal_id": "33b0fbc9-b613-4341-9e6d-84a20e416bd6",
+    "verdict": "insufficient",
+    "reasoning": "Operating income of ~$1.4B for FY2025 supports the plausibility of significant cash accumulation, but does not verify the balance sheet snapshot claimed for Q1 2026."
+   },
+   {
+    "evidence_id": "7dca3184-2426-4ca7-a37f-bd581d1ce3ce",
+    "claim_id": "4fba39dc-5705-4c23-ae6a-0db8b834c142",
+    "signal_id": "e02e8ba8-ee63-43d0-953e-3eac0c466701",
+    "verdict": "insufficient",
+    "reasoning": "Diluted EPS of $0.63 for FY2025 confirms profitability, which is consistent with growing cash reserves, but provides no direct evidence of the March 31, 2026 balance sheet."
+   },
+   {
+    "evidence_id": "1d133fc0-f501-4ecf-8fe4-1c85806f5cae",
+    "claim_id": "4fba39dc-5705-4c23-ae6a-0db8b834c142",
+    "signal_id": "89e84f34-5509-47ec-9104-a706a5016f7f",
+    "verdict": "insufficient",
+    "reasoning": "Five 8-K filings in the past 12 months is a normal filing cadence and provides no direct information about the cash, treasury, or debt figures claimed."
+   }
+  ],
+  "23d6e314-1aff-415d-8d5b-f9f2c797f889": [
+   {
+    "evidence_id": "ee583ce4-b271-4fe3-9375-cfbe2cd91409",
+    "claim_id": "23d6e314-1aff-415d-8d5b-f9f2c797f889",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "insufficient",
+    "reasoning": "Total annual revenue of ~$4.5B confirms Palantir's scale but provides no breakdown between recurring and non-recurring revenue streams, neither supporting nor contradicting the disclosure claim."
+   },
+   {
+    "evidence_id": "b612b674-5d11-4c2b-89f3-fda2e1548f8f",
+    "claim_id": "23d6e314-1aff-415d-8d5b-f9f2c797f889",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "insufficient",
+    "reasoning": "YoY revenue growth of 56% speaks to top-line momentum but offers no insight into how revenue is categorized or disclosed by contract type."
+   },
+   {
+    "evidence_id": "ff53acc5-4894-4352-a731-8d4b7ea85a8c",
+    "claim_id": "23d6e314-1aff-415d-8d5b-f9f2c797f889",
+    "signal_id": "0ec6cdf2-7f5d-4a6b-9a3e-e205ad6d2a57",
+    "verdict": "insufficient",
+    "reasoning": "A gross margin of 82% is consistent with a software-heavy, recurring-revenue model, which could weakly imply subscription dominance, but XBRL does not surface an explicit recurring vs. non-recurring split to confirm or deny the disclosure claim."
+   },
+   {
+    "evidence_id": "03bb99ac-b25b-41a9-8c1d-de7924f2b684",
+    "claim_id": "23d6e314-1aff-415d-8d5b-f9f2c797f889",
+    "signal_id": "33b0fbc9-b613-4341-9e6d-84a20e416bd6",
+    "verdict": "insufficient",
+    "reasoning": "Operating income of ~$1.4B reflects overall profitability but contains no segment or contract-type disaggregation relevant to the disclosure pattern being assessed."
+   },
+   {
+    "evidence_id": "651b09b7-476f-445b-9ad3-d71d4832f3ae",
+    "claim_id": "23d6e314-1aff-415d-8d5b-f9f2c797f889",
+    "signal_id": "e02e8ba8-ee63-43d0-953e-3eac0c466701",
+    "verdict": "insufficient",
+    "reasoning": "Diluted EPS of $0.63 is a bottom-line metric with no bearing on how Palantir characterizes or discloses its revenue mix by contract type."
+   },
+   {
+    "evidence_id": "f8710f43-86d4-406d-9d96-b96b2b33f714",
+    "claim_id": "23d6e314-1aff-415d-8d5b-f9f2c797f889",
+    "signal_id": "89e84f34-5509-47ec-9104-a706a5016f7f",
+    "verdict": "insufficient",
+    "reasoning": "Five 8-K filings over 12 months is a normal cadence for a public company and does not reveal whether recurring vs. non-recurring revenue is disclosed in those or other filings."
+   }
+  ],
+  "c18bbf9f-e110-4339-8b46-f3615180d95f": [
+   {
+    "evidence_id": "bf31abf4-730e-4ab4-953d-b145e2b65c52",
+    "claim_id": "c18bbf9f-e110-4339-8b46-f3615180d95f",
+    "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+    "verdict": "supporting",
+    "reasoning": "Annual revenue of ~$4.48B for FY2025 provides the denominator context; if Q1 2026 revenue is roughly $1.68B (annualizing at growth pace), a $202M SBC figure equating to ~12% of quarterly revenue is plausible and directionally consistent with the claim's scale."
+   },
+   {
+    "evidence_id": "86c1652d-bf87-4f01-be5f-bbed51ea5b62",
+    "claim_id": "c18bbf9f-e110-4339-8b46-f3615180d95f",
+    "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+    "verdict": "supporting",
+    "reasoning": "56% YoY revenue growth is strong, but rapid growth can mask SBC dilution; high growth rates are often used to justify non-GAAP exclusions, which is precisely the dynamic the claim flags as potentially obscuring total compensation costs."
+   },
+   {
+    "evidence_id": "c6adcaed-f235-4800-8f28-e205aa44b09e",
+    "claim_id": "c18bbf9f-e110-4339-8b46-f3615180d95f",
+    "signal_id": "0ec6cdf2-7f5d-4a6b-9a3e-e205ad6d2a57",
+    "verdict": "contradicting",
+    "reasoning": "GAAP gross margin of 82.37% for FY2025 falls between the claimed 80% (GAAP floor) and 87% (non-GAAP ceiling), suggesting the gross margin expansion narrative is partially real but also partially reliant on non-GAAP adjustments \u2014 consistent with the claim's concern about SBC exclusions inflating reported margin."
+   },
+   {
+    "evidence_id": "e3d1337e-cae5-4c37-8417-259123aec1f9",
+    "claim_id": "c18bbf9f-e110-4339-8b46-f3615180d95f",
+    "signal_id": "33b0fbc9-b613-4341-9e6d-84a20e416bd6",
+    "verdict": "supporting",
+    "reasoning": "GAAP operating income of ~$1.41B on $4.48B revenue yields an operating margin of ~31.6%, which, compared to likely non-GAAP operating margins in the 40%+ range, implies significant add-backs (consistent with $202M+ quarterly SBC being excluded from non-GAAP metrics)."
+   },
+   {
+    "evidence_id": "2b6fff90-db9c-429f-945a-6a085883379a",
+    "claim_id": "c18bbf9f-e110-4339-8b46-f3615180d95f",
+    "signal_id": "e02e8ba8-ee63-43d0-953e-3eac0c466701",
+    "verdict": "supporting",
+    "reasoning": "Diluted EPS of only $0.63 on ~$1.41B GAAP operating income signals substantial below-the-line charges or share dilution consistent with large SBC programs, supporting the claim that total compensation costs are material relative to revenue."
+   },
+   {
+    "evidence_id": "08e3e2e4-392a-4140-977f-cb614a32393c",
+    "claim_id": "c18bbf9f-e110-4339-8b46-f3615180d95f",
+    "signal_id": "89e84f34-5509-47ec-9104-a706a5016f7f",
+    "verdict": "insufficient",
+    "reasoning": "A count of 5 8-K filings over 12 months provides no direct evidence about SBC levels, non-GAAP reporting practices, or gross margin composition."
+   }
+  ]
+ },
+ "signals": [
+  {
+   "signal_id": "39d35f6d-03c1-4a62-bf44-55b5c60840cb",
+   "entity_id": "palantir",
+   "signal_type": "annual_revenue",
+   "signal_name": "annual_revenue_usd",
+   "value": 4475446000,
+   "unit": "USD",
+   "period_start": "2025-01-01",
+   "period_end": "2025-12-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655",
+   "fetched_at": "2026-07-16T02:13:31.011073",
+   "reliability_tier": 1,
+   "raw": {
+    "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "entry": {
+     "start": "2025-01-01",
+     "end": "2025-12-31",
+     "val": 4475446000,
+     "accn": "0001321655-26-000011",
+     "fy": 2025,
+     "fp": "FY",
+     "form": "10-K",
+     "filed": "2026-02-17",
+     "frame": "CY2025"
+    }
+   }
+  },
+  {
+   "signal_id": "55e36c7b-8dfc-436e-8ea8-e6fbffa654a8",
+   "entity_id": "palantir",
+   "signal_type": "revenue_growth",
+   "signal_name": "revenue_growth_yoy_pct",
+   "value": 56.18,
+   "unit": "pct",
+   "period_start": "2024-12-31",
+   "period_end": "2025-12-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655",
+   "fetched_at": "2026-07-16T02:13:31.011944",
+   "reliability_tier": 1,
+   "raw": {
+    "current": 4475446000,
+    "prior": 2865507000
+   }
+  },
+  {
+   "signal_id": "0ec6cdf2-7f5d-4a6b-9a3e-e205ad6d2a57",
+   "entity_id": "palantir",
+   "signal_type": "gross_margin",
+   "signal_name": "gross_margin_pct",
+   "value": 82.37,
+   "unit": "pct",
+   "period_start": null,
+   "period_end": "2025-12-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655",
+   "fetched_at": "2026-07-16T02:13:31.012477",
+   "reliability_tier": 1,
+   "raw": null
+  },
+  {
+   "signal_id": "33b0fbc9-b613-4341-9e6d-84a20e416bd6",
+   "entity_id": "palantir",
+   "signal_type": "operating_income",
+   "signal_name": "operating_income_usd",
+   "value": 1414015000,
+   "unit": "USD",
+   "period_start": "2025-01-01",
+   "period_end": "2025-12-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655",
+   "fetched_at": "2026-07-16T02:13:31.012979",
+   "reliability_tier": 1,
+   "raw": {
+    "concept": "OperatingIncomeLoss",
+    "entry": {
+     "start": "2025-01-01",
+     "end": "2025-12-31",
+     "val": 1414015000,
+     "accn": "0001321655-26-000011",
+     "fy": 2025,
+     "fp": "FY",
+     "form": "10-K",
+     "filed": "2026-02-17",
+     "frame": "CY2025"
+    }
+   }
+  },
+  {
+   "signal_id": "e02e8ba8-ee63-43d0-953e-3eac0c466701",
+   "entity_id": "palantir",
+   "signal_type": "eps",
+   "signal_name": "eps_diluted_usd",
+   "value": 0.63,
+   "unit": "USD/shares",
+   "period_start": "2025-01-01",
+   "period_end": "2025-12-31",
+   "source": "edgar_xbrl",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655",
+   "fetched_at": "2026-07-16T02:13:31.013572",
+   "reliability_tier": 1,
+   "raw": {
+    "concept": "EarningsPerShareDiluted",
+    "entry": {
+     "start": "2025-01-01",
+     "end": "2025-12-31",
+     "val": 0.63,
+     "accn": "0001321655-26-000011",
+     "fy": 2025,
+     "fp": "FY",
+     "form": "10-K",
+     "filed": "2026-02-17",
+     "frame": "CY2025"
+    }
+   }
+  },
+  {
+   "signal_id": "89e84f34-5509-47ec-9104-a706a5016f7f",
+   "entity_id": "palantir",
+   "signal_type": "filing_language_change",
+   "signal_name": "8k_count_12mo",
+   "value": 5,
+   "unit": "count",
+   "period_start": null,
+   "period_end": null,
+   "source": "edgar_filings",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655&type=8-K",
+   "fetched_at": "2026-07-16T02:13:31.208902",
+   "reliability_tier": 1,
+   "raw": {
+    "recent_8k_dates": [
+     "2026-06-09",
+     "2026-05-04",
+     "2026-02-02",
+     "2025-11-03",
+     "2025-08-04"
+    ]
+   }
+  },
+  {
+   "signal_id": "a538d18f-ec48-4172-8436-cc6c4f5a474c",
+   "entity_id": "palantir",
+   "signal_type": "oss_activity",
+   "signal_name": "github_public_repos",
+   "value": 266,
+   "unit": "count",
+   "period_start": null,
+   "period_end": null,
+   "source": "github_api",
+   "source_url": "https://github.com/palantir",
+   "fetched_at": "2026-07-16T02:13:30.994388",
+   "reliability_tier": 2,
+   "raw": {
+    "followers": 4418,
+    "created_at": "2010-06-11T21:47:13Z",
+    "org": "palantir"
+   }
+  },
+  {
+   "signal_id": "d9961fe9-27bf-4c51-b91d-667cdca1a9db",
+   "entity_id": "palantir",
+   "signal_type": "github_commit_velocity",
+   "signal_name": "commits_90d_top_repos",
+   "value": 131,
+   "unit": "count",
+   "period_start": "2026-04-17",
+   "period_end": "2026-07-16",
+   "source": "github_api",
+   "source_url": "https://github.com/palantir",
+   "fetched_at": "2026-07-16T02:13:32.795277",
+   "reliability_tier": 2,
+   "raw": {
+    "repos_checked": 3,
+    "org": "palantir"
+   }
+  },
+  {
+   "signal_id": "29db1b57-ea47-45f1-994a-d6517eaa557e",
+   "entity_id": "palantir",
+   "signal_type": "hiring_volume",
+   "signal_name": "open_jobs_count",
+   "value": 2554,
+   "unit": "count",
+   "period_start": null,
+   "period_end": "2026-07-16",
+   "source": "adzuna",
+   "source_url": "https://www.adzuna.com/search?q=Palantir",
+   "fetched_at": "2026-07-16T02:13:34.731758",
+   "reliability_tier": 2,
+   "raw": {
+    "query": "Palantir",
+    "total_count": 2554,
+    "sample_size": 150
+   }
+  },
+  {
+   "signal_id": "15d4bff2-0821-40a2-b477-3326503dd837",
+   "entity_id": "palantir",
+   "signal_type": "hiring_mix",
+   "signal_name": "hiring_mix_breakdown",
+   "value": {
+    "ai_ml_pct": 1.3,
+    "engineering_pct": 16.7,
+    "sales_pct": 0.7,
+    "ai_ml_count": 2,
+    "engineering_count": 25,
+    "sales_count": 1,
+    "sample_size": 150
+   },
+   "unit": "pct_breakdown",
+   "period_start": null,
+   "period_end": "2026-07-16",
+   "source": "adzuna",
+   "source_url": null,
+   "fetched_at": "2026-07-16T02:13:34.732434",
+   "reliability_tier": 2,
+   "raw": {
+    "sample_titles": [
+     "Palantir Engineer",
+     "Palantir Developer",
+     "Palantir Engineer",
+     "Palantir Data Engineer",
+     "Palantir Software Engineer",
+     "Palantir Data Engineer",
+     "Palantir AIP Engineer",
+     "Palantir Foundry Engineer",
+     "Palantir Integration Engineer",
+     "Palantir Platform Admin",
+     "Palantir Foundry developer",
+     "Palantir Foundry Developer",
+     "Palantir Foundry Developer",
+     "Data Engineer with Palantir",
+     "Deployment Specialist - Palantir",
+     "Deployment Strategist- Palantir",
+     "Palantir Data and Software Engineer",
+     "Palantir Foundry Ontology Engineer",
+     "Palantir Data Modeler & Architect",
+     "Senior Palantir Tech Lead"
+    ]
+   }
+  }
+ ],
+ "coverage": {
+  "total_claims": 15,
+  "strong_coverage": 14,
+  "partial_coverage": 1,
+  "no_coverage": 0,
+  "coverage_pct": 100.0
+ },
+ "errors": [
+  "Auto-fetched 10-Q (filed 2026-05-05): https://www.sec.gov/Archives/edgar/data/1321655/000132165526000028/0001321655-26-000028-index.html"
+ ],
+ "claim_drift": {
+  "comparison_basis": "year-ago quarter",
+  "current_form": "10-Q",
+  "current_period": "Mar 2026",
+  "prior_period": "Mar 2025",
+  "headline": "Palantir's Mar 2026 filing shows a dramatic acceleration across every key financial metric \u2014 revenue growth nearly doubled to 85%, gross margin expanded 7 points, adjusted operating margin surged to 60%, and the Ontology was introduced as a new strategic pillar \u2014 while the share repurchase program disclosure was quietly dropped.",
+  "items": [
+   {
+    "kind": "escalated",
+    "label": "Revenue growth rate",
+    "then": "Revenue of $883.9M for Q1 2025, reflecting 39% YoY growth.",
+    "now": "Revenue of $1.6B for Q1 2026, reflecting 85% YoY growth.",
+    "significance": "Growth nearly doubled in one year, a material acceleration that validates Palantir's AIP-driven demand thesis and raises the bar for future expectations.",
+    "quote": "For the three months ended March 31, 2026, we generated $1.6 billion in revenue, reflecting a 85% growth rate from the three months ended March 31, 2025, when we generated $0.9 billion in revenue."
+   },
+   {
+    "kind": "escalated",
+    "label": "Adjusted operating margin",
+    "then": "Adjusted operating margin of 44% for Q1 2025.",
+    "now": "Adjusted operating margin of 60% for Q1 2026.",
+    "significance": "A 16-point margin expansion in a single year signals significant operating leverage and meaningfully changes the profitability narrative for long-term valuation models.",
+    "quote": "Adjusted operating margin 60% [2026] vs. 44% [2025]"
+   },
+   {
+    "kind": "escalated",
+    "label": "Gross margin",
+    "then": "Gross margin of 80% (82% ex-SBC) for Q1 2025, noted as a decrease from 82% in Q1 2024.",
+    "now": "Gross margin of 87% (88% ex-SBC) for Q1 2026, up from 80% in Q1 2025.",
+    "significance": "Gross margin reversed its prior year compression and expanded sharply, suggesting improved product mix or pricing power \u2014 a positive signal for unit economics.",
+    "quote": "Our gross margin for the three months ended March 31, 2026 increased from 80% for the same period in 2025 to 87%."
+   },
+   {
+    "kind": "escalated",
+    "label": "U.S. commercial revenue growth",
+    "then": "U.S. commercial revenue grew 71% YoY to $255.5M in Q1 2025.",
+    "now": "U.S. commercial revenue grew 133% YoY to $595M in Q1 2026.",
+    "significance": "U.S. commercial growth nearly doubled, reinforcing that AIP adoption in domestic enterprises is accelerating well beyond prior-period trends.",
+    "quote": "Revenue from U.S. commercial customers was $595 million for the three months ended March 31, 2026 compared to $255 million for the same period in 2025, a 133% increase."
+   },
+   {
+    "kind": "escalated",
+    "label": "Top-20 customer revenue & growth",
+    "then": "Average revenue from top 20 customers was $69.9M (TTM Mar 2025), up 26% YoY.",
+    "now": "Average revenue from top 20 customers was $108M (TTM Mar 2026), up 55% YoY.",
+    "significance": "Both the absolute level and growth rate of top-customer spend accelerated sharply, indicating deepening platform entrenchment within the largest accounts.",
+    "quote": "Our average revenue for the top twenty customers during the trailing twelve months ended March 31, 2026 was $108 million, which grew 55% from an average of $70 million."
+   },
+   {
+    "kind": "new",
+    "label": "Ontology as strategic platform pillar",
+    "then": "\u2014",
+    "now": "A full paragraph introduced describing the Palantir Ontology as 'the heart of our platforms,' integrating data, logic, and actions into a foundational representation of the organization to enable AI-driven decision-making at scale.",
+    "significance": "Elevating the Ontology to a named, prominently described product concept is a new strategic framing that positions Palantir's differentiation in the AI platform market more explicitly than before.",
+    "quote": "The Ontology has continuously evolved over time, serving as the heart of our platforms by activating data and analytics inside operations, enabling real-time connectivity between data, analytics, and operational teams, as well as AI."
+   },
+   {
+    "kind": "dropped",
+    "label": "Share repurchase program disclosure",
+    "then": "The prior filing detailed the $1.0B share repurchase program authorized in Aug 2023, noting $18.0M repurchased in Q1 2025 and ~$917.8M remaining available.",
+    "now": "\u2014",
+    "significance": "The complete omission of any share repurchase activity or remaining authorization removes a visible capital return signal that investors previously tracked as a management confidence indicator.",
+    "quote": "During the three months ended March 31, 2025, the Company repurchased and subsequently retired 0.2 million shares of its Class A common stock for an aggregate amount, including commissions, of $18.0 million under the Share Repurchase Program."
+   },
+   {
+    "kind": "escalated",
+    "label": "U.S. trailing-twelve-month revenue & growth",
+    "then": "U.S. customer TTM revenue was $2.1B, growing 47% YoY as of Mar 2025.",
+    "now": "U.S. customer TTM revenue was $4.0B, growing 87% YoY as of Mar 2026.",
+    "significance": "The near-doubling of U.S. TTM revenue with an accelerating growth rate reinforces the domestic government and commercial demand surge, with significant implications for forward revenue estimates.",
+    "quote": "Revenue from our U.S. customers during the trailing twelve months ended March 31, 2026 was $4.0 billion, which grew 87% from the prior twelve-month period."
+   }
+  ],
+  "cost_usd": 0.090198,
+  "error": null,
+  "available": true
+ }
+}
