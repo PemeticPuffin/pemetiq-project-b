@@ -37,6 +37,8 @@ from schema.enums import AnalysisStatus, InputType
 from schema.models import Analysis, Claim, ClaimVerdictModel, Company, Evidence, Signal
 from spend.tracker import SpendLimitExceeded, SpendTracker
 
+import run_log
+
 _SYNC_FETCHERS = [
     EdgarFetcher(),
     GoogleTrendsFetcher(),
@@ -278,6 +280,20 @@ def run_analysis(
         analysis_id=analysis.analysis_id,
         cost_usd=total_cost,
         note=f"{len(claims)} claims, {tested_count} tested",
+    )
+
+    # Durable, cross-app record of what the visitor actually ran (fire-and-forget).
+    run_log.log_run(
+        app="manseil",
+        tool=input_type.value,
+        company=company.name,
+        cost_usd=total_cost,
+        meta={
+            "company_type": getattr(company.company_type, "value", None),
+            "claims": len(claims),
+            "tested": tested_count,
+            "status": analysis.status.value,
+        },
     )
 
     return AnalysisResult(
