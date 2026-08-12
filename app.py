@@ -453,8 +453,9 @@ def render_hero():
     <div style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy-lift) 100%);
                 padding:2.5rem 3rem 2.2rem;border-radius:14px;margin-bottom:2rem">
         <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
-            <img src="{icon_uri}"
-                 style="height:44px;width:44px;border-radius:10px;flex-shrink:0;box-shadow:0 0 0 1.5px rgba(255,255,255,0.3),0 2px 8px rgba(0,0,0,0.25)">
+            <a href="https://pemetiq.com" title="Back to pemetiq.com" style="display:inline-flex;flex-shrink:0">
+              <img src="{icon_uri}"
+                   style="height:44px;width:44px;border-radius:10px;flex-shrink:0;box-shadow:0 0 0 1.5px rgba(255,255,255,0.3),0 2px 8px rgba(0,0,0,0.25);cursor:pointer"></a>
             <div style="font-size:0.7rem;font-weight:800;letter-spacing:0.2em;
                         text-transform:uppercase;color:var(--coral-light);
                         font-family:'DM Sans',sans-serif">PEMETIQ</div>
