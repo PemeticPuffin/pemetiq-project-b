@@ -174,6 +174,47 @@ def test_parse_response_unknown_signal_id_skipped(growth_claim, revenue_signal):
     assert len(evidences) == 0
 
 
+def test_parse_response_skips_non_dict_assessment(growth_claim, revenue_signal):
+    """A bare scalar in signal_assessments (a model quirk) must not raise, and
+    valid entries must still parse. Regression for:
+    'int' object has no attribute 'get' (VerdictEngine warning)."""
+    response = _make_verdict_response(
+        overall_verdict="supported",
+        evidence_strength="strong",
+        reasoning="Confirmed by EDGAR.",
+        signal_assessments=[
+            42,  # malformed: model emitted a bare int instead of an object
+            {
+                "signal_id": revenue_signal.signal_id,
+                "verdict": "supporting",
+                "reasoning": "Valid assessment survives the bad element.",
+            },
+        ],
+    )
+    verdict_model, evidences = _parse_response(response, growth_claim, [revenue_signal])
+    assert verdict_model.verdict == ClaimVerdict.supported
+    assert len(evidences) == 1
+    assert evidences[0].signal_id == revenue_signal.signal_id
+
+
+def test_parse_response_non_list_assessments(growth_claim, revenue_signal):
+    """signal_assessments arriving as a non-list must not raise."""
+    block = SimpleNamespace(
+        type="tool_use",
+        name="render_verdict",
+        input={
+            "overall_verdict": "supported",
+            "evidence_strength": "strong",
+            "reasoning": "ok",
+            "signal_assessments": 7,  # malformed: not a list
+        },
+    )
+    response = SimpleNamespace(content=[block])
+    verdict_model, evidences = _parse_response(response, growth_claim, [revenue_signal])
+    assert verdict_model.verdict == ClaimVerdict.supported
+    assert evidences == []
+
+
 def test_parse_response_fallback_on_invalid_verdict(growth_claim, revenue_signal):
     """Invalid overall_verdict enum value → fallback to insufficient_evidence."""
     block = SimpleNamespace(

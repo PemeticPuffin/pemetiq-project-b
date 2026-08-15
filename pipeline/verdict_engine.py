@@ -204,12 +204,20 @@ def _parse_response(
             )
 
         evidences: list[Evidence] = []
-        for sa in inp.get("signal_assessments", []):
+        raw_assessments = inp.get("signal_assessments", [])
+        if not isinstance(raw_assessments, list):
+            raw_assessments = []
+        for sa in raw_assessments:
             if isinstance(sa, str):
                 try:
                     sa = json.loads(sa)
                 except (json.JSONDecodeError, TypeError):
                     continue
+            # The model occasionally emits a bare scalar where a per-signal object
+            # was expected; skip non-dicts so one bad element doesn't drop the
+            # whole claim's assessments (cf. the isinstance guards in claim_drift.py).
+            if not isinstance(sa, dict):
+                continue
             sig_id = sa.get("signal_id", "")
             if sig_id not in signal_index:
                 continue
