@@ -454,7 +454,7 @@ def render_hero():
                 padding:2.5rem 3rem 2.2rem;border-radius:14px;margin-bottom:2rem">
         <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
             <a href="https://pemetiq.com" target="_self" title="Back to pemetiq.com" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;cursor:pointer">
-              <img src="{icon_uri}"
+              <img src="{icon_uri}" alt="Pemetiq"
                    style="height:44px;width:44px;border-radius:10px;flex-shrink:0;box-shadow:0 0 0 1.5px rgba(255,255,255,0.3),0 2px 8px rgba(0,0,0,0.25)">
               <div style="font-size:0.7rem;font-weight:800;letter-spacing:0.2em;
                           text-transform:uppercase;color:var(--coral-light);
@@ -873,10 +873,13 @@ def render_footer():
     st.markdown(f"""
     <div style="margin-top:4rem;padding:2rem 0 1.5rem;
                 border-top:1px solid var(--border);text-align:center">
-        <img src="{logo_uri}"
+        <img src="{logo_uri}" alt="Pemetiq"
              style="height:28px;opacity:0.85;margin-bottom:0.75rem">
         <div style="font-size:0.75rem;color:var(--muted);font-family:'DM Sans',sans-serif">
             © 2026 Pemetiq · All signals sourced from public data
+        </div>
+        <div style="margin-top:0.5rem;font-size:0.75rem;font-family:'DM Sans',sans-serif">
+            <a href="https://cadillaq.pemetiq.com" target="_self" style="color:#1A5C6A;text-decoration:none">Also from Pemetiq: Cadillaq — competitive intel autopilot →</a>
         </div>
     </div>
     """, unsafe_allow_html=True)
